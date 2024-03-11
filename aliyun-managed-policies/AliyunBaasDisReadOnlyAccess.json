@@ -1,0 +1,12 @@
+{
+"Statement": [
+{
+"Action": [
+"baasdis:Get*"
+],
+"Effect": "Allow",
+"Resource": "*"
+}
+],
+"Version": "1"
+}

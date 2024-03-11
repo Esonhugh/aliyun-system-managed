@@ -1,0 +1,108 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "actiontrail:CreateServiceTrail",
+        "actiontrail:DeleteServiceTrail",
+        "actiontrail:ListServiceTrail",
+        "oos:ListExecutions"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "*:TagResources",
+        "*:UntagResources",
+        "*:UnTagResources"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeSnapshots",
+        "ecs:DescribeDisks",
+        "ecs:DescribeNetworkInterfaces",
+        "vpc:DescribeEipAddresses"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "alikafka:ListGroup",
+        "alikafka:ListTopic"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "tag.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": [
+        "config:StartConfigurationRecorder",
+        "config:DescribeConfigurationRecorder",
+        "config:CreateConfigRule",
+        "config:DeleteConfigRules",
+        "config:UpdateConfigRule",
+        "config:ListConfigRules",
+        "config:GetConfigRule",
+        "config:CreateAggregateConfigRule",
+        "config:DeleteAggregateConfigRules",
+        "config:ListAggregateConfigRules",
+        "config:GetAggregateConfigRule",
+        "config:UpdateAggregateConfigRule",
+        "config:ListAggregators",
+        "config:CreateAggregator",
+        "config:GetConfigRulesReport",
+        "config:GenerateConfigRulesReport",
+        "config:CreateRemediation",
+        "config:CreateAggregateRemediation",
+        "config:GetAggregateConfigRulesReport",
+        "config:GenerateAggregateConfigRulesReport",
+        "config:ListRemediations",
+        "config:ListAggregateRemediations",
+        "config:StartAggregateRemediation",
+        "config:StartRemediation",
+        "config:GetResourceComplianceGroupByRegion",
+        "config:ListConfigRuleEvaluationResults",
+        "config:GetAggregateResourceComplianceByConfigRule",
+        "config:ListAggregateConfigRuleEvaluationResults",
+        "config:ListRemediationExecutions",
+        "config:ListAggregateRemediationExecutions",
+        "config:GetDiscoveredResource",
+        "config:GetAggregateDiscoveredResource"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "config:ServiceChannel": "TagPolicy"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "config.aliyuncs.com",
+            "remediation.config.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

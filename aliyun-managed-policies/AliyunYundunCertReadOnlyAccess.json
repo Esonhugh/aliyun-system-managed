@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-cert:Get*", 
+                "yundun-cert:Describe*", 
+                "yundun-cert:Query*", 
+                "yundun-cert:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

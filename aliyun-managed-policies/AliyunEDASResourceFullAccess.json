@@ -1,0 +1,15 @@
+{
+    "Version":"1",
+    "Statement":[
+        {
+            "Effect":"Allow",
+            "Action":[
+                "edas:*Namespace",
+                "edas:*Cluster"
+            ],
+            "Resource":[
+                "acs:edas:*:*:*"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:GenerateDataKey",
+        "kms:GenerateDataKeyWithoutPlaintext",
+        "kms:AsymmetricDecrypt",
+        "kms:AsymmetricEncrypt",
+        "kms:AsymmetricSign",
+        "kms:AsymmetricVerify",
+        "kms:GetPublicKey"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

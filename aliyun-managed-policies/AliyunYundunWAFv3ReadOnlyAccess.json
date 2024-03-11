@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "yundun-waf:Get*",
+        "yundun-waf:Describe*",
+        "yundun-waf:Query*",
+        "yundun-waf:List*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

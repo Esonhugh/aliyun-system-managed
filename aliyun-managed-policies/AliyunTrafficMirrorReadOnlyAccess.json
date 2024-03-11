@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:ListTrafficMirror*",
+        "vpc:GetTrafficMirrorServiceStatus"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

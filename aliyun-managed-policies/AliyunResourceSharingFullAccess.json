@@ -1,0 +1,23 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "resourcesharing:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateServiceLinkedRole",
+        "ram:DeleteServiceLinkedRole"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "resourcesharing.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

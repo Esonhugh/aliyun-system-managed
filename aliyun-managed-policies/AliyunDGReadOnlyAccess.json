@@ -1,0 +1,14 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "dg:Get*", 
+                "dg:Find*", 
+                "dg:Describe*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

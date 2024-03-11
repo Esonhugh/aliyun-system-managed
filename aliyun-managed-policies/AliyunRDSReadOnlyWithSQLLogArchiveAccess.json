@@ -1,0 +1,36 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "rds:Describe*",
+        "rds:StartSqlLogDetailArchive"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "hdm:Get*",
+        "hdm:Describe*",
+        "hdm:Query*",
+        "hdm:Support*",
+        "hdm:StartLakeQuery",
+        "hdm:StartLakeQueryArchive",
+        "hdm:CreateSqlLogTask"
+      ],
+      "Resource": "acs:rds:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dbs:Get*",
+        "dbs:Describe*",
+        "dbs:Query*",
+        "dbs:Support*"
+      ],
+      "Resource": "acs:rds:*:*:*"
+    }
+  ]
+}

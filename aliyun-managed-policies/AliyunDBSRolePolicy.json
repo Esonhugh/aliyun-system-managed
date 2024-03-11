@@ -1,0 +1,216 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "rds:DescribeRegions",
+        "rds:DescribeZones",
+        "rds:DescribeDBInstanceNetInfo",
+        "rds:DescribeDBInstanceNetInfoForChannel",
+        "rds:DescribeTasks",
+        "rds:DescribeDBInstances",
+        "rds:DescribeFilesForSQLServer",
+        "rds:DescribeImportsForSQLServer",
+        "rds:DescribeSlowLogRecords",
+        "rds:DescribeBinlogFiles",
+        "rds:DescribeSQLLogRecords",
+        "rds:DescribeParameters",
+        "rds:DescribeParameterTemplates",
+        "rds:DescribeDBInstanceAttribute",
+        "rds:DescribeDatabases",
+        "rds:DescribeAccounts",
+        "rds:DescribeSecurityIPList",
+        "rds:DescribeSecurityIps",
+        "rds:DescribeDBInstanceIPArray",
+        "rds:DescribeDBInstanceIPArrayList",
+        "rds:DescribeDBInstanceSSL",
+        "rds:DescribeDBInstanceTDE",
+        "rds:CreateDBInstance",
+        "rds:CreateAccount",
+        "rds:CreateDatabase*",
+        "rds:ModifySecurityIps",
+        "rds:GrantAccountPrivilege",
+        "rds:CreateMigrateTask",
+        "rds:CreateOnlineDatabaseTask",
+        "rds:DescribeMigrateTasks",
+        "rds:DescribeOssDownloads",
+        "rds:CreateBackup",
+        "rds:DescribeBackups",
+        "rds:DescribeBackupPolicy",
+        "rds:ModifyBackupPolicy",
+        "rds:DescribeBackupTasks",
+        "rds:DescribeBinlogFiles",
+        "rds:DescribeResourceUsage",
+        "rds:DescribeAvailableZones",
+        "rds:DescribeAvailableClasses",
+        "rds:ListClasses"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeRegions",
+        "ecs:DescribeZones",
+        "ecs:DescribeInstance",
+        "ecs:DescribeInstances",
+        "ecs:DescribeVpcs",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:JoinSecurityGroup",
+        "ecs:RevokerSecurityGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dhs:ListProject",
+        "dhs:GetProject",
+        "dhs:CreateTopic",
+        "dhs:ListTopic",
+        "dhs:GetTopic",
+        "dhs:UpdateTopic",
+        "dhs:ListShard",
+        "dhs:MergeShard",
+        "dhs:SplitShard",
+        "dhs:PutRecords",
+        "dhs:GetRecords",
+        "dhs:GetCursors"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:ListBuckets",
+        "oss:PutBucket",
+        "oss:GetBucketWebsite",
+        "oss:GetBucketReferer",
+        "oss:GetBucketAcl",
+        "oss:GetBucketLogging",
+        "oss:GetBucketCors",
+        "oss:GetBucketReplication",
+        "oss:ListObjects",
+        "oss:GetBucketLocation",
+        "oss:GetBucketLifecycle",
+        "oss:PutBucketLifecycle",
+        "oss:GetObject",
+        "oss:PutObject",
+        "oss:DeleteObject",
+        "oss:RestoreObject",
+        "oss:ListMultipartUploads",
+        "oss:AbortMultipartUpload",
+        "oss:ListParts",
+        "oss:PutObjectTagging",
+        "oss:GetObjectTagging",
+        "oss:DeleteObjectTagging",
+        "oss:CopyObject",
+        "oss:DeleteMultipleObjects",
+        "oss:PutSymlink",
+        "oss:GetSymlink"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kms:CreateKey",
+        "kms:ListKeys",
+        "kms:GenerateDataKey",
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:EnableKey"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:PutEventRule",
+        "cms:PutEventTargets",
+        "cms:ListEventRules",
+        "cms:ListEventTargetsByRule",
+        "cms:DeleteEventRule",
+        "cms:DeleteEventTargets"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "polardb:DescribeDBClusterIPArrayList",
+        "polardb:DescribeDBClusterNetInfo",
+        "polardb:DescribeDBClusters",
+        "polardb:DescribeRegions",
+        "polardb:ModifySecurityIps",
+        "polardb:DescribeDBClusterEndpoints",
+        "polardb:DescribeDBClusterAccessWhitelist",
+        "polardb:ModifyDBClusterAccessWhitelist"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dds:DescribeDBInstanceAttribute",
+        "dds:DescribeReplicaSetRole",
+        "dds:DescribeSecurityIps",
+        "dds:DescribeDBInstances",
+        "dds:DescribeRegions",
+        "dds:ModifySecurityIps"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kvstore:DescribeSecurityIps",
+        "kvstore:DescribeInstances",
+        "kvstore:DescribeRegions",
+        "kvstore:DescribeAccounts",
+        "kvstore:DescribeDBInstanceNetInfoForInner",
+        "kvstore:DescribeDBInstanceNetInfo",
+        "kvstore:CreateAccount",
+        "kvstore:ModifySecurityIps",
+        "kvstore:DescribeInstanceAttribute",
+        "kvstore:AllocateInstancePrivateConnection",
+        "kvstore:DescribeLogicInstanceTopology"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "drds:DescribeDrds*",
+        "drds:ModifyDrdsIpWhiteList",
+        "drds:DescribeRegions",
+        "drds:CreateDrdsDB",
+        "drds:DescribeTable",
+        "drds:DescribeTables",
+        "drds:ModifyRdsReadWeight",
+        "drds:ChangeAccountPassword",
+        "drds:CreateDrdsInstance",
+        "drds:CreateInstanceAccount",
+        "drds:CreateInstanceInternetAddress",
+        "drds:DescribeInstanceAccounts"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "hdm:AddHDMInstance",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

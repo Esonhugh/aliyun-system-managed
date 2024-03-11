@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-ddos:Get*", 
+                "yundun-ddos:Describe*", 
+                "yundun-ddos:Query*", 
+                "yundun-ddos:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

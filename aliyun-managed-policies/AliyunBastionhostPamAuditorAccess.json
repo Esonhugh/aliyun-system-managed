@@ -1,0 +1,20 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "pam:ListRegions",
+        "pam:ListInstance*",
+        "pam:GetInstance*",
+        "pam:ListSession*",
+        "pam:GetSession*",
+        "pam:ListAuditLog*",
+        "pam:ListEventAuditLog*",
+        "pam:GeneratePlaybackToken",
+        "pam:GenerateAuditPlaybackToken"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

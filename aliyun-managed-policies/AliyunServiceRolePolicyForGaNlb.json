@@ -1,0 +1,23 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "nlb:GetLoadBalancerAttribute",
+        "nlb:UpdateLoadBalancerProtection"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "nlb.ga.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

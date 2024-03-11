@@ -1,0 +1,72 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:CreateNetworkInterface",
+        "ecs:DeleteNetworkInterface",
+        "ecs:AttachNetworkInterface",
+        "ecs:DetachNetworkInterface",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:CreateNetworkInterfacePermission",
+        "ecs:DescribeNetworkInterfacePermissions",
+        "ecs:CreateSecurityGroup",
+        "ecs:DeleteSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:DescribeSecurityGroups",
+        "ecs:ModifySecurityGroupAttribute",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:AuthorizeSecurityGroupEgress",
+        "ecs:RevokeSecurityGroup",
+        "ecs:RevokeSecurityGroupEgress"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kms:Listkeys",
+        "kms:Listaliases",
+        "kms:ListResourceTags",
+        "kms:DescribeKey",
+        "kms:UntagResource",
+        "kms:TagResource",
+        "kms:DescribeAccountKmsStatus"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:GenerateDataKey"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEqualsIgnoreCase": {
+          "kms:tag/acs:rds:instance-encryption": "true"
+        }
+      }
+    },
+    {
+      "Action": [
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcs"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "pgsql-onecs.rds.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

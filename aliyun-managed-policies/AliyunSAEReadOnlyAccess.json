@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "sae:Get*",
+        "sae:List*",
+        "sae:Query*",
+        "sae:Describe*",
+        "sae:CheckInDebt",
+        "sae:CheckApplication*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

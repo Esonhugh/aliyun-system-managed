@@ -1,0 +1,27 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "yundun-sas:*",
+        "yundun-aegis:*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "sas.aliyuncs.com",
+            "cloudsiem.sas.aliyuncs.com",
+            "cspm.sas.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

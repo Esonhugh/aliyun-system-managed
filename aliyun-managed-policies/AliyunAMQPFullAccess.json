@@ -1,0 +1,23 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "amqp:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "logdelivery.amqp.aliyuncs.com",
+            "monitoring.amqp.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

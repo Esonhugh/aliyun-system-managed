@@ -1,0 +1,10 @@
+{
+    "Statement": [
+        {
+            "Action": "cloudgame:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

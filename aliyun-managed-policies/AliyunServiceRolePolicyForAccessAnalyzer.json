@@ -1,0 +1,37 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "oss:GetBucketPolicy",
+                "oss:GetBucketAcl",
+                "oss:ListBuckets",
+                "ram:GetRole",
+                "ram:GetUser",
+                "ram:ListRoles"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Action": [
+                "actiontrail:CreateServiceTrail",
+                "actiontrail:DeleteServiceTrail",
+                "actiontrail:GetServiceTrail",
+                "actiontrail:GetServiceTrailDeliveryStatus"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": "ram:DeleteServiceLinkedRole",
+            "Resource": "*",
+            "Effect": "Allow",
+            "Condition": {
+                "StringEquals": {
+                    "ram:ServiceName": "accessanalyzer.aliyuncs.com"
+                }
+            }
+        }
+    ]
+}

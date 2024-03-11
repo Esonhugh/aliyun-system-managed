@@ -1,0 +1,13 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "smc:Describe*", 
+                "smc:Verify*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

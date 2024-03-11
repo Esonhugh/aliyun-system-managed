@@ -1,0 +1,41 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "resourcemanager:*ResourceDirectory*",
+        "resourcemanager:*Account",
+        "resourcemanager:*Accounts",
+        "resourcemanager:*CloudAccount*",
+        "resourcemanager:*ResourceAccount*",
+        "resourcemanager:*Parent*",
+        "resourcemanager:*Ancestor*",
+        "resourcemanager:*Folder*",
+        "resourcemanager:*Handshake*",
+        "resourcemanager:*TrustedServiceStatus",
+        "resourcemanager:*ControlPolicy*",
+        "resourcemanager:*ControlPolicies*",
+        "resourcemanager:*DelegatedAdministrator*",
+        "resourcemanager:*SendVerificationCodeFor*",
+        "resourcemanager:*BindSecureMobilePhone*",
+        "resourcemanager:*Tag*",
+        "resourcemanager:*Account*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateServiceLinkedRole",
+        "ram:DeleteServiceLinkedRole"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "resourcemanager.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

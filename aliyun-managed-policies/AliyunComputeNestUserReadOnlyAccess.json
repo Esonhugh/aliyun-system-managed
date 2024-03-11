@@ -1,0 +1,23 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "computenest:List*",
+        "computenest:Get*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "oos:GetParametersByPath",
+      "Resource": "acs:oos:*:*:parameter/computenest/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "oos:GetSecretParametersByPath",
+      "Resource": "acs:oos:*:*:secretparameter/computenest/*",
+      "Effect": "Allow"
+    }
+  ]
+}

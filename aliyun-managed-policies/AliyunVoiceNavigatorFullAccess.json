@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "voicebot:*",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,103 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ros:CreateTemplateScratch",
+        "ros:GetTemplateScratch",
+        "ros:GenerateTemplateByScratch",
+        "ros:DeleteTemplateScratch",
+        "ros:PreviewStack",
+        "ros:CreateStack",
+        "ros:DeleteStack",
+        "ros:GetStack",
+        "ros:ListStacks",
+        "ros:ListStackResources",
+        "ros:GetStackResource"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "nlb:CreateLoadBalancer",
+        "nlb:DeleteLoadBalancer",
+        "nlb:UpdateLoadBalancerAttribute",
+        "nlb:GetLoadBalancerAttribute",
+        "nlb:ListLoadBalancers",
+        "nlb:AttachCommonBandwidthPackageToLoadBalancer",
+        "nlb:DetachCommonBandwidthPackageFromLoadBalancer",
+        "nlb:EnableLoadBalancerIpv6Internet",
+        "nlb:DisableLoadBalancerIpv6Internet",
+        "nlb:UpdateLoadBalancerProtection",
+        "nlb:CreateListener",
+        "nlb:DeleteListener",
+        "nlb:GetListenerAttribute",
+        "nlb:ListListeners",
+        "nlb:GetListenerHealthStatus",
+        "nlb:UpdateListenerAttribute",
+        "nlb:StartListener",
+        "nlb:StopListener",
+        "nlb:ListServerGroupServers",
+        "nlb:ListServerGroups",
+        "nlb:CreateServerGroup",
+        "nlb:DeleteServerGroup",
+        "nlb:UpdateServerGroupAttribute",
+        "nlb:UpdateServerGroupServersAttribute",
+        "nlb:AddServersToServerGroup",
+        "nlb:RemoveServersFromServerGroup",
+        "nlb:ListTagResources",
+        "nlb:UntagResources",
+        "nlb:TagResources",
+        "nlb:DescribeZones",
+        "nlb:GetJobStatus"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "slb:Describe*",
+        "slb:ListTagResources"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "tag:TagResources",
+        "tag:UntagResources"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "clone.nlb.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "nlb.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

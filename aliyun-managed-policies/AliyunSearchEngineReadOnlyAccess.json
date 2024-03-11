@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "searchengine:List*",
+        "searchengine:Describe*",
+        "searchengine:Get*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

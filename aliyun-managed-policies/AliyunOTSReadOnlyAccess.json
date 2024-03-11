@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ots:BatchGet*",
+        "ots:Describe*",
+        "ots:Get*",
+        "ots:List*",
+        "ots:Consume*",
+        "ots:Search",
+        "ots:ComputeSplits",
+        "ots:ParallelScan",
+        "ots:ComputeSplitPointsBySize",
+        "ots:BulkExport",
+        "ots:SQL*",
+        "ots:Query*",
+        "ots:Scan*",
+        "ots:SplitTimeseriesScanTask"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

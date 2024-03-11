@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "log:Get*",
+        "log:List*",
+        "log:Query*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

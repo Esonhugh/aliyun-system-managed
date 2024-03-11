@@ -1,0 +1,10 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "feedback:Query*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

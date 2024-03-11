@@ -1,0 +1,12 @@
+{
+  "Statement": [
+    {
+      "Action": ["oss:Get*",
+                 "oss:List*" ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}
+                        

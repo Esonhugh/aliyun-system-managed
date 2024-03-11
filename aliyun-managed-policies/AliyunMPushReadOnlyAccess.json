@@ -1,0 +1,23 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "mpush:List*",
+        "mpush:Query*",
+        "mpush:Trace*",
+        "mpush:Check*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "mhub:List*",
+        "mhub:Query*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

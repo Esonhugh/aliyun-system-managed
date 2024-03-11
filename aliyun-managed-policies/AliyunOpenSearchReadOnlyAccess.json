@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "opensearch:List*",
+        "opensearch:Describe*",
+        "opensearch:Get*",
+        "opensearch:Search*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

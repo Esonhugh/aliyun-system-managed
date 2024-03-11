@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "yundun-greenweb:List*",
+        "yundun-greenweb:Get*",
+        "yundun-greenweb:Describe*",
+        "yundun-greenweb:Query*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "hologram:Get*",
+        "hologram:List*",
+        "hologram:Describe*",
+        "hologram:HoloWebAccess",
+        "cms:DescribeMetricList",
+        "cms:QueryMetricList"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

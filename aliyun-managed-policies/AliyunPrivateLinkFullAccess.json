@@ -1,0 +1,28 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "privatelink:*",
+                "vpc:DescribeVpcs",
+              	"vpc:DescribeVSwitches",
+                "ecs:DescribeSecurityGroups",
+                "slb:DescribeLoadBalancers"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "ram:CreateServiceLinkedRole"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "ram:ServiceName": "privatelink.aliyuncs.com"
+                }
+            },
+            "Effect": "Allow"
+        }
+    ]
+}

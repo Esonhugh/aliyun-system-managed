@@ -1,0 +1,70 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "adb:Get*",
+        "adb:List*",
+        "adb:Kill*",
+        "adb:Cancel*",
+        "adb:Submit*",
+        "adb:Allocate*",
+        "adb:Describe*",
+        "adb:Lock*",
+        "adb:Copy*",
+        "adb:Query*",
+        "adb:Show*",
+        "adb:Test*",
+        "adb:Export*",
+        "adb:Execute*",
+        "adb:*Project",
+        "adb:*Directory",
+        "adb:*ProcessDefinition",
+        "adb:*ProcessDefinitions",
+        "adb:*ProcessDefinitionAttribute",
+        "adb:*ProcessInstance",
+        "adb:*ProcessInstances",
+        "adb:*ProcessInstanceAttribute",
+        "adb:*ProcessInstanceTasks",
+        "adb:*TaskDefinition",
+        "adb:*TaskDefinitions",
+        "adb:*TaskDefinitionCode",
+        "adb:*TaskDefinitionAttribute",
+        "adb:*TaskInstance",
+        "adb:*TaskInstances",
+        "adb:*Notebook",
+        "adb:*Notebooks",
+        "adb:*NotebookKernel",
+        "adb:*NotebookAttribute",
+        "adb:*NotebookConfiguration",
+        "adb:*NotebookParagraph",
+        "adb:*NotebookParagraphs",
+        "adb:*Schedule",
+        "adb:BindAccount",
+        "adb:UnbindAccount",
+        "adb:Authentication",
+        "adb:Check*",
+        "adb:Load*",
+        "adb:Stat*",
+        "adb:*SparkTemplate*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListUserBasicInfos",
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "ads.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

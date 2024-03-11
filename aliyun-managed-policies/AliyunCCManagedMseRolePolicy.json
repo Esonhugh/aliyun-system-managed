@@ -1,0 +1,77 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "mse:AddBlackWhiteList",
+        "mse:AddGateway",
+        "mse:AddServiceSource",
+        "mse:CreateApplication",
+        "mse:DeleteGateway",
+        "mse:GetBlackWhiteList",
+        "mse:GetGateway",
+        "mse:GetGatewayDetail",
+        "mse:GetGatewayOption",
+        "mse:ListServiceSource",
+        "mse:ListTagResources",
+        "mse:ModifyLosslessRule",
+        "mse:TagResources",
+        "mse:UntagResources",
+        "mse:UpdateBlackWhiteList",
+        "mse:UpdateGatewayOption",
+        "mse:UpdateServiceSource",
+        "mse:GetLicenseKey"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "log:CloseProductDataCollection",
+        "log:OpenProductDataCollection",
+        "log:GetProductDataCollection"
+      ],
+      "Resource": [
+        "acs:mse:*:*:instance/*",
+        "acs:log:*:*:project/*/logstore/mse_*"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "audit.log.aliyuncs.com"
+          ]
+        }
+      },
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "middlewarelens.log.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "securitylens.log.aliyuncs.com",
+            "ai-lens.log.aliyuncs.com",
+            "storagelens.log.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

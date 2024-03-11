@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "emasdevops:List*",
+        "emasdevops:Get*",
+        "emasdevops:Describe*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

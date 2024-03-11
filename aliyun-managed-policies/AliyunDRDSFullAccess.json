@@ -1,0 +1,30 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "drds:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "polardbx:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "hdm:*",
+      "Resource": "acs:polardbx:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "drds.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

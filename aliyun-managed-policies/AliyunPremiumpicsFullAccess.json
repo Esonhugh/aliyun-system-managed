@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "premiumpics:*",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

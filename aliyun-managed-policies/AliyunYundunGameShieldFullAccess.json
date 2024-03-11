@@ -1,0 +1,10 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "yundun-gameshield:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

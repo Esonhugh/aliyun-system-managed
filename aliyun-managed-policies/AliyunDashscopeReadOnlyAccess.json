@@ -1,0 +1,24 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "dashscope:Get*",
+                "dashscope:List*",
+                "dashscope:Query*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+          "Action": "ram:PassRole",
+          "Resource": "*",
+          "Effect": "Allow",
+          "Condition": {
+            "StringEquals": {
+              "acs:Service": "dashscope.aliyuncs.com"
+            }
+          }
+        }
+    ],
+    "Version": "1"
+}

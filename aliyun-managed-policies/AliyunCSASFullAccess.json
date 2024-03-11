@@ -1,0 +1,10 @@
+{
+    "Statement": [
+        {
+            "Action": "csas:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

@@ -1,0 +1,56 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecs:DescribeInstances",
+                "ecs:DescribeTag*",
+                "ecs:*Command",
+                "ecs:DescribeCommand*",
+                "ecs:DescribeInvocation*",
+                "ecs:StopInvocation",
+                "ecs:*CloudAssistant*",
+                "ecs:SendFile",
+                "ecs:DescribeSendFileResults",
+                "ecs:*ManagedInstance",
+                "ecs:DescribeManagedInstances",
+                "ecs:*Activation",
+                "ecs:DescribeActivations",
+                "ecs:ListPluginStatus",
+                "ecs:ModifyInvocationAttribute"
+            ],
+            "Resource": [
+                "acs:ecs:*:*:instance/*",
+                "acs:ecs:*:*:command/*",
+                "acs:ecs:*:*:activation/*",
+                "acs:ecs:*:*:invocation/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ram:CreateServiceLinkedRole"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "ram:ServiceName": [
+                        "archiving.ecs.aliyuncs.com"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecs:ListServiceSettings",
+                "ecs:UpdateServiceSettings"
+            ],
+            "Resource": [
+                "acs:ecs:*:*:servicesettings/cloudassistantdeliverysettings",
+                "acs:ecs:*:*:servicesettings/sessionmanagerdeliverysettings"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-hsm:Get*", 
+                "yundun-hsm:Describe*", 
+                "yundun-hsm:Query*", 
+                "yundun-hsm:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

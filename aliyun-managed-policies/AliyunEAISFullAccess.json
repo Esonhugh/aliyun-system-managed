@@ -1,0 +1,24 @@
+{
+  "Statement": [
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "eais.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": [
+        "eais:*",
+        "vpc:DescribeVSwitches",
+        "ecs:DescribeInstances"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ],
+  "Version": "1"
+}

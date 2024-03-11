@@ -1,0 +1,14 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "cloudphoto:Get*", 
+                "cloudphoto:List*", 
+                "cloudphoto:Fetch*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

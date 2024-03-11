@@ -1,0 +1,20 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "kms:*"
+      ],
+      "Resource": [
+        "acs:kms:*:*:key*",
+        "acs:kms:*:*:alias*"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": ["ecs:TagResources","ecs:UntagResources","ecs:ListTagResources"],
+      "Resource": ["acs:kms:*:*:key/*","acs:kms:*:*:secret/*"],
+      "Effect": "Allow"
+    }
+  ]
+}

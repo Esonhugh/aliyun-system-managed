@@ -1,0 +1,16 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "aiccs:List*",
+        "aiccs:Get*",
+        "aiccs:Describe*",
+        "aiccs:Check*",
+        "aiccs:Download*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

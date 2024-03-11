@@ -1,0 +1,32 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "emrstudio:CreateWfWorkspace",
+        "emrstudio:DeleteWfWorkspace",
+        "emrstudio:CreateResourceGroup",
+        "emrstudio:ListSupportToBindVSwitches",
+        "emrstudio:ListSupportToBindClusterTemplates",
+        "emrstudio:ListSupportToBindClusters",
+        "emrstudio:ListBoundClusterTemplates",
+        "emrstudio:ListBoundClusters",
+        "emrstudio:QueryResourceGroupListPaging",
+        "emrstudio:GetResourceGroup",
+        "emrstudio:ListAssociatedWorkspaces",
+        "emrstudio:DeleteResourceGroup",
+        "emrstudio:UnindClusterTemplate",
+        "emrstudio:BindClusterTemplate",
+        "emrstudio:UnbindCluster",
+        "emrstudio:BindCluster",
+        "emrstudio:DisAssociateResourceGroupWithWorkspace",
+        "emrstudio:AssociateResourceGroupWithWorkspace",
+        "emrstudio:StartService",
+        "emrstudio:ListSupportClusterTypes",
+        "emrstudio:ListAvailableVSwitchZones"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}

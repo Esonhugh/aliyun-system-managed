@@ -1,0 +1,18 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "pvtz:AddZone",
+        "pvtz:DeleteZone",
+        "pvtz:BindZoneVpc",
+        "pvtz:AddZoneRecord",
+        "pvtz:DeleteZoneRecord",
+        "pvtz:DescribeZoneRecords",
+        "pvtz:AddUserVpcAuthorization"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

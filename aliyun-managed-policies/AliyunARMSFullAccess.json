@@ -1,0 +1,32 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "arms:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "xtrace:Describe*",
+        "xtrace:Get*",
+        "xtrace:Read*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "arms.aliyuncs.com",
+            "security.arms.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

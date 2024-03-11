@@ -1,0 +1,26 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "openanalytics:ConsolePermission",
+        "openanalytics:Get*",
+        "openanalytics:Query*",
+        "openanalytics:List*",
+        "openanalytics:Describe*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListRoles",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "dms:LoginDatabase",
+      "Resource": "acs:openanalytics:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

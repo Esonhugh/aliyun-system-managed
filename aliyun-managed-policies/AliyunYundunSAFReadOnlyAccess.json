@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "yundun-saf:Describe*",
+        "yundun-saf:Get*",
+        "yundun-saf:List*",
+        "ram:ListUserBasicInfos"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

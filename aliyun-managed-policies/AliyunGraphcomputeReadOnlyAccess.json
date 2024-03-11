@@ -1,0 +1,27 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "graphcompute:List*",
+        "graphcompute:Describe*",
+        "graphcompute:Get*",
+        "graphcompute:Query*",
+        "graphcompute:Search*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "elasticsearch:ListEmon*",
+        "elasticsearch:DescribeEmon*",
+        "elasticsearch:GetEmon*",
+        "elasticsearch:QueryEmon*",
+        "elasticsearch:SuggestEmon*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

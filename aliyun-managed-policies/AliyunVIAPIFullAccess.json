@@ -1,0 +1,38 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "viapi-imageenhan:*",
+        "viapi-imagerecog:*",
+        "viapi-imageseg:*",
+        "viapi-ocr:*",
+        "viapi-facebody:*",
+        "viapi-objectdet:*",
+        "viapi-imageaudit:*",
+        "viapi-goodstech:*",
+        "viapi-imgsearch:*",
+        "viapi-videorecog:*",
+        "viapi-videoenhan:*",
+        "viapi-videoseg:*",
+        "viapi-imageprocess:*",
+        "viapi-threedvision:*",
+        "viapi-regen:*",
+        "viapi-aigen:*",
+        "viapi:*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "viapi.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "ecd:DescribeDesktops",
+        "ecd:DescribeDirectories",
+        "ecd:GetConnectionTicket",
+        "ecd:RebootDesktops",
+        "ecd:StartDesktops",
+        "ecd:StopDesktops"
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "ecd:version": "2020-10-01"
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

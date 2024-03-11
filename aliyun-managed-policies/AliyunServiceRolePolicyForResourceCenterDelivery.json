@@ -1,0 +1,29 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "log:PostLogStoreLogs",
+                "log:GetLogstore",
+                "log:GetLogStoreLogs"
+            ],
+            "Resource": "acs:log:*:*:project/*/logstore/resourcecenter-*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": "oss:PutObject",
+            "Resource": "acs:oss:*:*:resourcecenter-*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": "ram:DeleteServiceLinkedRole",
+            "Resource": "*",
+            "Effect": "Allow",
+            "Condition": {
+                "StringEquals": {
+                    "ram:ServiceName": "delivery.resourcecenter.aliyuncs.com"
+                }
+            }
+        }
+    ]
+}

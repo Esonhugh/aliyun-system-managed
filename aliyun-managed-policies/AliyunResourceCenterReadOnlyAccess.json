@@ -1,0 +1,21 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "resourcecenter:Get*",
+        "resourcecenter:List*",
+        "resourcecenter:Search*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "tag:ListTag*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

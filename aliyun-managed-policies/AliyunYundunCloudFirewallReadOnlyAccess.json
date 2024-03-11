@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-cloudfirewall:Get*", 
+                "yundun-cloudfirewall:Describe*", 
+                "yundun-cloudfirewall:Query*", 
+                "yundun-cloudfirewall:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

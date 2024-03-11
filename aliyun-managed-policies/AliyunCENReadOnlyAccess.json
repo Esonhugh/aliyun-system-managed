@@ -1,0 +1,19 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "cen:Describe*",
+        "cen:List*",
+        "cen:Get*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "cms:QueryMetric*",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

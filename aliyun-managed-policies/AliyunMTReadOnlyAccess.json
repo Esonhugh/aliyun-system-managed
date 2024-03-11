@@ -1,0 +1,13 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "alimt:Get*",
+        "alimt:List*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

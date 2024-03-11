@@ -1,0 +1,14 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Resource": "*",
+            "Action": [
+                "opensearch:SearchKnowledge",
+                "opensearch:UseLLM",
+                "opensearch:SearchMultiplexKnowledge"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sofa:Get*",
+        "sofa:List*",
+        "sofa:Query*",
+        "sofa:Find*",
+        "sofa:Exist*",
+        "sofa:Count*",
+        "sofa:AllMS*",
+        "sofa:AllTS*",
+        "sofa:BatchQuery*",
+        "sofa:DescribeMq*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

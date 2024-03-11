@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "yundun-afs:Describe*",
+        "yundun-afs:Query*",
+        "yundun-afs:List*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

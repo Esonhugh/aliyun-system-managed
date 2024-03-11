@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "vod:Get*", 
+                "vod:List*", 
+                "vod:Search*", 
+                "vod:Describe*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

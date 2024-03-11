@@ -1,0 +1,21 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "ecd:*",
+      "Resource": "acs:ecd:*:*:officesite/*"
+    },
+    {
+      "Action": [
+        "ecd:CheckUserTag",
+        "ecd:CheckUserTags",
+        "ecd:GetUsersCount",
+        "ecd:List*",
+        "ecd:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}

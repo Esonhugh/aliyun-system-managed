@@ -1,0 +1,10 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": ["dypls:Query*","dypls:Get*","dypls:List*"],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

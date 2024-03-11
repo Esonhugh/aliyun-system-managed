@@ -1,0 +1,35 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "oss:CreateImportJob",
+        "oss:GetImportJob",
+        "oss:ListImportJob",
+        "oss:UpdateImportJob",
+        "oss:DeleteImportJob",
+        "oss:GetImportJobResult",
+        "oss:ListImportJobHistory",
+        "oss:CreateImportAddress",
+        "oss:GetImportAddress",
+        "oss:ListImportAddress",
+        "oss:DeleteImportAddress",
+        "oss:UpdateImportAddress",
+        "oss:VerifyImportAddress",
+        "oss:CreateImportAgent",
+        "oss:UpdateImportAgent",
+        "oss:GetImportAgent",
+        "oss:ListImportAgent",
+        "oss:DeleteImportAgent",
+        "oss:CreateImportTunnel",
+        "oss:UpdateImportTunnel",
+        "oss:GetImportTunnel",
+        "oss:ListImportTunnel",
+        "oss:DeleteImportTunnel",
+        "oss:VerifyAgentTunnel"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

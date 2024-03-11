@@ -1,0 +1,57 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "hbr:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "hdr:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeImages",
+        "ecs:DescribeInstances",
+        "ecs:DescribeInstanceAttribute"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeEipAddresses",
+        "vpc:DescribeVpcAttribute",
+        "vpc:DescribeZones",
+        "vcp:DescribeVSwitchAttributes"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateServiceLinkedRole",
+        "ram:DeleteServiceLinkedRole"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "dr.hbr.aliyuncs.com",
+            "ecsbackup.hbr.aliyuncs.com",
+            "ossbackup.hbr.aliyuncs.com",
+            "nasbackup.hbr.aliyuncs.com",
+            "csgbackup.hbr.aliyuncs.com",
+            "vaultencryption.hbr.aliyuncs.com",
+            "otsbackup.hbr.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

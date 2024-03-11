@@ -1,0 +1,23 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "kms:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "secretsmanager-rds.kms.aliyuncs.com",
+            "keystore.kms.aliyuncs.com"
+          ]
+        }
+      },
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

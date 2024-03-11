@@ -1,0 +1,22 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "pts:Check*",
+                "pts:Describe*",
+                "pts:Get*",
+                "pts:List*",
+                "pts:Query*",
+                "pts:Search*",
+                "pts:ApplicationGranted",
+                "pts:CompareReport",
+                "pts:ExportReport",
+                "pts:InvokeRecorder",
+                "pts:PreviewJmxParser"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

@@ -1,0 +1,107 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "governance:*",
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "governance.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "resourcemanager:GetResourceDirectory",
+        "resourcemanager:ListResources",
+        "resourcemanager:ListFoldersForParent",
+        "resourcemanager:InviteAccountToResourceDirectory",
+        "resourcemanager:GetAccount",
+        "resourcemanager:GetPayerForAccount",
+        "resourcemanager:GetFolder",
+        "resourcemanager:ListAccountRecordsForParent",
+        "resourcemanager:ListChildrenForParent",
+        "resourcemanager:ListAccounts",
+        "resourcemanager:ListAccountsForParent",
+        "resourcemanager:ListAncestors",
+        "resourcemanager:ListDelegatedAdministrators"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:GetAccountSummary",
+        "ram:ListSAMLProviders"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "config:DescribeDeliveryChannels",
+        "config:GetAggregateConfigRuleComplianceByPack",
+        "config:ListSupportedProducts",
+        "config:ListAggregateConfigRuleEvaluationResults",
+        "config:ListCompliancePackTemplates",
+        "config:GetManagedRule",
+        "config:GetConfigRule",
+        "config:ListAggregators",
+        "config:DescribeConfigurationRecorder",
+        "config:GetAggregateDiscoveredResource",
+        "config:ListAggregateResourceEvaluationResults",
+        "config:ListAggregateConfigDeliveryChannels",
+        "actiontrail:DescribeTrails",
+        "config:GetAggregateResourceComplianceByConfigRule"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudsso:GetServiceStatus",
+        "cloudsso:ListDirectories",
+        "cloudsso:GetExternalSAMLIdentityProvider",
+        "cloudsso:GetDirectorySAMLServiceProviderInfo",
+        "cloudsso:GetMFAAuthenticationStatus",
+        "cloudsso:ListUsers",
+        "cloudsso:ListAccessConfigurations",
+        "cloudsso:ListGroups"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cen:ListTransitRouterAvailableResource"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:ListPolicies",
+      "Resource": "acs:ram:*:system:policy/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:DescribeImages",
+        "ecs:DescribeImageSharePermission",
+        "ecs:DescribeRegions"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "log:ListProject",
+      "Resource": "acs:log:*:*:project/*"
+    }
+  ],
+  "Version": "1"
+}

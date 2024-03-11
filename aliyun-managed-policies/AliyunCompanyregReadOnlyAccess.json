@@ -1,0 +1,13 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "companyreg:List*",
+                "companyreg:Get*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

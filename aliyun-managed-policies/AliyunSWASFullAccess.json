@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "swas:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "swas-open:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

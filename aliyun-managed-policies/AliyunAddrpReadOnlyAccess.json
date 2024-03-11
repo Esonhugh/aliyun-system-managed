@@ -1,0 +1,20 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "address-purification:GetProject",
+                "address-purification:GetProjectAndService",
+                "address-purification:GetStatistics",
+                "address-purification:GetSurvey",
+                "address-purification:GetUsedCount",
+                "address-purification:ListAPIs",
+                "address-purification:ListProjectNames",
+                "address-purification:ListProjects",
+                "address-purification:ListServices"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

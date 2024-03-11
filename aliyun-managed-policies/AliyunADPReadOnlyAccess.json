@@ -1,0 +1,15 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "adp:Get*",
+                "adp:List*",
+                "adp:Validate*",
+                "adp:Generate*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

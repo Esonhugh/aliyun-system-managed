@@ -1,0 +1,20 @@
+{
+     "Version": "1",
+     "Statement": [
+         {
+             "Action": [
+                 "tdsr:ListProject",
+                 "tdsr:GetProject",
+                 "tdsr:ListScene",
+                 "tdsr:GetScene",
+                 "tdsr:ListSubScene",
+                 "tdsr:GetSubScene",
+                 "tdsr:GetLabel",
+                 "tdsr:GetTag",
+                 "tdsr:ListTag"
+             ],
+             "Resource": "acs:tdsr:*:*:project/*",
+             "Effect": "Allow"
+         }
+     ]
+ }

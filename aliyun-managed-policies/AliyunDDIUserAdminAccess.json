@@ -1,0 +1,22 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ddi:ManageUserPlatform",
+        "ddi:CreateUserPassword",
+        "ddi:DeleteUser"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ddi:ManageDataPlatform",
+        "ddi:*Flow*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

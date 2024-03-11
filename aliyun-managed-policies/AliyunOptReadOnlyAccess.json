@@ -1,0 +1,13 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "opt:Get*",
+        "opt:List*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

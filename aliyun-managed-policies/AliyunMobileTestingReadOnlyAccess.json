@@ -1,0 +1,13 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "mqc:View*", 
+                "mqc:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

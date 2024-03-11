@@ -1,0 +1,10 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "yundun-aegis:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

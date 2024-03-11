@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "adb:List*",
+        "adb:Describe*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

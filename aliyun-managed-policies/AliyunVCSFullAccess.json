@@ -1,0 +1,10 @@
+{
+    "Statement": [
+        {
+            "Action": "vcs:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

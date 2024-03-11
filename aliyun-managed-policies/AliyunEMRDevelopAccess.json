@@ -1,0 +1,110 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "emr:Run*",
+        "emr:CheckUser*",
+        "emr:List*",
+        "emr:Describe*",
+        "emr:Get*",
+        "emr:Query*",
+        "emr:Metastore*",
+        "emr:AttachClusterForNote",
+        "emr:CreateClusterScript",
+        "emr:CreateExecutionPlan",
+        "emr:CreateJob",
+        "emr:CreateNote",
+        "emr:CreateParagraph",
+        "emr:CheckRenewCluster",
+        "emr:DeleteClusterScript",
+        "emr:DeleteExecutionPlan",
+        "emr:DeleteJob",
+        "emr:DeleteNote",
+        "emr:DeleteParagraph",
+        "emr:KillExecutionJobInstance",
+        "emr:KillExecutionPlanInstance",
+        "emr:ModifyClusterServiceConfig",
+        "emr:ModifyExecutionPlan*",
+        "emr:ModifyHealthRuleConfig",
+        "emr:ModifyJob",
+        "emr:ModifyUserChannelInfo",
+        "emr:ResetSoftwarePassword",
+        "emr:ResumeExecutionPlanScheduler",
+        "emr:RetryExecutionPlan",
+        "emr:SaveParagraph",
+        "emr:StopParagraph",
+        "emr:SuspendExecutionPlanScheduler",
+        "emr:TerminateClusterOperation",
+        "emr:CreateResourcePool*",
+        "emr:DeleteResourcePool*",
+        "emr:ModifyResourcePool*",
+        "emr:CreateResourceQueue*",
+        "emr:ModifyResourceQueue*",
+        "emr:DeleteResourceQueue*",
+        "emr:RefreshClusterResourcePool*",
+        "emr:SuspendExecutionPlan*",
+        "emr:ResumeExecutionPlan*",
+        "emr:RetryExecutionPlan*",
+        "emr:CreateClusterTemplate",
+        "emr:CreateJobExecutionPlan*",
+        "emr:DeleteClusterTemplate",
+        "emr:DeleteJobExecutionPlan*",
+        "emr:ModifyClusterTemplate",
+        "emr:ModifyJobExecutionPlan*",
+        "emr:ResumeExecutionJob*",
+        "emr:RetryExecutionJob*",
+        "emr:SuspendExecutionJob*",
+        "emr:SubmitFlow*",
+        "emr:ModifyFlow*",
+        "emr:ListFlow*",
+        "emr:DescribeFlow*",
+        "emr:KillFlow*",
+        "emr:RerunFlow*",
+        "emr:ResumeFlow*",
+        "emr:DeleteFlow*",
+        "emr:CreateFlow*",
+        "emr:CloneFlow*",
+        "emr:SuspendFlow*",
+        "emr:StartFlow*",
+        "emr:ResetUserPassword",
+        "emr:ModifyUserNote"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:GetObject",
+        "oss:ListObjects",
+        "oss:ListBuckets"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:QueryAlarm",
+        "cms:QueryAlarmHistory",
+        "cms:QueryMetricList"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListRoles",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "emr.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

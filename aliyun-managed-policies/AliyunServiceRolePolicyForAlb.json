@@ -1,0 +1,84 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:CreateNetworkInterface",
+        "ecs:DeleteNetworkInterface",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:CreateSecurityGroup",
+        "ecs:DeleteSecurityGroup",
+        "ecs:DescribeSecurityGroups",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:AuthorizeSecurityGroupEgress",
+        "ecs:RevokeSecurityGroup",
+        "ecs:RevokeSecurityGroupEgress",
+        "ecs:AttachNetworkInterface",
+        "ecs:DetachNetworkInterface",
+        "ecs:ModifyNetworkInterfaceAttribute",
+        "eci:DescribeContainerGroups",
+        "ecs:DescribeNetworkInterfaceAttribute",
+        "vpc:RemoveCommonBandwidthPackageIp",
+        "vpc:AddCommonBandwidthPackageIp",
+        "vpc:DeleteCommonBandwidthPackage",
+        "vpc:CreateCommonBandwidthPackage",
+        "vpc:DescribeCommonBandwidthPackages",
+        "vpc:ModifyCommonBandwidthPackageSpec",
+        "vpc:ModifyCommonBandwidthPackageChargeType",
+        "vpc:ReleaseEipAddress",
+        "vpc:AllocateEipAddress",
+        "vpc:AssociateEipAddress",
+        "vpc:UnassociateEipAddress",
+        "vpc:DescribeEipAddresses",
+        "vpc:ModifyEipAddressAttribute",
+        "vpc:DeleteIpv6InternetBandwidth",
+        "vpc:AllocateIpv6InternetBandwidth",
+        "vpc:ModifyIpv6AddressAttribute",
+        "vpc:DescribeIpv6Addresses",
+        "vpc:DescribeIpv6Gateways",
+        "vpc:MoveResourceGroup",
+        "vpc:TagResources",
+        "cas:DescribeCACertificate",
+        "yundun-waf:DescribeInstanceCompatible",
+        "yundun-waf:CreateInstance",
+        "eipanycast:AllocateAnycastEipAddress",
+        "eipanycast:ModifyAnycastEipAddressAttribute",
+        "eipanycast:ReleaseAnycastEipAddress",
+        "eipanycast:AssociateAnycastEipAddress",
+        "eipanycast:UnassociateAnycastEipAddress",
+        "eipanycast:DescribeAnycastEipAddress",
+        "eipanycast:ListAnycastEipAddresses"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "alb.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": [
+        "oss:GetBucketInfo",
+        "oss:PutObject",
+        "oss:GetObject",
+        "oss:PutBucket",
+        "oss:PutBucketVersioning",
+        "oss:GetBucketVersioning",
+        "oss:GetObjectVersion",
+        "oss:PutBucketCors"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "acs:oss:*:*:alb-res-backup-*",
+        "acs:oss:*:*:alb-res-backup-*/*"
+      ]
+    }
+  ]
+}

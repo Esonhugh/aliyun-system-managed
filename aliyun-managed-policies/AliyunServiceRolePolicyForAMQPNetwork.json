@@ -1,0 +1,58 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "privatelink:GetVpcEndpointServiceAttribute",
+        "privatelink:ListVpcEndpointServices",
+        "privatelink:DeleteVpcEndpoint",
+        "privatelink:CreateVpcEndpoint",
+        "privatelink:UpdateVpcEndpointAttribute",
+        "privatelink:ListVpcEndpoints",
+        "privatelink:GetVpcEndpointAttribute",
+        "privatelink:ListVpcEndpointServicesByEndUser",
+        "privatelink:AddZoneToVpcEndpoint",
+        "privatelink:ListVpcEndpointZones",
+        "privatelink:RemoveZoneFromVpcEndpoint",
+        "privatelink:AttachSecurityGroupToVpcEndpoint",
+        "privatelink:ListVpcEndpointSecurityGroups",
+        "privatelink:DetachSecurityGroupFromVpcEndpoint",
+        "privatelink:UpdateVpcEndpointZoneConnectionResourceAttribute"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcAttribute",
+        "vpc:DescribeVpcs",
+        "vpc:ListVSwitchCidrReservations",
+        "vpc:GetVSwitchCidrReservationUsage",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVSwitchAttributes"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "network.amqp.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "privatelink.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+          "microgw:Get*",
+          "microgw:Find*",
+          "microgw:List*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

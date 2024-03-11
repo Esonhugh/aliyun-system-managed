@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "dytns:Query*",
+        "dytns:Get*",
+        "dytns:List*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

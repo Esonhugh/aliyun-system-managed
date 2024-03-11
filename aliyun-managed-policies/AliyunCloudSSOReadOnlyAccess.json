@@ -1,0 +1,36 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "cloudsso:List*",
+        "cloudsso:Get*",
+        "cloudsso:Check*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "resourcemanager:GetResourceDirectory",
+        "resourcemanager:ListParents",
+        "resourcemanager:ListChildrenForParent",
+        "resourcemanager:ListAncestors",
+        "resourcemanager:ListAccountRecordsForParent",
+        "resourcemanager:GetFolder",
+        "resourcemanager:GetAccount"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:GetPolicyVersion",
+        "ram:ListPolicyVersions",
+        "ram:GetPolicy"
+      ],
+      "Resource": "acs:ram:*:system:policy/*",
+      "Effect": "Allow"
+    }
+  ]
+}

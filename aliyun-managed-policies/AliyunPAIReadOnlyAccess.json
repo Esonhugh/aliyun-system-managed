@@ -1,0 +1,62 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "paiplugin:List*",
+        "paiplugin:Get*",
+        "eas:Describe*",
+        "eas:List*",
+        "pai:List*",
+        "pai:Get*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "oss:ListBuckets",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bssapi:DescribePricingModule",
+        "bss:DescribeProduct"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bssapi:GetPayAsYouGoPrice",
+        "bss:DescribePrice"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "bssapi:ProductCode": [
+            "learn"
+          ]
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "log:ListProject",
+        "log:ListLogStores"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "ecs:DescribeSecurityGroups"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "dhs:List*", 
+                "dhs:Get*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

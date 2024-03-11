@@ -1,0 +1,69 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "eas:*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "oss:ListBuckets",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bssapi:DescribePricingModule",
+        "bss:DescribeProduct"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bssapi:GetPayAsYouGoPrice",
+        "bss:DescribePrice"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "bssapi:ProductCode": [
+            "learn"
+          ],
+          "bssapi:ProductType": [
+            "learn_EasPayAsYouGo_public_intl",
+            "learn_EasPayAsYouGo_public_cn"
+          ]
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "log:ListProject",
+        "log:ListLogStores"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "ecs:DescribeSecurityGroups"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "eas.pai.aliyuncs.com"
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

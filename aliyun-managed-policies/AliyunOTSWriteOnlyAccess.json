@@ -1,0 +1,23 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "ots:Create*", 
+                "ots:Update*", 
+                "ots:BatchWrite*", 
+                "ots:Delete*", 
+                "ots:Drop*", 
+                "ots:Put*", 
+                "ots:Update*", 
+                "ots:Start*", 
+                "ots:Commit*", 
+                "ots:Abort*", 
+                "ots:Add*", 
+                "ots:BulkImport"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

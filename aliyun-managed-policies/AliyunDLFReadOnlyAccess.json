@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "dlf:Get*",
+        "dlf:Query*",
+        "dlf:List*",
+        "dlf:Describe*",
+        "dlf:BatchGet*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

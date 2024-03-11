@@ -1,0 +1,14 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "snsu:Query*",
+        "Snsu:Get*",
+        "Snsu:List*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

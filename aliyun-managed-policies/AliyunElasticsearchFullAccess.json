@@ -1,0 +1,24 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "elasticsearch:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "collector.elasticsearch.aliyuncs.com",
+            "ops.elasticsearch.aliyuncs.com",
+            "elasticsearch.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

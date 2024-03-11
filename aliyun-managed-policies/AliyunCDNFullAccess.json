@@ -1,0 +1,24 @@
+{
+  "Statement": [
+    {
+      "Action": "cdn:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "cdn-waf.cdn.aliyuncs.com",
+            "cdn-ddos.cdn.aliyuncs.com",
+            "logdelivery.cdn.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

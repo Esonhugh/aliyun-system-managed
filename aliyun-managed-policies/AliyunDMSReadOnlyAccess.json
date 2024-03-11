@@ -1,0 +1,15 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "dms:Describe*",
+                "dms:List*",
+                "dms:Get*",
+                "dms:Search*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "ccc:*", 
+                "ims:GetDirectory"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

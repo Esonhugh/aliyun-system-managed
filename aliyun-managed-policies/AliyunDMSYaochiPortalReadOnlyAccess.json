@@ -1,0 +1,29 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "dmsyaochiportal:Describe*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "dmsyaochiportal:Get*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "dmsyaochiportal:List*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dmsyaochiportal:MetaSearch",
+        "dmsyaochiportal:MetaDatabaseSearch",
+        "dmsyaochiportal:CheckUserAuth"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

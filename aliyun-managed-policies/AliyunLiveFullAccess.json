@@ -1,0 +1,18 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+          "live:*",
+          "live-interaction:*"
+          ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "cdn:DescribeUserDomains",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

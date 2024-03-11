@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "efc:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": "bss:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

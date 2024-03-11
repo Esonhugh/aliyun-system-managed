@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Action": "easygene:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

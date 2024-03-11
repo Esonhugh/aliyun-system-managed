@@ -1,0 +1,19 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "privatelink:ListVpcEndpointServicesByEndUser",
+        "privatelink:ListVpcEndpoints",
+        "privatelink:GetVpcEndpointAttribute",
+        "privatelink:ListVpcEndpointZones",
+        "privatelink:ListVpcEndpointSecurityGroups",
+        "vpc:DescribeVpcs",
+        "ecs:DescribeSecurityGroups",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

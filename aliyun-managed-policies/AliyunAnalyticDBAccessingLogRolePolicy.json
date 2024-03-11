@@ -1,0 +1,49 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "log:GetProject",
+        "log:ListProject",
+        "log:GetCursorTime",
+        "log:GetLogs",
+        "log:GetHistograms",
+        "log:GetContextLogs",
+        "log:GetLogStoreLogs",
+        "log:GetLogStoreHistogram",
+        "log:GetLogStore",
+        "log:ListLogStores",
+        "log:GetConfig",
+        "log:ListConfig",
+        "log:GetShipperStatus",
+        "log:GetCheckPoint",
+        "log:HeartBeat",
+        "log:UpdateCheckPoint",
+        "log:PostLogStoreLogs",
+        "log:CreateConsumerGroup",
+        "log:UpdateConsumerGroup",
+        "log:DeleteConsumerGroup",
+        "log:ListConsumerGroup",
+        "log:ConsumerGroupUpdateCheckPoint",
+        "log:ConsumerGroupHeartBeat",
+        "log:GetConsumerGroupCheckPoint",
+        "log:CreateExport",
+        "log:GetExport",
+        "log:ListExport",
+        "log:UpdateExport",
+        "log:DeleteExport",
+        "log:CreateJob",
+        "log:GetJob",
+        "log:ListJobs",
+        "log:UpdateJob",
+        "log:DeleteJob",
+        "log:GetCursor",
+        "log:PullLogs",
+        "log:GetCursorOrData",
+        "log:ListShards"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

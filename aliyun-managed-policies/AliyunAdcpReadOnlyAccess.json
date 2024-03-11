@@ -1,0 +1,14 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "adcp:Get*",
+                "adcp:List*",
+                "adcp:Describe*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "nas:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "bssapi:QueryResourcePackageInstances",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "cms:QueryMetricList",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:GetRole",
+      "Resource": [
+        "acs:ram:*:*:role/aliyunservicerolefornasstandard",
+        "acs:ram:*:*:role/aliyunservicerolefornasextreme",
+        "acs:ram:*:*:role/aliyunservicerolefornasencryption",
+        "acs:ram:*:*:role/aliyunservicerolefornaslogdelivery",
+        "acs:ram:*:*:role/aliyunservicerolefornasecshandler",
+        "acs:ram:*:*:role/aliyunservicerolefornascpfsnetwork",
+        "acs:ram:*:*:role/aliyunservicerolefornascpfsclient",
+        "acs:ram:*:*:role/aliyunservicerolefornasossdataflow",
+        "acs:ram:*:*:role/aliyunservicerolefornaseventnotification",
+        "acs:ram:*:*:role/aliyunnastieringrole",
+        "acs:ram:*:*:role/aliyunnasencryptdefaultrole",
+        "acs:ram:*:*:role/aliyunnasdefaultrole",
+        "acs:ram:*:*:role/aliyunnaslogarchiverole",
+        "acs:ram:*:*:role/aliyunnasmanageenirole"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "extreme.nas.aliyuncs.com",
+            "encryption.nas.aliyuncs.com",
+            "logdelivery.nas.aliyuncs.com",
+            "ecs-handler.nas.aliyuncs.com",
+            "cpfs-network.nas.aliyuncs.com",
+            "cpfs-client.nas.aliyuncs.com",
+            "oss-dataflow.nas.aliyuncs.com",
+            "event-notification.nas.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

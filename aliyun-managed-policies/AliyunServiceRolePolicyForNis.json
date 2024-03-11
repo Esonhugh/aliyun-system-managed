@@ -1,0 +1,66 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:InvokeCommand",
+        "ecs:StopInvocation",
+        "ecs:DescribeCloudAssistantStatus",
+        "ecs:DescribeCommands",
+        "ecs:DescribeInvocations",
+        "ecs:DescribeInvocationResults"
+      ],
+      "Resource": [
+        "acs:ecs:*:*:instance/*",
+        "acs:ecs:*:*:command/cmd-ACS-SLB-Diagnosis*"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dts:DescribeDtsJobs",
+        "vpc:UpgradeVpnGatewayFirmware",
+        "quotas:ListProductQuotas",
+        "cms:DescribeMetricLast",
+        "bssapi:QueryAvailableInstances",
+        "ecs:DescribeInstances",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:DescribeSecurityGroupReferences",
+        "alb:ListLoadBalancers",
+        "alb:GetLoadBalancerAttribute",
+        "slb:Describe*",
+        "nlb:ListLoadBalancers",
+        "nlb:GetListenerAttribute",
+        "nlb:ListServerGroups",
+        "nlb:ListServerGroupServers",
+        "nlb:ListListeners",
+        "vpc:Describe*",
+        "vpc:List*",
+        "vpc:Get*",
+        "vpc:CreateFlowlog",
+        "vpc:DeleteFlowLog",
+        "vpc:UpgradeVpnGatewayFirmware",
+        "vpc:DiagnoseVpnConnectionsHistory",
+        "cen:Describe*",
+        "cen:List*",
+        "cen:CreateFlowlog",
+        "cen:DeleteFlowlog",
+        "privatelink:List*",
+        "privatelink:Get*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "nis.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

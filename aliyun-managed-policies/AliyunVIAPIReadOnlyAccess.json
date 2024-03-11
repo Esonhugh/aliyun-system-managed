@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "viapi:Query*",
+        "viapi:List*",
+        "viapi:Get*"
+      ],
+      "Resource": "acs:viapi:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

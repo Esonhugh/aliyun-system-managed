@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "dlf:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListRoles",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "dlf.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

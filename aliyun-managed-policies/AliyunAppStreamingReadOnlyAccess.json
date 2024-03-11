@@ -1,0 +1,15 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "appstreaming:Get*",
+        "appstreaming:*List*",
+        "appstreaming:Describe*",
+        "appstreaming:Query*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

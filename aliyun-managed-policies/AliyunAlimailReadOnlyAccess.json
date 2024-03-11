@@ -1,0 +1,15 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "alimail:Describe*",
+                "alimail:List*",
+                "alimail:Get*",
+                "alimail:Prepare*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

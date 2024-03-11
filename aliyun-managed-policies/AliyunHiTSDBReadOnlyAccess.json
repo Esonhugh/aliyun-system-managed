@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "hitsdb:Describe*",
+        "hitsdb:Explore*",
+        "hitsdb:List*",
+        "hitsdb:Get*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

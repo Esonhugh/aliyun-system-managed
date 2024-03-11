@@ -1,0 +1,14 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "dhs:GetTopic", 
+                "dhs:ListShard", 
+                "dhs:PutRecords"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

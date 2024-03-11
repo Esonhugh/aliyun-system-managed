@@ -1,0 +1,14 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "yuanjing:Get*",
+        "yuanjing:Describe*",
+        "yuanjing:List*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,10 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "dysms:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

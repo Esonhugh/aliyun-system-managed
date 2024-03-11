@@ -1,0 +1,13 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "cloudbox:List*",
+        "cloudbox:Get*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

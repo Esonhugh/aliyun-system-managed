@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "smartag:Describe*",
+        "smartag:List*",
+        "smartag:Get*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

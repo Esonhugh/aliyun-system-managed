@@ -1,0 +1,21 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecd:*Users",
+        "ecd:ResetUserPassword",
+        "ecd:ChangePassword",
+        "ecd:CheckUserTags",
+        "ecd:ResetPassword",
+        "ecd:RefreshLoginToken",
+        "ecd:GetUsersCount",
+        "ecd:CreateProperty",
+        "ecd:List*",
+        "ecd:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "pvtz:Describe*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "pvtz:Search*",
+        "pvtz:read"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Resource": "acs:log:*:*:project/nosql-*",
+      "Action": [
+        "log:GetLogstoreLogs",
+        "log:ListLogStores",
+        "log:GetLogStore",
+        "log:GetIndex",
+        "log:GetLogstoreHistogram",
+        "log:GetConfig",
+        "log:ListConfig",
+        "log:GetDashboard",
+        "log:ListDashboard",
+        "log:CreateLogStore",
+        "log:CreateIndex",
+        "log:UpdateIndex",
+        "log:CreateDashboard",
+        "log:UpdateDashboard",
+        "log:CreateSavedSearch",
+        "log:UpdateSavedSearch",
+        "log:CreateProject"
+      ]
+    },
+    {
+      "Action": [
+        "kms:ListKeys",
+        "kms:ListKeyVersions",
+        "kms:ListAliases",
+        "kms:ListAliasesByKeyId",
+        "kms:ListResourceTags",
+        "kms:DescribeKey",
+        "kms:TagResource",
+        "kms:UntagResource"
+      ],
+      "Resource": "acs:kms:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:GenerateDataKey",
+        "kms:CreateAlias"
+      ],
+      "Resource": "acs:kms:*:*:*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEqualsIgnoreCase": {
+          "kms:tag/acs:rds:instance-encryption": "true"
+        }
+      }
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "mongodb.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "bss:Describe*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "oss:GetObject",
+        "oss:GetObjectMetadata",
+        "oss:GetObjectMeta"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

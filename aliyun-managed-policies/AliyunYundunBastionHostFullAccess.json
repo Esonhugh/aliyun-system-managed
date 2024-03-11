@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "yundun-bastionhost:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "pam:GetInstanceDetail",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "bastionhost.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

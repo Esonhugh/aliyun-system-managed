@@ -1,0 +1,25 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "oss:GetObject",
+                "oss:GetBucket",
+                "oss:GetObjectMeta",
+                "oss:ListObjects"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": "ram:DeleteServiceLinkedRole",
+            "Resource": "*",
+            "Effect": "Allow",
+            "Condition": {
+                "StringEquals": {
+                    "ram:ServiceName": "gdb.aliyuncs.com"
+                }
+            }
+        }
+    ]
+}

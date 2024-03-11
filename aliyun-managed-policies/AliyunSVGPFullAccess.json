@@ -1,0 +1,10 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "svgp:*",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

@@ -1,0 +1,32 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "emr-serverless-spark:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:ListBuckets",
+        "dlf:DescribeRegions",
+        "dlf:GetRegionStatus",
+        "dlf:ListCatalogs",
+        "emr:GetApmData",
+        "emr:QueryApmGrafanaData"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "spark.emr-serverless.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

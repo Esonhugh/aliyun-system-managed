@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "lto:List*",
+        "lto:Describe*",
+        "lto:Query*",
+        "lto:Get*",
+        "lto:Download*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

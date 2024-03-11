@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "alikafka:List*", 
+                "alikafka:Query*", 
+                "alikafka:Get*", 
+                "alikafka:Download*"
+            ], 
+            "Resource": "acs:alikafka:*:*:*", 
+            "Effect": "Allow"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "emrstudio:CreateWorkspace",
+        "emrstudio:DeleteWorkspace"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}

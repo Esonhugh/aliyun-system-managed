@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "lindorm:Describe*",
+        "lindorm:Explore*",
+        "lindorm:List*",
+        "lindorm:Get*",
+        "lindorm:Check*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

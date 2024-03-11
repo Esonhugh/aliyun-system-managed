@@ -1,0 +1,62 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "pts:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeInstance*",
+        "ecs:DescribeDisks",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:RevokeSecurityGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "slb:DescribeLoadBalancer*",
+        "slb:DescribeHealthStatus"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DescribeDbInstance*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:QueryMetricList",
+        "cms:NodeStatusList",
+        "cms:ListNodeStatus",
+        "cms:GetNodeStatus",
+        "cms:ListNode",
+        "cms:ListNodeProcesses",
+        "cms:CreateAgentInstallTask",
+        "cms:GetProfile"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateServiceLinkedRole",
+        "ram:ListUserBasicInfos"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "pts.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

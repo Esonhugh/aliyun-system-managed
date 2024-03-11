@@ -1,0 +1,13 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "multimediaai:Get*", 
+                "multimediaai:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

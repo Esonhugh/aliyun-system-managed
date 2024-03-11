@@ -1,0 +1,24 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "cen:CreateTransitRouterEcrAttachment",
+        "cen:DeleteTransitRouterEcrAttachment",
+        "cen:DescribeGrantRulesToResource"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "ecr.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Action": "aiccs:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

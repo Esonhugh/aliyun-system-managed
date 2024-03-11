@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "pds:List*",
+        "pds:Get*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

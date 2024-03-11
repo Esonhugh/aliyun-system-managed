@@ -1,0 +1,27 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "pam:Get*",
+        "pam:Describe*",
+        "pam:List*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:DescribeInstances",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVpcAttribute",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVSwitchAttributes",
+        "yundun-idaas:DescribeRegions",
+        "yundun-idaas:DescribeInstances"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

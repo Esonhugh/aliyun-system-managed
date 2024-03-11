@@ -1,0 +1,25 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-ddosdip:Get*", 
+                "yundun-ddosdip:Describe*", 
+                "yundun-ddosdip:Query*", 
+                "yundun-ddosdip:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": [
+                "yundun-ddoscoo:Get*", 
+                "yundun-ddoscoo:Describe*", 
+                "yundun-ddoscoo:Query*", 
+                "yundun-ddoscoo:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

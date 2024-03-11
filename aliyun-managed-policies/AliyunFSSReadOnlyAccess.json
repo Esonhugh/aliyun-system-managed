@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "fss:Query*",
+        "fss:Get*"
+      ],
+      "Resource": "acs:fss:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

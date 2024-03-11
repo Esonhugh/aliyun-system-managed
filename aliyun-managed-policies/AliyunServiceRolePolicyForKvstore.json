@@ -1,0 +1,46 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Resource": "acs:log:*:*:project/nosql-*",
+      "Action": [
+        "log:GetLogstoreLogs",
+        "log:ListLogStores",
+        "log:GetLogStore",
+        "log:GetIndex",
+        "log:GetLogstoreHistogram",
+        "log:GetConfig",
+        "log:ListConfig",
+        "log:GetDashboard",
+        "log:ListDashboard",
+        "log:CreateLogStore",
+        "log:CreateIndex",
+        "log:UpdateIndex",
+        "log:CreateDashboard",
+        "log:UpdateDashboard",
+        "log:CreateSavedSearch",
+        "log:UpdateSavedSearch",
+        "log:CreateProject"
+      ]
+    },
+    {
+      "Action": [
+        "cs:DescribeClusterInnerServiceKubeconfig",
+        "cs:RevokeClusterInnerServiceKubeconfig"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "r-kvstore.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

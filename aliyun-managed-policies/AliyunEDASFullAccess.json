@@ -1,0 +1,33 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "edas:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "acms:*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListRoles",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "arms:Describe*",
+        "arms:List*",
+        "arms:Get*",
+        "arms:Search*",
+        "arms:Query*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

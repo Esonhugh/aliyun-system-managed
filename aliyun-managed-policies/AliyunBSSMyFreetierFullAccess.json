@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "bss:DescribeMyFreetier*",
+        "bss:DoMyFreetier*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

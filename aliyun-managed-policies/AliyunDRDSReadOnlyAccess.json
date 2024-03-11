@@ -1,0 +1,24 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "drds:Describe*",
+        "polardbx:Describe*",
+        "polardbx:Check*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "hdm:Get*",
+        "hdm:Describe*",
+        "hdm:Query*",
+        "hdm:Support*"
+      ],
+      "Resource": "acs:polardbx:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "hdr:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:AllocatePublicIpAddress",
+        "ecs:AttachDisk",
+        "ecs:CreateDisk",
+        "ecs:CreateInstance",
+        "ecs:DescribeDisks",
+        "ecs:DescribeInstances",
+        "ecs:DescribeInstanceAttribute",
+        "ecs:DescribeImages",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DescribeRegions",
+        "ecs:DetachDisk",
+        "ecs:DeleteImage",
+        "ecs:DeleteInstance",
+        "ecs:DeleteDisk",
+        "ecs:ImportImage",
+        "ecs:ModifyInstanceAttribute",
+        "ecs:RebootInstance",
+        "ecs:ReplaceSystemDisk",
+        "ecs:StartInstance",
+        "ecs:StopInstance",
+        "ecs:JoinSecurityGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcs"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "hdr.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "hdr.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

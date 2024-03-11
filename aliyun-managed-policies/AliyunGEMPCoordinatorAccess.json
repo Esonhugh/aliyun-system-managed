@@ -1,0 +1,25 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "gemp:Get*",
+        "gemp:List*",
+        "gemp:GenerateProblemPictureLink",
+        "gemp:CreateUser",
+        "gemp:UpdateUser",
+        "ram:ListUserBasicInfos"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": "gemp:*",
+      "Effect": "Allow",
+      "Resource": [
+        "acs:gemp:*:*:incident/*",
+        "acs:gemp:*:*:problem/*"
+      ]
+    }
+  ],
+  "Version": "1"
+}

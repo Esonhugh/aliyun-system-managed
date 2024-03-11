@@ -1,0 +1,24 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:DescribeGlobalAcceleration*",
+        "vpc:DescribeServerRelatedGlobalAccelerationInstances"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ga:Describe*",
+        "ga:List*",
+        "ga:Get*",
+        "ga:Check*",
+        "ga:Query*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

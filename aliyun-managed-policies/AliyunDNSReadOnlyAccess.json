@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "alidns:Describe*",
+        "alidns:Get*",
+        "alidns:List*",
+        "alidns:Query*",
+        "alidns:Check*",
+        "alidns:ValidateDomainCanAdd"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

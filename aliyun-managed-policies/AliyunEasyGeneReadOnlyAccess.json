@@ -1,0 +1,13 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "easygene:List*",
+        "easygene:Get*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

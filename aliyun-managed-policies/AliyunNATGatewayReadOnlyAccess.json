@@ -1,0 +1,21 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:DescribeNatGateway*",
+        "vpc:DescribeBandwidthPackage*",
+        "vpc:DescribeSnatTableEntr*",
+        "vpc:DescribeForwardTableEntr*",
+        "vpc:GetNatGatewayAttribute",
+        "vpc:VpcDescribeVpcNatGatewayNetworkInterfaceQuota",
+        "vpc:ListFullNatEntries",
+        "vpc:ListNatIpCidrs",
+        "vpc:ListNatIps",
+        "vpc:ListEnhanhcedNatGatewayAvailableZones"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

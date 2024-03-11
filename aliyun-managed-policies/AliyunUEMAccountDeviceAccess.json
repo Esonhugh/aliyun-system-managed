@@ -1,0 +1,29 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "uem:Get*",
+        "uem:Describe*",
+        "uem:Query*",
+        "uem:List*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "uem:LockUserNet",
+        "uem:UnlockUserNet",
+        "uem:MassDisableTrustDeviceNet",
+        "uem:MassEnableTrustDeviceNet",
+        "uem:MassLockTrustDevice",
+        "uem:MassUnlockTrustDevice",
+        "uem:BatchLogoutDevice",
+        "uem:RemoveEmployee"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

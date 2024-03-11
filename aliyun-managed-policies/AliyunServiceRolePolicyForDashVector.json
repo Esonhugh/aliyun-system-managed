@@ -1,0 +1,48 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "privatelink:OpenPrivateLinkService",
+        "privatelink:CheckProductOpen",
+        "privatelink:ListVpcEndpointServices",
+        "privatelink:CreateVpcEndpoint",
+        "privatelink:ListVpcEndpoints",
+        "privatelink:UpdateVpcEndpointAttribute",
+        "privatelink:GetVpcEndpointAttribute",
+        "privatelink:ListVpcEndpointSecurityGroups",
+        "privatelink:AttachSecurityGroupToVpcEndpoint",
+        "privatelink:DetachSecurityGroupFromVpcEndpoint",
+        "privatelink:AddZoneToVpcEndpoint",
+        "privatelink:RemoveZoneFromVpcEndpoint",
+        "privatelink:ListVpcEndpointZones",
+        "privatelink:DeleteVpcEndpoint",
+        "vpc:DescribeVpcs",
+        "ecs:DescribeSecurityGroups",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "dashvector.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "privatelink.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

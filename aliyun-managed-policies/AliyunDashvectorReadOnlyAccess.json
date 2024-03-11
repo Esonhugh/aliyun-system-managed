@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dashvector:Check*",
+        "dashvector:Get*",
+        "dashvector:List*",
+        "dashvector:Search*",
+        "dashvector:Fetch*",
+        "dashvector:Version*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

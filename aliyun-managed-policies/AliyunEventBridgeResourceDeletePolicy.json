@@ -1,0 +1,13 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "eventbridge:DeleteEventBus",
+        "eventbridge:DeleteRule"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

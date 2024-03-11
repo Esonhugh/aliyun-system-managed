@@ -1,0 +1,14 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "ens:Get*",
+        "ens:List*",
+        "ens:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,10 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "aliyunape:*",
+      "Resource": "acs:aliyunape:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

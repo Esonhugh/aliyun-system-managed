@@ -1,0 +1,39 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:*VpnGateway*",
+        "vpc:*VpnConnection*",
+        "vpc:*CustomerGateway*",
+        "vpc:*SslVpnServer*",
+        "vpc:*SslVpnClientCert*",
+        "vpc:*VpnRoute*",
+        "vpc:*VpnPbrRoute*",
+        "vpc:*VpnCertificate*",
+        "vpc:*IpsecServer*",
+        "vpc:*VcoRoute*",
+        "vpc:*VpnAttachment*",
+        "vpc:DescribeVpnCrossAccountAuthorizations",
+        "vpc:UpgradeVcoFirmware",
+        "vpc:*VpnSslServer*",
+        "vpc:DescribeSslVpnClients",
+        "vpc:ModifyTunnelAttribute",
+        "vpc:CheckVpnBgpEnabled",
+        "vpc:MoveVpnResourceGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "vpn.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

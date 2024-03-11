@@ -1,0 +1,14 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "xingchen:Get*",
+        "xingchen:List*",
+        "xingchen:Query*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

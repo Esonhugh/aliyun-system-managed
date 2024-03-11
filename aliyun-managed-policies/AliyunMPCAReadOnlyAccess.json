@@ -1,0 +1,14 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "mpca:Get*", 
+                "mpca:Check*", 
+                "mpca:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

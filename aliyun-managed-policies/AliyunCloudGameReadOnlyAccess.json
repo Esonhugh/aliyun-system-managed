@@ -1,0 +1,15 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudgame:List*",
+        "cloudgame:Get*",
+        "cloudgame:Describe*",
+        "cloudgame:*List"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

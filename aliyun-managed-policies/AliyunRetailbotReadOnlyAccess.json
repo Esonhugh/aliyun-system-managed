@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": 
+      [
+        "retailbot:Get*",
+        "retailbot:List*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

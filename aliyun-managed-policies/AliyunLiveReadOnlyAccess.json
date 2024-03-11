@@ -1,0 +1,20 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+          "live:Describe*",
+          "live:List*",
+          "live:Get*",
+          "live:Query*",
+          "live-interaction:List*",
+          "live-interaction:Describe*",
+          "live-interaction:Get*",
+          "live-interaction:Query*"
+          ],
+
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

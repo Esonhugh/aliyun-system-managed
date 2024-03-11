@@ -1,0 +1,20 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "linkcard:List*",
+                "linkcard:Get*",
+                "linkcard:Export*",
+                "linkcard:BatchQuery",
+                "linkcard:CheckTagAssociationRules",
+                "linkcard:CountUnGroupCard",
+                "linkcard:RechargeOrderDetail"
+            ],
+            "Resource": [
+                "acs:linkcard::*:*"
+            ]
+        }
+    ],
+    "Version": "1"
+}

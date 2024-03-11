@@ -1,0 +1,55 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "emr:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:QueryMetricList",
+        "ram:GetRole",
+        "ram:ListRoles",
+        "ram:ListUserBasicInfos",
+        "ecs:DescribeZones",
+        "ecs:DescribeInstanceTypes",
+        "ecs:DescribeKeyPairs",
+        "ecs:DescribeAvailableResource",
+        "ecs:DescribeInstances",
+        "ecs:DescribeSpotPriceHistory",
+        "ecs:DescribeSpotAdvice",
+        "ecs:DescribeInstanceStatus",
+        "ecs:DescribeDeploymentSets",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "oss:ListBuckets",
+        "dlf:DescribeRegions",
+        "dlf:GetRegionStatus",
+        "dlf:ListCatalogs"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "emr.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "quotas:ListProductQuotas",
+      "Resource": "acs:quotas:*:*:quota/ecs/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "kms:DescribeAccountKmsStatus",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

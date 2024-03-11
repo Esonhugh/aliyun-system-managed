@@ -1,0 +1,161 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:RunInstances",
+        "ecs:DeleteInstance",
+        "ecs:DescribeInstances",
+        "ecs:DescribeInstanceStatus",
+        "ecs:DescribeImages",
+        "ecs:StopInstance"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeSecurityGroups",
+        "ecs:CreateSecurityGroup",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:AuthorizeSecurityGroupEgress",
+        "ecs:RevokeSecurityGroup",
+        "ecs:RevokeSecurityGroupEgress",
+        "ecs:JoinSecurityGroup",
+        "ecs:LeaveSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:ModifySecurityGroupAttribute",
+        "ecs:ModifySecurityGroupRule",
+        "ecs:ModifySecurityGroupEgressRule",
+        "ecs:DeleteSecurityGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVSwitches",
+        "vpc:AssociateEipAddress",
+        "vpc:ReleaseEipAddress",
+        "vpc:DescribeEipAddresses",
+        "vpc:DescribeIpv6Addresses",
+        "vpc:DescribeVpcs",
+        "vpc:CreateVpc",
+        "vpc:DeleteVpc",
+        "vpc:CreateVSwitch",
+        "vpc:DeleteVSwitch"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DescribeDBInstanceAttribute",
+        "rds:CreateDBInstance",
+        "rds:DescribeDBInstances",
+        "rds:StopDBInstance",
+        "rds:StartDBInstance",
+        "rds:DeleteDBInstance",
+        "rds:AllocateInstancePublicConnection",
+        "rds:ReleaseInstanceConnection",
+        "rds:AddTagsToResource",
+        "rds:TagResources",
+        "rds:ListTagResources",
+        "rds:DescribeTags",
+        "rds:DescribeDBInstanceByTags",
+        "rds:UntagResources",
+        "rds:RemoveTagsFromResource",
+        "rds:DescribeDatabases",
+        "rds:DescribeResourceUsage",
+        "rds:DescribeDBInstancePerformance",
+        "rds:DescribeDBInstanceNetInfo"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:DeleteAccessPoint",
+        "oss:DeleteAccessPointPolicy",
+        "oss:DeleteBucket",
+        "oss:DeleteBucketCors",
+        "oss:DeleteBucketEncryption",
+        "oss:DeleteBucketInventory",
+        "oss:DeleteBucketLifecycle",
+        "oss:DeleteBucketLogging",
+        "oss:DeleteBucketPolicy",
+        "oss:DeleteBucketReplication",
+        "oss:DeleteBucketTagging",
+        "oss:DeleteBucketWebsite",
+        "oss:DeleteLiveChannel",
+        "oss:DeleteObject",
+        "oss:DeleteObjectTagging",
+        "oss:DeleteStyle",
+        "oss:ListObjects",
+        "oss:ListBuckets",
+        "oss:ActivateProduct",
+        "oss:PutBucket",
+        "oss:PutBucketTagging",
+        "oss:GetBucketTagging",
+        "oss:ListObjectVersions"
+      ],
+      "Resource": [
+        "acs:oss:*:*:adc-lab-*",
+        "acs:oss:*:*:adc-lab-*/"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:OpenOssService"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "ros:GetStack",
+        "ros:DeleteStack",
+        "ros:CreateStack",
+        "ros:UpdateStack",
+        "ros:CancelUpdateStack",
+        "ros:GetStackResource",
+        "ros:ListStackResources",
+        "ros:ListResourceTypes",
+        "ros:GetTemplate",
+        "ros:ValidateTemplate",
+        "ros:ListStackEvents",
+        "ros:DetectStackDrift",
+        "ros:GetStackDriftDetectionStatus",
+        "ros:ListStackResourceDrifts",
+        "ros:UpdateStackTemplateByResources",
+        "ros:GetStackPolicy",
+        "ros:ListStackOperationRisks",
+        "ros:ListStacks",
+        "ros:GetTemplateParameterConstraints"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "bss:InstanceOperationExpire",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "bss:InstanceOperationReleased",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "devcloud.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

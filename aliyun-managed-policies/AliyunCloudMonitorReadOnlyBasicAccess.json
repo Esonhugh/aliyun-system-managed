@@ -1,0 +1,20 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "cms:Get*",
+        "cms:List*",
+        "cms:Query*",
+        "cms:BatchQuery*",
+        "cms:Describe*",
+        "cms:Cursor",
+        "cms:BatchGet",
+        "cms:BatchExport",
+        "cms:Check*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

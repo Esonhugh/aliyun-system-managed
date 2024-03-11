@@ -1,0 +1,77 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "rds:DescribeDBInstances",
+        "rds:DescribeDBInstanceAttribute",
+        "rds:ModifyDBInstanceDescription",
+        "rds:DescribePrice",
+        "rds:DescribeRdsVpcs",
+        "rds:DescribeRegions",
+        "rds:DescribeZones",
+        "rds:CreateGADInstance",
+        "rds:CreateGadInstanceMember",
+        "rds:DescribeGadInstances",
+        "rds:DetachGadInstanceMember",
+        "rds:DeleteGadInstance",
+        "rds:DescribeClassList",
+        "rds:ListAvailableClasses",
+        "rds:QueryInstanceConnection"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DeleteDBInstance",
+        "rds:StopDBInstance"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "rds:ResourceTag/gadinstance": "yes"
+        }
+      }
+    },
+    {
+      "Action": [
+        "dts:CreateJobMonitorRule",
+        "dts:DescribeDtsJobDetail",
+        "dts:DescribeDtsJobs",
+        "dts:DescribeJobMonitorRule",
+        "dts:StartSynchronizationJob",
+        "dts:ModifyDtsJob"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:ResourceTag/gadinstance": "yes"
+        }
+      }
+    },
+    {
+      "Action": [
+        "dts:TransferInstanceClass",
+        "dts:DescribeDtsInstancePrice",
+        "dts:CheckDefaultRole",
+        "dts:DescribeSchemaList",
+        "dts:DescribeLinkConfig"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "gad.rds.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

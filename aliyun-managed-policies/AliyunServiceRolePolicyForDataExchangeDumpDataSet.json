@@ -1,0 +1,30 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:ReplicateList",
+        "oss:ReplicateGet"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "oss:BucketTag/dataexchange": [
+            "yunmarket"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "oss.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

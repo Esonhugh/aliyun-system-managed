@@ -1,0 +1,26 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:DescribeSecurityGroups",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeNatGateways",
+        "vpc:DescribeSnatTableEntries"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "eiam:Get*",
+        "eiam:List*",
+        "eiam:ExecApplicationMetadataUrlResolution"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

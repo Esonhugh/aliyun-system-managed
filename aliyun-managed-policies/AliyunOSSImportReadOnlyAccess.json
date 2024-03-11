@@ -1,0 +1,23 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "oss:GetImportJob",
+        "oss:ListImportJob",
+        "oss:GetImportJobResult",
+        "oss:ListImportJobHistory",
+        "oss:GetImportAddress",
+        "oss:ListImportAddress",
+        "oss:VerifyImportAddress",
+        "oss:GetImportAgent",
+        "oss:ListImportAgent",
+        "oss:GetImportTunnel",
+        "oss:ListImportTunnel",
+        "oss:VerifyAgentTunnel"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "Version":"1",
+    "Statement":[
+        {
+            "Effect":"Allow",
+            "Action":[
+                "edas:ReadNamespace",
+                "edas:ReadCluster"
+            ],
+            "Resource":[
+                "acs:edas:*:*:*"
+            ]
+        }
+    ]
+}

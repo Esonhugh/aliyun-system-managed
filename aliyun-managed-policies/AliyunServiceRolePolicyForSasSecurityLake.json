@@ -1,0 +1,55 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:ListObjects",
+        "oss:ListObjectsV2",
+        "oss:PutObject",
+        "oss:GetObject",
+        "oss:RestoreObject",
+        "oss:DeleteObject",
+        "oss:PutObjectTagging",
+        "oss:GetObjectTagging",
+        "oss:DeleteObjectTagging",
+        "oss:PutBucket",
+        "oss:DeleteBucket",
+        "oss:GetBucketLocation",
+        "oss:GetBucketInfo",
+        "oss:GetBucketStat",
+        "oss:GetBucketAcl",
+        "oss:GetBucketReplication",
+        "oss:PutBucketReplication",
+        "oss:DeleteBucketReplication",
+        "oss:PutBucketLifecycle",
+        "oss:GetBucketLifecycle",
+        "oss:DeleteBucketLifecycle"
+      ],
+      "Resource": [
+        "acs:oss:*:*:security-lake-*",
+        "acs:oss:*:*:security-lake-*/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "dlf:*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "dlf-dss:*",
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "security-lake.sas.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

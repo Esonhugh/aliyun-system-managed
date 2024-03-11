@@ -1,0 +1,28 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "chatbot:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "resourcepacket.chatbot.aliyuncs.com",
+            "sms.chatbot.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+    "Effect": "Allow",
+    "Action": "ram:ListUserBasicInfos",
+    "Resource": "*"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+    "Statement": [
+        {
+            "Action": "aiops:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

@@ -1,0 +1,13 @@
+{
+"Statement": [
+{
+"Action": [
+"baascccs:Get*",
+"baascccs:List*"
+],
+"Effect": "Allow",
+"Resource": "*"
+}
+],
+"Version": "1"
+}

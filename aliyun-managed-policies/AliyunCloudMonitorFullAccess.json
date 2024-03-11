@@ -1,0 +1,76 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "cms:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeInstances",
+        "rds:DescribeDBInstances",
+        "slb:DescribeLoadBalancer*",
+        "vpc:DescribeEipAddresses",
+        "vpc:DescribeRouterInterfaces",
+        "vpc:DescribeGlobalAccelerationInstances",
+        "vpc:DescribeVpnGateways",
+        "vpc:DescribeNatGateways",
+        "vpc:DescribeBandwidthPackages",
+        "vpc:DescribeCommonBandwidthPackages",
+        "oss:ListBuckets",
+        "log:ListProject",
+        "cdn:DescribeUserDomains",
+        "mns:ListQueue",
+        "mns:ListTopic",
+        "ess:DescribeScalingGroups",
+        "ocs:DescribeInstances",
+        "kvstore:DescribeInstances",
+        "kvstore:DescribeLogicInstanceTopology",
+        "hbase:DescribeClusterList",
+        "hitsdb:DescribeHiTSDBInstanceList",
+        "dds:DescribeDBInstances",
+        "petadata:DescribeInstances",
+        "petadata:DescribeDatabases",
+        "gpdb:DescribeDBInstances",
+        "emr:ListClusters",
+        "opensearch:ListApps",
+        "elasticsearch:ListInstance",
+        "mongodb:DescribeDBInstances",
+        "rds:DescribeReplicas",
+        "CloudAPI:DescribeApis",
+        "netgateway:DescribeNatGateways",
+        "ddos:DescribeInstancePage",
+        "live:DescribeLiveUserDomains",
+        "cen:DescribeCens",
+        "cen:DescribeCenAttachedChildInstances",
+        "kafka:GetKafkaInstanceList",
+        "scdn:DescribeScdnUserDomains",
+        "dcdn:DescribeDcdnUserDomains",
+        "polardb:DescribeDBInstances",
+        "polardb:DescribeRegions",
+        "polardb:DescribeDBClusters",
+        "cs:DescribeClusters",
+        "resourcemanager:GetAccount",
+        "resourcemanager:ListAccountsForParent",
+        "resourcemanager:ListAccounts",
+        "resourcemanager:GetFolder",
+        "resourcemanager:ListFoldersForParent",
+        "resourcemanager:ListAncestors",
+        "resourcemanager:GetResourceDirectory"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "cloudmonitor.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

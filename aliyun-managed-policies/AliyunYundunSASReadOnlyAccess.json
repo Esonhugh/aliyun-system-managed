@@ -1,0 +1,19 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-aegis:Get*", 
+                "yundun-aegis:Describe*", 
+                "yundun-aegis:Query*", 
+                "yundun-aegis:List*", 
+                "yundun-sas:Get*", 
+                "yundun-sas:Describe*", 
+                "yundun-sas:Query*", 
+                "yundun-sas:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

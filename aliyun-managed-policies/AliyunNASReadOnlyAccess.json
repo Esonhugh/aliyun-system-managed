@@ -1,0 +1,32 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "nas:Describe*",
+        "nas:Get*",
+        "nas:List*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "bssapi:QueryResourcePackageInstances",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "cms:QueryMetricList",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

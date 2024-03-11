@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-gameshield:Get*", 
+                "yundun-gameshield:Describe*", 
+                "yundun-gameshield:Query*", 
+                "yundun-gameshield:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

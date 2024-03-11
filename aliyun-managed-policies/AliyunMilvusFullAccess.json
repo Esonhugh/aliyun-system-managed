@@ -1,0 +1,29 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "milvus:*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "vpc:DescribeVpcs",
+                "vpc:DescribeVSwitches",
+                "oss:ListBuckets"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Action": "ram:CreateServiceLinkedRole",
+            "Resource": "*",
+            "Effect": "Allow",
+            "Condition": {
+                "StringEquals": {
+                    "ram:ServiceName": "milvus.aliyuncs.com"
+                }
+            }
+        }
+    ],
+    "Version": "1"
+}

@@ -1,0 +1,57 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:CreateSecurityGroup",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DeleteSecurityGroup",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "privatelink:ListVpcEndpoints",
+        "privatelink:ListVpcEndpointZones",
+        "privatelink:CreateVpcEndpoint",
+        "privatelink:RemoveZoneFromVpcEndpoint",
+        "privatelink:GetVpcEndpointAttribute",
+        "privatelink:DeleteVpcEndpoint"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vpc:ListFullNatEntries",
+        "vpc:CreateFullNatEntry",
+        "vpc:DeleteFullNatEntry"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "migration-assessment.oceanbase.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "privatelink.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

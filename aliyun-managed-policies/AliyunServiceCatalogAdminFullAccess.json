@@ -1,0 +1,65 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "servicecatalog:*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ros:GetTemplate",
+        "ros:ValidateTemplate",
+        "ros:PreviewStack",
+        "ros:CreateStack",
+        "ros:ContinueCreateStack",
+        "ros:GetStack",
+        "ros:UpdateStack",
+        "ros:DeleteStack",
+        "ros:ListStacks",
+        "ros:ListStackEvents",
+        "ros:ListStackResources",
+        "ros:ListChangeSets"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "resourcesharing:ListSharedTargets",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:GetUser",
+        "ram:ListUsers",
+        "ram:GetRole",
+        "ram:ListRoles"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": [
+            "servicecatalog.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "servicecatalog.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

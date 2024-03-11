@@ -1,0 +1,14 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "cr:Get*", 
+                "cr:List*", 
+                "cr:PullRepository"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

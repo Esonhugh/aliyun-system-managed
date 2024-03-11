@@ -1,0 +1,16 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "iotid:Verify*", 
+                "iotid:GetServer*", 
+                "iotid:OtpGet*", 
+                "iotid:Encrypt*", 
+                "iotid:Activate"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

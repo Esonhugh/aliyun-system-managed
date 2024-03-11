@@ -1,0 +1,17 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "premiumpics:Describe*",
+        "premiumpics:Check*",
+        "premiumpics:Download*",
+        "premiumpics:Collect*",
+        "premiumpics:UnCollectImage*",
+        "premiumpics:List*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

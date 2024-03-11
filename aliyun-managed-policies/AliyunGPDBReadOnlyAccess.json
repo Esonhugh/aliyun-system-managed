@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "gpdb:Describe*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "gpdb:CheckServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

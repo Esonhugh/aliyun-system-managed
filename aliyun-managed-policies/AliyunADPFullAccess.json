@@ -1,0 +1,20 @@
+{
+  "Statement": [
+    {
+      "Action": "adp:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+    "Action": "quotas:ListProductQuotas",
+    "Resource": "acs:quotas:*:*:quota/vpc/*",
+    "Effect": "Allow"
+    },
+{
+  "Action": "vpc:DescribeVpcs",
+  "Resource": "*",
+  "Effect": "Allow"
+}
+  ],
+  "Version": "1"
+}

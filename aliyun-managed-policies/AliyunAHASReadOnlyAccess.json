@@ -1,0 +1,40 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "ahas:Query*", 
+                "ahas:Search*", 
+                "ahas:SentinelMetricList*", 
+                "ahas:SentinelMetricQuery*", 
+                "ahas:DescribeRegions", 
+                "ahas:BatchQueryPluginStatus", 
+                "ahas:SentinelAppListSentinelApps", 
+                "ahas:SentinelAppMachineList", 
+                "ahas:SentinelAppSummaryMetricListTopNAppsSummaryMetric", 
+                "ahas:SentinelAppSummaryMetricQuerySummaryMetricsOfApp", 
+                "ahas:SentinelClusterAssignGetNewAssignPageData", 
+                "ahas:SentinelClusterAssignGetUpdateAssignPageData", 
+                "ahas:SentinelClusterAssignMapListForApp", 
+                "ahas:SentinelClusterAssignMapUnbindSingle", 
+                "ahas:SentinelClusterAssignMapUpdate", 
+                "ahas:SentinelDegradeRuleListAll", 
+                "ahas:SentinelDegradeRuleListRulesOfResource", 
+                "ahas:SentinelFavoriteListFavoriteApps", 
+                "ahas:SentinelFavoriteListFavoriteResources", 
+                "ahas:SentinelFlowRuleListAll", 
+                "ahas:SentinelFlowRuleListRulesOfResource", 
+                "ahas:SentinelSystemRuleListAll", 
+                "ahas:SentinelGetClusterClientDetailListForAssign", 
+                "ahas:SentinelGetClusterServerDetailForAssign", 
+                "ahas:SentinelNodeListSentinelMachineNodes", 
+                "ahas:SentinelOperationLogListOpLogs", 
+                "ahas:UserNamespace", 
+                "ahas:UserScope", 
+                "ahas:UserLogin"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

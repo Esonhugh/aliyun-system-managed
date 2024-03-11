@@ -1,0 +1,22 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "paiautoml:*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "automl.pai.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

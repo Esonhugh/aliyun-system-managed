@@ -1,0 +1,22 @@
+{
+  "Statement": [
+    {
+      "Action": "ebs:Describe*",
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "ecs:DescribeDisks",
+        "ecs:DescribeSnapshotsUsage",
+        "ecs:DescribeDedicatedBlockStorageClusters",
+        "ecs:DescribeDedicatedBlockStorageClusterDisks",
+        "ecs:ListTagResources",
+        "actiontrail:ListServiceTrail"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ],
+  "Version": "1"
+}

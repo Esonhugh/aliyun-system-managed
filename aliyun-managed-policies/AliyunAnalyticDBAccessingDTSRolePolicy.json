@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "dts:CreateSynchronizationJob",
+        "dts:ConfigureSynchronizationJob",
+        "dts:DescribeSynchronizationJobs",
+        "dts:DescribeSynchronizationJobStatus",
+        "dts:StartSynchronizationJob",
+        "dts:DeleteSynchronizationJob"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

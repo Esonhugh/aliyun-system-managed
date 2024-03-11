@@ -1,0 +1,18 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ehpc:Describe*",
+        "ehpc:List*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:GetRole",
+      "Resource": "acs:ram:*:*:role/AliyunECSInstanceForEHPCRole"
+    }
+  ]
+}

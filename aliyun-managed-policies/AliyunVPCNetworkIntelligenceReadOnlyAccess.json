@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:ListBlockStorageLatencyInfo",
+        "vpc:ListLatencyInfo*",
+        "vpc:ListPackageLossInfo*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

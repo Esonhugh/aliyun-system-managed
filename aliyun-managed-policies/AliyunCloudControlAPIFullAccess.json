@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "cloudcontrol:*",
+      "Resource": "acs:cloudcontrol:*:*:*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,63 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dls:createNamespace",
+        "dls:listNamespaces",
+        "dls:getNamespaceInfo",
+        "dls:getNamespaceAccessInfo",
+        "dls:dlsDirectoryListing",
+        "dls:getNamespaceConfigs",
+        "dls:updateNamespaceConfig",
+        "dls:getNamespaceVpcConfig",
+        "dls:updateNamespaceVpcConfig",
+        "dls:anyDlsServiceAvailable",
+        "dls:checkAssumeRole",
+        "dls:PostDataLakeStorageFileOperation",
+        "dls:PostDataLakeStorageAdminOperation",
+        "dls:PostDataLakeStorageSecurityOperation"
+
+      ],
+        "Resource": "acs:dls:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:ListObjects",
+        "oss:ListObjectVersions"
+      ],
+      "Resource": "acs:oss:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:ListObjects",
+        "oss:ListObjectVersions",
+        "oss:ListMultipartUploads",
+        "oss:PutObject",
+        "oss:AbortMultipartUpload",
+        "oss:GetObject",
+        "oss:DeleteObject",
+        "oss:ListParts",
+        "oss:GetObjectVersion",
+        "oss:DeleteObjectVersion"
+      ],
+      "Resource": [
+        "acs:oss:*:*:*/.dlsdata",
+        "acs:oss:*:*:*/.dlsdata*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:GetBucketInfo",
+        "oss:PostDataLakeStorageFileOperation",
+        "oss:PostDataLakeStorageAdminOperation",
+        "oss:PostDataLakeStorageSecurityOperation"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

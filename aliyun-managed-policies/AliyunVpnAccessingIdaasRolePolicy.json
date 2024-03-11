@@ -1,0 +1,14 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "yundun-idaas:DescribeInstances",
+        "yundun-idaas:CreateOauthClient",
+        "yundun-idaas:DescribeOauthClientDetail"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

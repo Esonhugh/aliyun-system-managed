@@ -1,0 +1,40 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "eas:Describe*",
+        "eas:List*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bssapi:DescribePricingModule",
+        "bss:DescribeProduct"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bssapi:GetPayAsYouGoPrice",
+        "bss:DescribePrice"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "bssapi:ProductCode": [
+            "learn"
+          ],
+          "bssapi:ProductType": [
+            "learn_EasPayAsYouGo_public_intl",
+            "learn_EasPayAsYouGo_public_cn"
+          ]
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

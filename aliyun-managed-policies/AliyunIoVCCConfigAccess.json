@@ -1,0 +1,27 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "iovcc:Add*", 
+                "iovcc:Connect*", 
+                "iovcc:Count*", 
+                "iovcc:Create*", 
+                "iovcc:Delete*", 
+                "iovcc:Describe*", 
+                "iovcc:Diagnosis*", 
+                "iovcc:Down*", 
+                "iovcc:Find*", 
+                "iovcc:Generate*", 
+                "iovcc:Get*", 
+                "iovcc:List*", 
+                "iovcc:Push*", 
+                "iovcc:Query*", 
+                "iovcc:Submit*", 
+                "iovcc:Update*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

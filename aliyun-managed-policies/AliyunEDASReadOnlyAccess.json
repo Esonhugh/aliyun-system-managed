@@ -1,0 +1,24 @@
+{
+    "Version":"1",
+    "Statement":[
+        {
+            "Effect":"Allow",
+            "Action":[
+                "edas:ReadNamespace",
+                "edas:ReadCluster",
+                "edas:ReadApplication",
+                "edas:ReadService",
+                "edas:ReadOperationLog",
+                "arms:Describe*",
+                "arms:List*",
+                "arms:Get*",
+                "arms:Search*",
+                "arms:Query*",
+                "acms:R"
+            ],
+            "Resource":[
+                "*"
+            ]
+        }
+    ]
+}

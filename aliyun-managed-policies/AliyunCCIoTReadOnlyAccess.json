@@ -1,0 +1,13 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "iotcc:Get*",
+        "iotcc:List*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

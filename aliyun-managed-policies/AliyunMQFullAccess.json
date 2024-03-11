@@ -1,0 +1,26 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "mq:*",
+        "rocketmq:*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "ons.aliyuncs.com",
+            "migration.rmq.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "iot:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "iotid:QueryId2OrderAbstract"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "isoc:GetSummary",
+        "isoc:GetDeviceRankSummary",
+        "isoc:GetDeviceRiskSummary",
+        "isoc:GetAlertTaskSummary"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "linkwan:GetInstancePacketStat",
+        "linkwan:CountGateways"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DescribeDBInstances",
+        "rds:DescribeDatabases",
+        "rds:DescribeAccounts",
+        "rds:DescribeDBInstanceNetInfo"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListRoles",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "mns:ListTopic",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dhs:ListProject",
+        "dhs:ListTopic",
+        "dhs:GetTopic"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ots:ListInstance",
+        "ots:ListTable",
+        "ots:DescribeTable"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "log:Get*",
+        "log:List*"
+      ],
+      "Resource": "acs:log:*:*:project/iot-log-*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "iot.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "device-file-upload.iot.aliyuncs.com",
+            "log-export.iot.aliyuncs.com",
+            "ruleengine-lindorm.iot.aliyuncs.com",
+            "iot-instance-network.iot.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Action": [
+        "cms:QueryMetricList"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

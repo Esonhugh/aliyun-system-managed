@@ -1,0 +1,10 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": ["dcdn:Describe*","dcdn:Get*","dcdn:List*"],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "nls:*AsrVocab", 
+                "nls:*AsrLmModel", 
+                "nls:*AsrLmData", 
+                "nls:DeleteVocab"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

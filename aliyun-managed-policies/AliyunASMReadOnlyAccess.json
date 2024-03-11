@@ -1,0 +1,30 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "servicemesh:List*",
+        "servicemesh:Describe*",
+        "servicemesh:Get*",
+        "servicemesh:InvokeApiServer"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "log:ListLogStores",
+        "log:ListDashboard",
+        "log:GetDashboard",
+        "log:ListSavedSearch"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "log:GetLogStoreLogs",
+      "Resource": "acs:log:*:*:project/*/logstore/audit-*"
+    }
+  ],
+  "Version": "1"
+}

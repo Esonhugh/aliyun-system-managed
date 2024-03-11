@@ -1,0 +1,17 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "milvus:Query*",
+        "milvus:Describe*",
+        "milvus:CheckInventory",
+        "milvus:List*",
+        "milvus:Get*",
+        "milvus:HasRole"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

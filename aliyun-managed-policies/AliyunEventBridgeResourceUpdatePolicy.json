@@ -1,0 +1,33 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "eventbridge:UpdateRule",
+        "eventbridge:EnableRule",
+        "eventbridge:DisableRule",
+        "eventbridge:CreateTargets",
+        "eventbridge:UpdateTargets",
+        "eventbridge:DeleteTargets"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "sendevent-fc.eventbridge.aliyuncs.com",
+            "sendevent-mns.eventbridge.aliyuncs.com",
+            "sendevent-sms.eventbridge.aliyuncs.com",
+            "sendevent-directmail.eventbridge.aliyuncs.com",
+            "source-rocketmq.eventbridge.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,85 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ros:GetStack",
+        "ros:CreateStack",
+        "ros:ContinueCreateStack",
+        "ros:UpdateStack"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:ImportKeyPair",
+        "ecs:DescribeKeyPairs",
+        "ecs:ListTagResources",
+        "vpc:CreateVpc",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitchAttributes",
+        "vpc:CreateVSwitch",
+        "vpc:CreateNatGateway",
+        "vpc:DescribeNatGateways",
+        "vpc:AllocateEipAddress",
+        "vpc:AssociateEipAddress",
+        "vpc:DescribeEipAddresses",
+        "vpc:CreateSnatEntry",
+        "vpc:ListTagResources",
+        "vpc:DescribeSnatTableEntries",
+        "vpc:DescribeRouteTableList",
+        "cs:CreateCluster",
+        "cs:DescribeClusterResources",
+        "cs:DescribeClusterDetail",
+        "cs:DescribeClusterNodePools",
+        "cs:DescribeClusterNodePoolDetail",
+        "cs:DescribeClusterCerts",
+        "cs:DescribeClusterUserKubeconfig",
+        "cs:CreateClusterNodePool",
+        "cs:AttachInstances",
+        "cs:DescribeClusterNodePoolDetail",
+        "cs:DescribeClusterNodes",
+        "cs:DescribeUserPermission",
+        "cs:GrantPermissions",
+        "cs:GetClusters"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "nat.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:ListRoles"
+      ],
+      "Resource": "acs:ram:*:*:role/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:GetRole",
+      "Resource": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "blueprint-cloud-native.governance.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

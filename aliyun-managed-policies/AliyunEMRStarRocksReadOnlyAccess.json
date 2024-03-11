@@ -1,0 +1,25 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sr:Query*",
+        "sr:Describe*",
+        "sr:CheckInventory",
+        "sr:List*",
+        "sr:Get*",
+        "sr:HasRole"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ],
+  "Version": "1"
+}

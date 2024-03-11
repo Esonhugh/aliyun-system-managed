@@ -1,0 +1,66 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:DescribeZones",
+        "ecs:DescribeAvailableResource",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DescribeKeyPairs",
+        "ecs:DescribeInstanceTypes",
+        "ecs:DescribeInstances",
+        "ecs:DescribeSpotInstanceAdvice",
+        "kms:ListKeys",
+        "nas:DescribeProtocolMountTarget",
+        "ecs:DescribeDeploymentSets"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ehpc:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:GetRole",
+        "ram:CreateRole",
+        "ram:AttachPolicyToRole"
+      ],
+      "Resource": [
+        "acs:ram:*:*:policy/AliyunECSInstanceForEHPCRolePolicy",
+        "acs:ram:*:*:role/AliyunECSInstanceForEHPCRole"
+      ]
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "ehpc.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "ehpc.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

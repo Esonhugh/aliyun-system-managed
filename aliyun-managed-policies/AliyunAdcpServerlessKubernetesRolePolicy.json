@@ -1,0 +1,143 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "arms:GetManagedPrometheusStatus",
+        "arms:InstallManagedPrometheus",
+        "arms:UninstallManagedPrometheus"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcs",
+        "vpc:AssociateEipAddress",
+        "vpc:DescribeEipAddresses",
+        "vpc:AllocateEipAddress",
+        "vpc:ReleaseEipAddress",
+        "vpc:AddCommonBandwidthPackageIp",
+        "vpc:RemoveCommonBandwidthPackageIp"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeSecurityGroups",
+        "ecs:CreateNetworkInterface",
+        "ecs:CreateNetworkInterfacePermission",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:AttachNetworkInterface",
+        "ecs:DetachNetworkInterface",
+        "ecs:DeleteNetworkInterface",
+        "ecs:DeleteNetworkInterfacePermission"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "pvtz:AddZone",
+        "pvtz:DeleteZone",
+        "pvtz:DescribeZones",
+        "pvtz:DescribeZoneInfo",
+        "pvtz:BindZoneVpc",
+        "pvtz:AddZoneRecord",
+        "pvtz:DeleteZoneRecord",
+        "pvtz:DeleteZoneRecordsByRR",
+        "pvtz:DescribeZoneRecordsByRR",
+        "pvtz:DescribeZoneRecords"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cr:Get*",
+        "cr:List*",
+        "cr:PullRepository"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "eci:CreateContainerGroup",
+        "eci:DeleteContainerGroup",
+        "eci:DescribeContainerGroups",
+        "eci:DescribeContainerGroupStatus",
+        "eci:DescribeContainerGroupEvents",
+        "eci:DescribeContainerLog",
+        "eci:UpdateContainerGroup",
+        "eci:UpdateContainerGroupByTemplate",
+        "eci:CreateContainerGroupFromTemplate",
+        "eci:RestartContainerGroup",
+        "eci:ExportContainerGroupTemplate",
+        "eci:DescribeContainerGroupMetric",
+        "eci:DescribeMultiContainerGroupMetric",
+        "eci:ResizeContainerGroupVolume",
+        "eci:ExecContainerCommand",
+        "eci:CreateImageCache",
+        "eci:DescribeImageCaches",
+        "eci:DeleteImageCache"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "log:CreateProject",
+        "log:GetProject",
+        "log:DeleteProject",
+        "log:CreateLogStore",
+        "log:GetLogStore",
+        "log:UpdateLogStore",
+        "log:DeleteLogStore",
+        "log:CreateConfig",
+        "log:UpdateConfig",
+        "log:GetConfig",
+        "log:DeleteConfig",
+        "log:CreateMachineGroup",
+        "log:UpdateMachineGroup",
+        "log:GetMachineGroup",
+        "log:DeleteMachineGroup",
+        "log:ApplyConfigToGroup",
+        "log:GetAppliedMachineGroups",
+        "log:GetAppliedConfigs",
+        "log:RemoveConfigFromMachineGroup",
+        "log:CreateIndex",
+        "log:GetIndex",
+        "log:UpdateIndex",
+        "log:DeleteIndex",
+        "log:CreateSavedSearch",
+        "log:GetSavedSearch",
+        "log:UpdateSavedSearch",
+        "log:DeleteSavedSearch",
+        "log:CreateDashboard",
+        "log:GetDashboard",
+        "log:UpdateDashboard",
+        "log:DeleteDashboard",
+        "log:CreateJob",
+        "log:GetJob",
+        "log:DeleteJob",
+        "log:PostLogStoreLogs",
+        "log:UpdateJob"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "eci.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ddi:Run*",
+        "ddi:Check*",
+        "ddi:List*",
+        "ddi:Describe*",
+        "ddi:Query*",
+        "ddi:*Metastore*",
+        "ddi:*Library*",
+        "ddi:*Libraries*",
+        "ddi:*Flow*",
+        "ddi:ModifyClusterTemplate",
+        "ddi:ModifyClusterServiceConfig",
+        "ddi:ResetUserPassword"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "emr:ListClusters",
+        "ecs:DescribeInstances",
+        "vpc:DescribeVSwitches",
+        "ddi:ListDatasourceInstances",
+        "ddi:DetachAndReleaseClusterEni",
+        "ddi:CreateClusterEni"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:ListObjects",
+        "oss:ListBuckets"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "ddi.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

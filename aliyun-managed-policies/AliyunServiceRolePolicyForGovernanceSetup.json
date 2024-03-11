@@ -1,0 +1,298 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:CreateRole",
+        "ram:AttachPolicyToRole"
+      ],
+      "Resource": [
+        "acs:ram:*:*:role/aliyungovernance*",
+        "acs:ram:*:*:role/aliyunreservedgovernance*",
+        "acs:ram:*:*:role/aliyuncsmanagedlogrole",
+        "acs:ram:*:*:role/aliyuncsmanagedcmsrole",
+        "acs:ram:*:*:role/aliyuncsmanagedcsirole",
+        "acs:ram:*:*:role/aliyuncsmanagedvkrole",
+        "acs:ram:*:*:role/aliyuncsclusterrole",
+        "acs:ram:*:*:role/aliyuncsserverlesskubernetesrole",
+        "acs:ram:*:*:role/aliyuncskubernetesauditrole",
+        "acs:ram:*:*:role/aliyuncsmanagednetworkrole",
+        "acs:ram:*:*:role/aliyuncsdefaultrole",
+        "acs:ram:*:*:role/aliyuncsmanagedkubernetesrole",
+        "acs:ram:*:*:role/aliyuncsmanagedarmsrole",
+        "acs:ram:*:*:role/aliyunooslifecyclehook4csrole",
+        "acs:ram:*:*:role/aliyunfcdefaultrole",
+        "acs:ram:*:*:role/aliyundmsdefaultrole",
+        "acs:ram:*:*:role/aliyundtsdefaultrole",
+        "acs:ram:*:*:role/aliyuncsmanagednlcrole",
+        "acs:ram:*:*:role/aliyuncsmanagedautoscalerrole",
+        "acs:ram:*:*:role/aliyunslbhealthdiagnoserole",
+        "acs:ram:*:*:role/slblogdefaultrole",
+        "acs:ram:*:*:role/aliyunlogarchiverole"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:CreateRole",
+        "ram:AttachPolicyToRole",
+        "ram:ListPoliciesForRole"
+      ],
+      "Resource": "acs:ram:*:*:role/*",
+      "Condition": {
+        "ForAllValues:StringEquals": {
+          "ram:TrustedPrincipalTypes": "RAM"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:AttachPolicyToRole",
+        "ram:ListPoliciesForRole"
+      ],
+      "Resource": [
+        "acs:ram:*:system:policy/*",
+        "acs:ram:*:*:policy/AliyunReservedGovernance*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "resourcemanager:GetResourceDirectory",
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "setup.governance.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": [
+        "config:GetDiscoveredResourceCountsGroupByRegion",
+        "config:GetDiscoveredResourceCountsGroupByResourceType"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:GetSAMLProvider",
+        "ram:CreateSAMLProvider",
+        "ram:CreatePolicy",
+        "ram:ListRoles",
+        "ram:GetRole",
+        "ram:ListPolicies",
+        "ram:ListSAMLProviders"
+      ],
+      "Resource": [
+        "acs:ram:*:*:policy/*",
+        "acs:ram:*:*:saml-provider/*",
+        "acs:ram:*:*:role/*"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:ListEntitiesForPolicy",
+        "ram:ListPolicyVersions",
+        "ram:DeletePolicyVersion",
+        "ram:CreatePolicyVersion",
+        "ram:DeletePolicy"
+      ],
+      "Resource": "acs:ram:*:*:policy/AliyunReservedGovernance*",
+      "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:UpdateSAMLProvider",
+        "ram:DeleteSAMLProvider",
+        "ram:DetachPolicyFromRole",
+        "ram:ListPoliciesForRole",
+        "ram:UpdateRole",
+        "ram:GetPolicy",
+        "ram:DeleteRole"
+      ],
+      "Resource": [
+        "acs:ram:*:*:saml-provider/AliyunReservedGovernance*",
+        "acs:ram:*:*:role/aliyunreservedgovernance*",
+        "acs:ram:*:system:policy/*",
+        "acs:ram:*:*:policy/AliyunReservedGovernance*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "actiontrail:LookupEvents",
+        "actiontrail:CreateServiceTrail"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "tag:ListTagResources",
+        "tag:DescribeRegions",
+        "tag:OpenCreatedBy",
+        "tag:CreateTags"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "mscsub:CreateContact",
+        "mscsub:GetContact",
+        "mscsub:CreateSubscriptionItem",
+        "mscsub:GetSubscriptionItem",
+        "mscsub:ListSubscriptionItems",
+        "mscsub:UpdateSubscriptionItem"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:SetPasswordPolicy",
+        "ram:GetPasswordPolicy",
+        "ram:GetSecurityPreference",
+        "ram:SetSecurityPreference",
+        "ims:SetPasswordPolicy",
+        "ims:GetPasswordPolicy",
+        "ims:SetDefaultDomain",
+        "ims:GetDefaultDomain"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:CreateSecurityGroup",
+        "ecs:ModifySecurityGroupRule",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:AuthorizeSecurityGroupEgress",
+        "ecs:ModifySecurityGroupPolicy",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:ListTagResources",
+        "ecs:DescribeKeyPairs",
+        "ecs:ImportKeyPair"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vpc:CreateVpc",
+        "vpc:DescribeVpcs",
+        "vpc:CreateVSwitch",
+        "vpc:CreateNetworkAcl",
+        "vpc:DescribeVSwitchAttributes",
+        "vpc:DescribeRouteTableList",
+        "vpc:ListTagResources",
+        "vpc:DescribeNetworkAclAttributes",
+        "vpc:UpdateNetworkAclEntries",
+        "vpc:AssociateNetworkAcl",
+        "vpc:DeleteNetworkAcl",
+        "vpc:DescribeNetworkAcls",
+        "vpc:GrantInstanceToCen",
+        "vpc:CreateRouteEntry",
+        "vpc:DescribeRouteTables"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cen:CheckTransitRouterService",
+        "cen:OpenTransitRouterService",
+        "cdt:OpenCdtService",
+        "cdt:GetCdtServiceStatus",
+        "cdt:GetCdtInternetServiceStatus",
+        "cdt:OpenCdtInternetService",
+        "cms:OpenCmsService",
+        "kms:OpenKmsService",
+        "oss:OpenOssService",
+        "bssapi:CreateInstance",
+        "bssapi:QueryAvailableInstances",
+        "log:DescribeService",
+        "log:EnableService",
+        "ots:OpenOtsService",
+        "nas:OpenNASService",
+        "fc:OpenFcService",
+        "ons:OpenOnsService",
+        "mns:OpenService",
+        "kms:DescribeAccountKmsStatus",
+        "yundun-sas:DescribeServiceLinkedRoleStatus",
+        "yundun-sas:CreateServiceLinkedRole",
+        "cdn:OpenCdnService",
+        "cdn:DescribeCdnService",
+        "dcdn:DescribeDcdnService",
+        "dcdn:OpenDcdnService",
+        "privatelink:CheckProductOpen",
+        "arms:OpenArmsService",
+        "arms:OpenArmsDefaultSLR",
+        "config:DescribeConfigurationRecorder",
+        "config:StartConfigurationRecorder",
+        "dbs:InitializeDbsServiceLinkedRole",
+        "apigateway:OpenApiGatewayService",
+        "cs:OpenAckService",
+        "dataworks:OpenDataWorksStandardService",
+        "servicecatalog:InitializeServiceCatalog",
+        "eventbridge:CreateServiceLinkedRoleForProduct",
+        "eventbridge:ListEventBuses",
+        "eventbridge:CreateDefaultEventBus",
+        "hbr:OpenHbrService"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "cen.aliyuncs.com",
+            "sas.aliyuncs.com",
+            "privatelink.aliyuncs.com",
+            "dbs.aliyuncs.com",
+            "config.aliyuncs.com",
+            "nat.aliyuncs.com",
+            "logdelivery.slb.aliyuncs.com",
+            "arms.aliyuncs.com",
+            "cspm.sas.aliyuncs.com",
+            "dms.aliyuncs.com",
+            "servicecatalog.aliyuncs.com",
+            "source-actiontrail.eventbridge.aliyuncs.com",
+            "source-cms.eventbridge.aliyuncs.com",
+            "connect-vpc.eventbridge.aliyuncs.com",
+            "tag.aliyuncs.com",
+            "nis.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cen:DescribeCens",
+        "cen:ListTransitRouters",
+        "cen:ListTransitRouterRouteTables",
+        "cen:ListTransitRouterVpcAttachments"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "nis:ConfigNetworkObservability",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

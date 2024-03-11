@@ -1,0 +1,174 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Resource": "*",
+      "Action": "cms:*"
+    },
+    {
+      "Effect": "Allow",
+      "Resource": "*",
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Resource": "*",
+      "Action": [
+        "ecs:DescribeSecurityGroups"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Resource": "*",
+      "Action": "Linkcard:GetUserBaseInfo"
+    },
+    {
+      "Action": [
+        "iotid:QueryId2OrderAbstract"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "isoc:GetSummary",
+        "isoc:GetDeviceRankSummary",
+        "isoc:GetDeviceRiskSummary",
+        "isoc:GetAlertTaskSummary",
+        "isoc:GetNotificationSetting",
+        "isoc:UpdateNotificationSetting"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "linkwan:GetInstancePacketStat",
+        "linkwan:CountGateways"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DescribeDBInstances",
+        "rds:DescribeDatabases",
+        "rds:DescribeAccounts",
+        "rds:DescribeDBInstanceNetInfo"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListRoles",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "mns:ListTopic",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dhs:ListProject",
+        "dhs:ListTopic",
+        "dhs:GetTopic"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ots:ListInstance",
+        "ots:ListTable",
+        "ots:DescribeTable"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "log:Get*",
+        "log:List*"
+      ],
+      "Resource": "acs:log:*:*:project/iot-log-*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "iot.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "device-file-upload.iot.aliyuncs.com",
+            "log-export.iot.aliyuncs.com",
+            "ruleengine-lindorm.iot.aliyuncs.com",
+            "iot-instance-network.iot.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Resource": "*",
+      "Action": [
+        "iot:QueryAutomationRule",
+        "iot:QueryOpenedAddedServiceList",
+        "iot:SetDeviceGroupTags",
+        "iot:QueryPageByApplyId",
+        "iot:QueryServicesInfo",
+        "iot:BatchGetDeviceState",
+        "iot:DeleteProductTopic",
+        "iot:UpdateProductTopic",
+        "iot:InitializeAccountInfomation",
+        "iot:QueryProductWithScript",
+        "iot:listDTInstances",
+        "iot:ListDeviceDistributeJob",
+        "iot:QueryMqInstancesForRule",
+        "iot:CreateRule",
+        "iot:ListRule",
+        "iot:GetRule",
+        "iot:UpdateRule",
+        "iot:DeleteRule",
+        "iot:StartRule",
+        "iot:StopRule",
+        "iot:DebugRuleSql",
+        "iot:ListRuleActions",
+        "iot:CreateRuleAction",
+        "iot:GetRuleAction",
+        "iot:UpdateRuleAction",
+        "iot:DeleteRuleAction",
+        "iot:QueryTableStorePrimaryKeysForRule",
+        "iot:QueryDataHubSchemasForRule",
+        "iot:QueryDeviceProvisioning",
+        "iot:ListDistributedProduct",
+        "iot:ListDistributedDevice",
+        "iot:QueryDeviceDistributeJob",
+        "iot:CreateProductDistributeJob",
+        "iot:ListDistributedDistinctProduct",
+        "iot:QueryDeviceDistributeDetail",
+        "iot:DeleteDeviceDistributeJob",
+        "iot:CreateDeviceDistributeJob",
+        "iot:QueryServicesInfo",
+        "iot:ListOTAModuleByPage",
+        "iot:ListConfigForDeviceFileUpload"
+      ]
+    }
+  ]
+}

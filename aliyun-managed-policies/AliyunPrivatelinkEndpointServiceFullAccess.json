@@ -1,0 +1,27 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "privatelink:CreateVpcEndpointService",
+        "privatelink:ListVpcEndpointServices",
+        "privatelink:UpdateVpcEndpointServiceAttribute",
+        "privatelink:GetVpcEndpointServiceAttribute",
+        "privatelink:AttachResourceToVpcEndpointService",
+        "privatelink:ListVpcEndpointServiceResources",
+        "privatelink:DetachResourceFromVpcEndpointService",
+        "privatelink:DeleteVpcEndpointService",
+        "privatelink:ListVpcEndpointConnections",
+        "privatelink:UpdateVpcEndpointConnectionAttribute",
+        "privatelink:EnableVpcEndpointConnection",
+        "privatelink:DisableVpcEndpointConnection",
+        "privatelink:AddUserToVpcEndpointService",
+        "privatelink:RemoveUserFromVpcEndpointService",
+        "privatelink:ListVpcEndpointServiceUsers",
+        "slb:DescribeLoadBalancers"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

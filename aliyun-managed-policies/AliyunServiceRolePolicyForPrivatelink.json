@@ -1,0 +1,74 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:DescribeVSwitchAttributes"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "nlb:GetLoadBalancerAttribute",
+        "nlb:UpdateLoadBalancerProtection",
+        "nlb:DescribeZones"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "ecs:CreateNetworkInterface",
+        "ecs:DeleteNetworkInterface",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:AttachNetworkInterface",
+        "ecs:DetachNetworkInterface",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:ModifyNetworkInterfaceAttribute",
+        "ecs:CreateNetworkInterfacePermission",
+        "ecs:DescribeNetworkInterfacePermissions",
+        "ecs:DeleteNetworkInterfacePermission",
+        "ecs:DescribeSecurityGroups",
+        "ecs:AttachNetworkInterfacePermissions",
+        "ecs:DetachNetworkInterfacePermissions",
+        "ecs:AssignPrivateIpAddresses",
+        "ecs:UnassignPrivateIpAddresses",
+        "ecs:DescribeNetworkInterfaceAttribute",
+        "ecs:CreateSecurityGroup",
+        "ecs:DeleteSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:AuthorizeSecurityGroupEgress",
+        "ecs:RevokeSecurityGroup",
+        "ecs:RevokeSecurityGroupEgress",
+        "ecs:AuthorizeSecurityGroupPermission",
+        "ecs:RevokeSecurityGroupPermission",
+        "ecs:DeleteSecurityGroupPermission",
+        "ecs:JoinSecurityGroupPermission",
+        "ecs:DeleteSecurityGroupPermission",
+        "ecs:LeaveSecurityGroupPermission",
+        "ecs:DescribeSecurityGroupPermissions"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "privatelink.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": [
+        "quotas:GetProductQuota"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "itaas-cd:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

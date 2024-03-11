@@ -1,0 +1,57 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:DescribeVSwitchAttributes"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:CreateNetworkInterface",
+        "ecs:CreateSecurityGroup",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:RevokeSecurityGroup",
+        "ecs:DeleteSecurityGroup",
+        "ecs:JoinSecurityGroup",
+        "ecs:DeleteSecurityGroup",
+        "ecs:LeaveSecurityGroup",
+        "ecs:DescribeSecurityGroups",
+        "ecs:AttachNetworkInterface",
+        "ecs:DetachNetworkInterface",
+        "ecs:DeleteNetworkInterface",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:CreateNetworkInterfacePermission",
+        "ecs:DescribeNetworkInterfacePermissions",
+        "ecs:DeleteNetworkInterfacePermission",
+        "ecs:CreateSecurityGroupPermission",
+        "ecs:AuthorizeSecurityGroupPermission",
+        "ecs:RevokeSecurityGroupPermission",
+        "ecs:DeleteSecurityGroupPermission",
+        "ecs:JoinSecurityGroupPermission",
+        "ecs:DeleteSecurityGroupPermission",
+        "ecs:LeaveSecurityGroupPermission",
+        "ecs:DescribeSecurityGroupPermissions",
+        "ecs:AttachNetworkInterfacePermissions",
+        "ecs:DetachNetworkInterfacePermissions",
+        "ecs:AssignPrivateIpAddresses",
+        "ecs:UnassignPrivateIpAddresses",
+        "ecs:DescribeNetworkInterfaceAttribute"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "nat.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

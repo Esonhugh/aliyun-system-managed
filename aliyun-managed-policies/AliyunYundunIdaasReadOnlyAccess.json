@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-idaas:Get*", 
+                "yundun-idaas:Describe*", 
+                "yundun-idaas:Query*", 
+                "yundun-idaas:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

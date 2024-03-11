@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:DescribeEip*",
+        "vpc:ListPublicIpAddressPool*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:CreateInstance",
+        "ecs:CreateOrder",
+        "ecs:RunInstances",
+        "ecs:RenewInstance",
+        "ecs:DescribeRegions",
+        "ecs:DescribeZones",
+        "ecs:DescribeImages",
+        "ecs:StartInstance",
+        "ecs:DescribeInstances",
+        "ecs:DescribeDisks",
+        "ecs:DescribeInstanceHistoryEvents",
+        "ecs:DescribeInstancesFullStatus",
+        "ecs:DescribeDisksFullStatus",
+        "ecs:ModifyInstanceChargeType",
+        "ecs:ModifyPrepayInstanceSpec",
+        "ecs:DescribeResourcesModification",
+        "ecs:DescribeAvailableResource",
+        "ecs:DescribeBandwidthLimitation",
+        "ecs:DescribeKeyPairs",
+        "ecs:DescribePrice",
+        "ecs:DescribeInstanceHistoryEvents",
+        "ecs:AcceptInquiredSystemEvent",
+        "ecs:DescribeTasks",
+        "ecs:JoinResourceGroup",
+        "ecs:ReportInstancesStatus",
+        "ecs:ModifyInstanceAttribute",
+        "ecs:StartInstances",
+        "ecs:DescribeLocalDiskRepairActivities"
+      ],
+      "Resource": "*"
+    },
+    {
+        "Effect":"Allow",
+        "Action":[
+            "ecs:DeleteInstances",
+            "ecs:RebootInstances",
+            "ecs:StopInstances",
+            "ecs:RedeployInstance",
+            "ecs:RebootInstance",
+            "ecs:DeleteInstance",
+            "ecs:StopInstance",
+            "ecs:InstallCloudAssistant",
+            "ecs:DescribeCloudAssistantStatus",
+            "ecs:RunCommand",
+            "ecs:DescribeInvocationResults"
+        ],
+        "Resource": [
+            "acs:ecs:*:*:*"
+        ],
+        "Condition": {
+            "StringLike": {
+                "ecs:tag/acs:rds:mybaseHost": "mybase-*"
+            }
+        }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcs"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "mybase-proprietary.rds.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

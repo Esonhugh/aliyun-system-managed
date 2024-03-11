@@ -1,0 +1,35 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "rds:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "dbs:*",
+      "Resource": "acs:rds:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "hdm:*",
+      "Resource": "acs:rds:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "dms:LoginDatabase",
+      "Resource": "acs:rds:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "backupencryption.rds.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

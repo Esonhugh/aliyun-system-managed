@@ -1,0 +1,40 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:*NatGateway*",
+        "vpc:*Forward*",
+        "vpc:*Snat*",
+        "vpc:*FullNat*",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "vpc:CreateBandwidthPackage",
+        "vpc:DescribeBandwidthPackages",
+        "vpc:ModifyBandwidthPackageSpec",
+        "vpc:AddBandwidthPackageIps",
+        "vpc:RemoveBandwidthPackageIps",
+        "vpc:DeleteBandwidthPackage",
+        "vpc:ConvertBandwidthPackage",
+        "vpc:*NatIp*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "vpc:DeletionProtection",
+      "Resource": "acs:vpc:*:*:natgateway/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "nat.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

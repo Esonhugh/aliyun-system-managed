@@ -1,0 +1,12 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "eventbridge:PutEvents"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

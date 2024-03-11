@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "graphcompute:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+        "Effect": "Allow",
+        "Action": "elasticsearch:*Emon*",
+        "Resource": "*"
+    }
+  ]
+}

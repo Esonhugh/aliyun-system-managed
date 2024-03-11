@@ -1,0 +1,14 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "acvs:Describe*",
+                "acvs:Get*",
+                "acvs:List*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

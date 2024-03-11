@@ -1,0 +1,60 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "computenest:*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oos:GetParametersByPath",
+        "oos:GetParameter",
+        "oos:UpdateParameter"
+      ],
+      "Resource": "acs:oos:*:*:parameter/computenest/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oos:GetSecretParametersByPath",
+        "oos:GetSecretParameter",
+        "oos:UpdateSecretParameter"
+      ],
+      "Resource": "acs:oos:*:*:secretparameter/computenest/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kms:GetSecretValue",
+        "kms:PutSecretValue"
+      ],
+      "Resource": "acs:kms:*:*:secret/oos/computenest/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateServiceLinkedRole"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "user.computenest.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Action": [
+        "ram:CreateRole",
+        "ram:GetRole"
+      ],
+      "Resource": "acs:ram:*:*:role/AliyunCloudMonitorSendOperationMessageToComputeNestRole",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "oss:PutObject", 
+                "oss:GetObject", 
+                "oss:ListObjects", 
+                "oss:ListBuckets"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

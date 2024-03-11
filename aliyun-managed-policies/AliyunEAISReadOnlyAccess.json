@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "eais:Describe*",
+        "eais:Get*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

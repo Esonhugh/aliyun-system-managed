@@ -1,0 +1,28 @@
+{
+  "Statement": [
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "gws.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": [
+        "gws:*",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeNatGateways",
+        "ecs:DescribePrice",
+        "acm:DescribePrice",
+        "ram:ListUserBasicInfos"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ],
+  "Version": "1"
+}

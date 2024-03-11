@@ -1,0 +1,21 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "yundun-bastionhost:GetInstance*",
+                "yundun-bastionhost:DescribeInstance*",
+                "yundun-bastionhost:QueryInstance*",
+                "yundun-bastionhost:ListInstance*",
+                "yundun-bastionhost:*Audit*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": "pam:GetInstanceDetail",
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

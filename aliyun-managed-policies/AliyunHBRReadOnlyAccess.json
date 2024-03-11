@@ -1,0 +1,20 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "hbr:Describe*",
+        "hbr:Get*",
+        "hbr:Search*",
+        "hbr:BrowseFiles",
+        "hbr:List*",
+        "hbr:BatchCountTables",
+        "hbr:QueryAvailableInstances",
+        "hbr:CheckRole",
+        "hbr:PreCheckSourceGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

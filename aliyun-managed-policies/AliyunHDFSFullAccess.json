@@ -1,0 +1,18 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "dfs:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": [
+                "vpc:DescribeVpcs", 
+                "vpc:DescribeVSwitches"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "vod:CreateUploadVideo", 
+                "vod:RefreshUploadVideo", 
+                "vod:CreateUploadImage"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

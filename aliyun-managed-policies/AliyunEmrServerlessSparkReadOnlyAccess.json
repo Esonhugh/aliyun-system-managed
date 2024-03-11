@@ -1,0 +1,16 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "emr-serverless-spark:Get*",
+                "emr-serverless-spark:List*",
+                "emr-serverless-spark:Query*",
+                "emr-serverless-spark:Is*",
+                "emr-serverless-spark:Check*"
+                ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

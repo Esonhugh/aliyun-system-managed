@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Action": "appstreaming:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

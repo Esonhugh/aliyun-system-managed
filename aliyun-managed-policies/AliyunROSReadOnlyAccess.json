@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ros:Describe*",
+        "ros:Get*",
+        "ros:List*",
+        "ros:InquiryStack",
+        "ros:PreviewStack",
+        "ros:ValidateTemplate"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

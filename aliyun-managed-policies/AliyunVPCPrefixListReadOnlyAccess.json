@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action":  [
+                "vpc:ListPrefixLists",
+                "vpc:GetVpcPrefixListAssociations",
+                "vpc:GetVpcPrefixListEntries"
+            ],
+      "Resource": "*"
+    }
+  ]
+}

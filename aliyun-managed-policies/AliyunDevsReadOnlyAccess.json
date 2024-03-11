@@ -1,0 +1,13 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "devs:Get*",
+                "devs:List*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

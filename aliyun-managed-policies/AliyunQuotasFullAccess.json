@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "quotas:*",
+      "Resource": "acs:quotas:*:*:*"
+    }
+  ],
+  "Version": "1"
+}

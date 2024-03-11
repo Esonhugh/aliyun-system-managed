@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Action": "iotcc:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

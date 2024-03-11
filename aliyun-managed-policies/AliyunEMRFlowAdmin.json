@@ -1,0 +1,24 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "emr:SubmitFlow*", 
+                "emr:ModifyFlow*", 
+                "emr:ListFlow*", 
+                "emr:DescribeFlow*", 
+                "emr:KillFlow*", 
+                "emr:RerunFlow*", 
+                "emr:ResumeFlow*", 
+                "emr:DeleteFlow*", 
+                "emr:CreateFlow*", 
+                "emr:CloneFlow*", 
+                "emr:SuspendFlow*", 
+                "emr:StartFlow*", 
+                "emr:ManageDataPlatform*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

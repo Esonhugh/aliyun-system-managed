@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "acmp:Get*",
+        "acmp:List*",
+        "acmp:Describe*",
+        "acmp:Check*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

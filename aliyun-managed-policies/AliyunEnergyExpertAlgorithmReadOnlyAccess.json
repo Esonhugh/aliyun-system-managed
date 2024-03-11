@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "energyexpertalgorithm:Query*",
+        "energyexpertalgorithm:List*",
+        "energyexpertalgorithm:Get*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}

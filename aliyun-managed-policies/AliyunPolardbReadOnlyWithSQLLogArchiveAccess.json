@@ -1,0 +1,26 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "polardb:Describe*",
+        "polardb:StartSqlLogDetailArchive"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "hdm:Get*",
+        "hdm:Describe*",
+        "hdm:Query*",
+        "hdm:Support*",
+        "hdm:StartLakeQuery",
+        "hdm:StartLakeQueryArchive",
+        "hdm:CreateSqlLogTask"
+      ],
+      "Resource": "acs:polardb:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

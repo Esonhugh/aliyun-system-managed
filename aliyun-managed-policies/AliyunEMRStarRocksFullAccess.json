@@ -1,0 +1,44 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sr:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVSwitchAttributes",
+        "vpc:DescribeVpcAttribute"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "starrocks.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:CreateRole",
+        "ram:AttachPolicyToRole",
+        "ram:GetRole"
+      ],
+      "Resource": [
+        "acs:ram:*:*:role/AliyunEMRStarRocksAccessingOSSRole",
+        "acs:ram:*:system:policy/AliyunEMRStarRocksAccessingOSSRolePolicy"
+      ]
+    }
+  ],
+  "Version": "1"
+}

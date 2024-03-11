@@ -1,0 +1,15 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "clickhouse:Describe*",
+                "clickhouse:Get*",
+                "clickhouse:List*",
+                "clickhouse:Check*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "rds:DescribeAccounts",
+        "rds:DescribeAvailableClasses",
+        "rds:DescribeAvailableResource",
+        "rds:DescribeAvailableZones",
+        "rds:DescribeDatabases",
+        "rds:DescribeDBInstanceAttribute",
+        "rds:DescribeDBInstanceDetail",
+        "rds:DescribeRegions"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "rds:ResourceTag/gadinstance": "yes"
+        }
+      }
+    },
+    {
+      "Action": [
+        "rds:CreateDBInstance"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dts:ConfigureDtsJob",
+        "dts:StopDtsJob",
+        "dts:StartDtsJob",
+        "dts:ModifyDtsJob",
+        "dts:DeleteDtsJob",
+        "dts:DescribeDtsJobDetail",
+        "dts:DescribeDtsJobs",
+        "dts:InitDtsRdsInstance",
+        "dts:UntagResources",
+        "dts:ListTagResources"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:ResourceTag/gadinstance": "yes"
+        }
+      }
+    },
+    {
+      "Action": [
+        "dts:CreateDtsInstance",
+        "dts:TagResources"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "gad.rds.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

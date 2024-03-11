@@ -1,0 +1,18 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "gemp:Get*",
+                "gemp:List*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "gemp:GenerateProblemPictureLink",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

@@ -1,0 +1,30 @@
+{
+  "Version": "1",
+  "Statement": [
+        {
+      "Action": "oos:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "oos.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": ["instancescheduler.oos.aliyuncs.com", "bandwidthscheduler.oos.aliyuncs.com"]
+        }
+      }
+    }
+  ]
+}

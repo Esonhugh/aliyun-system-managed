@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "vod:GetPlayInfo", 
+                "vod:GetVideoPlayAuth", 
+                "vod:GetVideoPlayInfo", 
+                "vod:GetVideoInfo"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

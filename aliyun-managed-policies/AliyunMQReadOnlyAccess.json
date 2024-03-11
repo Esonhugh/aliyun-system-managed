@@ -1,0 +1,20 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "mq:OnsInstanceBaseInfo",
+        "mq:List*",
+        "mq:Query*",
+        "mq:Get*",
+        "mq:Download*",
+        "rocketmq:List*",
+        "rocketmq:SubmitQuery*",
+        "rocketmq:Get*",
+        "rocketmq:Download*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

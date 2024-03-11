@@ -1,0 +1,15 @@
+{
+    "Statement": [
+        {
+            "Action": "gemp:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "ram:ListUserBasicInfos",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

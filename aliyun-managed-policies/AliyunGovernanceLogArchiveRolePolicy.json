@@ -1,0 +1,104 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "log:DescribeService",
+        "log:EnableService",
+        "log:CreateProject",
+        "log:GetProject",
+        "log:ListProject",
+        "log:CreateLogstore",
+        "log:GetLogstore",
+        "log:ListLogstore",
+        "log:ListLogStores",
+        "log:ListShards",
+        "log:ListTagResources",
+        "log:TagResources",
+        "log:GetProjectPolicy",
+        "oss:PutBucket",
+        "oss:GetService",
+        "oss:ListBuckets",
+        "oss:GetBucketInfo",
+        "oss:OpenOssService",
+        "oss:PutBucketAcl",
+        "oss:GetBucketCors",
+        "oss:GetBucketWebsite",
+        "oss:GetBucketLogging",
+        "oss:GetBucketReferer",
+        "oss:GetBucketLifecycle",
+        "oss:GetBucketPolicy",
+        "oss:GetBucketTags",
+        "oss:GetBucketTagging",
+        "oss:GetBucketTransferAcceleration",
+        "oss:PutBucketTagging"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "config:GetConfigRuleComplianceByPack",
+        "config:ListConfigRuleEvaluationResults",
+        "config:StartConfigurationRecorder",
+        "config:PutConfigurationRecorder",
+        "config:DescribeConfigurationRecorder",
+        "config:ListCompliancePacks",
+        "config:CreateCompliancePack",
+        "config:UpdateCompliancePack",
+        "config:GetCompliancePack",
+        "config:GetConfigRule",
+        "config:UpdateConfigRule",
+        "config:DeleteCompliancePacks",
+        "config:DetachConfigRuleToCompliancePack",
+        "config:AttachConfigRuleToCompliancePack",
+        "config:ListConfigRules",
+        "config:GetManagedRule",
+        "config:CreateConfigRule",
+        "config:DeleteConfigRules"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+          "log:CreateJob",
+          "log:UpdateJob"
+      ],
+      "Resource": "acs:log:*:*:project/slsaudit-*/job/sls-audit-*"
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "log:AnalyzeAppLog",
+            "log:GetApp",
+            "log:CreateApp"
+        ],
+        "Resource": "acs:log:*:*:app/audit"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "config.aliyuncs.com",
+            "audit.log.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+        "Effect": "Allow",
+        "Action": "ram:GetRole",
+        "Resource": "acs:ram:*:*:role/aliyunserviceroleforslsaudit"
+    },
+    {
+        "Effect": "Allow",
+        "Action": "ram:ListRoles",
+        "Resource": "acs:ram:*:*:role/*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sfm:Get*",
+        "sfm:Describe*",
+        "sfm:List*",
+        "sfm:Query*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

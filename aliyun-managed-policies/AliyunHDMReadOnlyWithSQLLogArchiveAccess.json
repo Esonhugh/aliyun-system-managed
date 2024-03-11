@@ -1,0 +1,36 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "hdm:Get*",
+        "hdm:Describe*",
+        "hdm:Query*",
+        "hdm:StartDasSqlLogDetailArchive",
+        "hdm:StartLakeQuery",
+        "hdm:StartLakeQueryArchive",
+        "hdm:CreateSqlLogTask"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DescribeSQLLogRecordsList",
+        "rds:DescribeSqlLogDetailArchiveStatus",
+        "rds:StartSqlLogDetailArchive"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "polardb:DescribeSQLLogRecords",
+        "polardb:DescribeSqlLogDetailArchiveStatus",
+        "polardb:StartSqlLogDetailArchive"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

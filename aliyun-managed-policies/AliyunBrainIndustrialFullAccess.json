@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "brain-industrial:*",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,41 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:DescribeInstances",
+        "ecs:DescribeInvocationResults",
+        "ecs:DescribeInvocations",
+        "ecs:RebootInstance",
+        "ecs:RunCommand"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oos:GetTemplate",
+        "oos:ListInstancePackageStates",
+        "oos:ListExecutions",
+        "oos:StartExecution",
+        "oos:UpdateInstancePackageState"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "bssopenapi:GetOrderDetail"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:GetObject"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

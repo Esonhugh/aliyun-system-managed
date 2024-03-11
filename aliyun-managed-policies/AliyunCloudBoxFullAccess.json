@@ -1,0 +1,40 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "cloudbox:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:DescribeMetricData",
+        "cms:DescribeMetricLast",
+        "cms:DescribeMetricMetaList",
+        "cms:DescribeMetricTop",
+        "cms:QueryMetricMeta",
+        "cms:QueryMetricTop",
+        "cms:ListMetricMeta",
+        "cms:ListMetricMetaProject",
+        "cms:QueryMetricData",
+        "cms:QueryMetricLast",
+        "cms:DescribeMetricList",
+        "cms:QueryMetricList",
+        "cms:MetricMeta",
+        "cms:GetMetricStreamMeta"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ecs:DescribeInstanceHistoryEvents",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "tag:ListTagResources",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sofa:GetOneXMethod",
+        "ledgerdb:*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

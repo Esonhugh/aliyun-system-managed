@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "tag:List*",
+        "tag:Get*",
+        "tag:Describe*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

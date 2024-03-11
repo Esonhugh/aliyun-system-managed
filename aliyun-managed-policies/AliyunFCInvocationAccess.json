@@ -1,0 +1,12 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "fc:InvokeFunction"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

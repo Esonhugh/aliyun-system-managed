@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecd:ListTagResources",
+        "ecd:TagResources",
+        "ecd:UntagResources"
+      ],
+      "Resource": [
+        "acs:ecd:*:*:ecddesktop/*",
+        "acs:ecd:*:*:officesite/*"
+      ]
+    },
+    {
+      "Action": [
+        "ecd:List*",
+        "ecd:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}

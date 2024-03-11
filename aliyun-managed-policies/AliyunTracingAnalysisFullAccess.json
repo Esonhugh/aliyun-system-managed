@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "xtrace:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "arms:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "xtrace.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

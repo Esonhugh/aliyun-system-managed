@@ -1,0 +1,20 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "kvstore:Describe*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "hdm:Get*",
+        "hdm:Describe*",
+        "hdm:Query*",
+        "hdm:Support*"
+      ],
+      "Resource": "acs:kvstore:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

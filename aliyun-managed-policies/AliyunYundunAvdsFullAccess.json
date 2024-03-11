@@ -1,0 +1,10 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "yundun-avds:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

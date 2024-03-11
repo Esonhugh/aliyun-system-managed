@@ -1,0 +1,20 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "copyright:List*",
+        "copyright:Check*",
+        "copyright:Describe*",
+        "copyright:Export*",
+        "copyright:Get*",
+        "copyright:Query*",
+        "copyright:GenerateOssPolicy",
+        "copyright:OpenPatentStatistics",
+        "copyright:VerifyOwnerInfo"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

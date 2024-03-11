@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "alikafka:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "connector.alikafka.aliyuncs.com",
+            "instanceencryption.alikafka.aliyuncs.com",
+            "alikafka.aliyuncs.com",
+            "etl.alikafka.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

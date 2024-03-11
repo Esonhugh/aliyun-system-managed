@@ -1,0 +1,13 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "dts:Describe*",
+                "dts:List*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

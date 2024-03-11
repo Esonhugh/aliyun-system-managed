@@ -1,0 +1,20 @@
+{
+  "Statement": [
+    {
+      "Action": "ecd:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "gws.aliyuncs.com"
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

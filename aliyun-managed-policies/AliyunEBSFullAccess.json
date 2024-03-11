@@ -1,0 +1,47 @@
+{
+  "Statement": [
+    {
+      "Action": "ebs:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "ecs:DescribeDisks",
+        "ecs:DescribeSnapshotsUsage",
+        "ecs:CreateDisk",
+        "ecs:AttachDisk",
+        "ecs:ReInitDisk",
+        "ecs:DetachDisk",
+        "ecs:ReplaceSystemDisk",
+        "ecs:DeleteDisk",
+        "ecs:ResizeDisk",
+        "ecs:DescribeDedicatedBlockStorageClusters",
+        "ecs:DescribeDedicatedBlockStorageClusterDisks",
+        "ecs:CreateDedicatedBlockStorageCluster",
+        "ecs:TagResources",
+        "ecs:UntagResources",
+        "ecs:ListTagResources",
+        "actiontrail:CreateServiceTrail",
+        "actiontrail:DeleteServiceTrail",
+        "actiontrail:ListServiceTrail"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateServiceLinkedRole",
+        "ram:DeleteServiceLinkedRole"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "ebs.aliyuncs.com"
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

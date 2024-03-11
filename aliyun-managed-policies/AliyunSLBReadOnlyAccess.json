@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "slb:Describe*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": "cms:QueryMetric*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

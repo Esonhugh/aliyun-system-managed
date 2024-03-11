@@ -1,0 +1,30 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "imm:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": "oss:ListBuckets", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": "ram:ListRoles", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": "ram:PassRole", 
+            "Resource": "*", 
+            "Effect": "Allow", 
+            "Condition": {
+                "StringEquals": {
+                    "acs:Service": "imm.aliyuncs.com"
+                }
+            }
+        }
+    ]
+}

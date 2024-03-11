@@ -1,0 +1,70 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": "dataworks:*",
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "bpstudio:CreateApplication",
+                "bpstudio:ValidateApplication",
+                "bpstudio:GetApplication",
+                "bpstudio:ValuateApplication",
+                "bpstudio:AddApplication",
+                "bpstudio:DeployApplication",
+                "bpstudio:CreateOneClickOrder",
+                "bpstudio:DeployOneClickOrder",
+                "bpstudio:CheckOneClickOrder",
+                "bpstudio:GetApplicationDetail",
+                "bpstudio:QueryTemplateNodeInfo"
+            ],
+            "Resource": [
+                "acs:bpstudio::*:template/UWMCAV2H3WRLCP2V",
+                "acs:bpstudio::*:template/87GIGAXARUXBLBN3",
+                "acs:bpstudio::*:template/ICGPZ14WT14CDNLP",
+                "acs:bpstudio::*:template/UZY5X86J1GE0PW60",
+                "acs:bpstudio::*:template/Z2O6SR1RNDO9DFK0",
+                "acs:bpstudio::*:template/B3O8L8S0Q6G7OPCE",
+                "acs:bpstudio::*:template/C479JZ7D4M8404NX",
+                "acs:bpstudio::*:template/9Q3XG4Z5L8D8SG4E",
+                "acs:bpstudio::*:template/IPFAEJ14H8WWHJYL",
+                "acs:bpstudio::*:template/37KVVXY607PO3J99"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "bpstudio:ExecuteOperationASync",
+                "bpstudio:GetExecuteResult",
+                "bss:DescribeOrderDetail",
+                "bpstudio:ValuateResource",
+                "quotas:ListProductQuotas",
+                "bss:DescribeInstances",
+                "odps:CreateProject"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": "ram:CreateServiceLinkedRole",
+            "Resource": "*",
+            "Effect": "Allow",
+            "Condition": {
+                "StringEquals": {
+                    "ram:ServiceName": [
+                        "di.dataworks.aliyuncs.com",
+                        "datamap.dataworks.aliyuncs.com",
+                        "openplatform.dataworks.aliyuncs.com",
+                        "dataworks.aliyuncs.com",
+                        "dlf.dataworks.aliyuncs.com",
+                        "engine.dataworks.aliyuncs.com",
+                        "emr.dataworks.aliyuncs.com",
+                        "identity.odps.aliyuncs.com"
+                    ]
+                }
+            }
+        }
+    ]
+}

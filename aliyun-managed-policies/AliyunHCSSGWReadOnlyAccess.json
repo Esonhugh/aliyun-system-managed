@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "hcs-sgw:Describe*",
+        "hcs-sgw:Check*",
+        "hcs-sgw:List*",
+        "hcs-sgw:Validate*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

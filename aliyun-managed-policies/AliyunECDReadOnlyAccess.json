@@ -1,0 +1,14 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "ecd:Get*",
+                "ecd:List*",
+                "ecd:Describe*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

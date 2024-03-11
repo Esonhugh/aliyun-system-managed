@@ -1,0 +1,10 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "multisearch:*",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

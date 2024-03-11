@@ -1,0 +1,89 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ram:CreateSAMLProvider",
+        "ram:CreatePolicy",
+        "ram:ListRoles",
+        "ram:ListPolicies"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:ListPolicyVersions",
+        "ram:DeletePolicyVersion",
+        "ram:CreatePolicyVersion",
+        "ram:DeletePolicy"
+      ],
+      "Resource": "acs:ram:*:*:policy/AliyunReservedSSO*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:GetSAMLProvider",
+        "ram:DeleteSAMLProvider",
+        "ram:GetRole",
+        "ram:CreateRole",
+        "ram:DeleteRole",
+        "ram:GetPolicy",
+        "ram:AttachPolicyToRole",
+        "ram:DetachPolicyFromRole",
+        "ram:ListPoliciesForRole"
+      ],
+      "Resource": [
+        "acs:ram:*:*:saml-provider/AliyunReservedSSO*",
+        "acs:ram:*:*:role/aliyunreservedsso*",
+        "acs:ram:*:*:policy/*"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateUser",
+        "ram:DeleteUser",
+        "ram:GetUser",
+        "ram:UpdateUserProvisionType",
+        "ram:UnBindMFADevice",
+        "ram:DeleteLoginProfile",
+        "ram:UnbindUserPersonalDingTalk",
+        "ram:ListAccessKeys",
+        "ram:DeleteAccessKey",
+        "ram:ListGroupsForUser",
+        "ram:RemoveUserFromGroup",
+        "ram:ListPublicKeys",
+        "ram:DeletePublicKey"
+      ],
+      "Resource": [
+        "acs:ram:*:*:user/*",
+        "acs:ram:*:*:group/*"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:DeleteServiceLinkedRole",
+        "ram:GetServiceLinkedRoleDeletionStatus"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "cloudsso.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "cloudsso.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

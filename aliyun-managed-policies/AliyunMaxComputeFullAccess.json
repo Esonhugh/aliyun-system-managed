@@ -1,0 +1,20 @@
+{
+"Version": "1",
+"Statement": [
+{
+"Effect": "Allow",
+"Action": "odps:*",
+"Resource": "*"
+},
+{
+"Effect": "Allow",
+"Action": "ram:CreateServiceLinkedRole",
+"Resource": "*",
+"Condition": {
+"StringEquals": {
+"ram:ServiceName": "identity.odps.aliyuncs.com"
+}
+}
+}
+]
+}

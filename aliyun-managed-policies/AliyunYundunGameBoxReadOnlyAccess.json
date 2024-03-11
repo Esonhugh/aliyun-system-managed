@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "yundun-gamesecbox:Get*",
+        "yundun-gamesecbox:Describe*",
+        "yundun-gamesecbox:Query*",
+        "yundun-gamesecbox:List*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

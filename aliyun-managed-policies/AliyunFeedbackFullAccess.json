@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": "feedback:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": "mhub:*", 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

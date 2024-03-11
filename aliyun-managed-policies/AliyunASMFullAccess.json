@@ -1,0 +1,54 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "servicemesh:*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ims:ListUserBasicInfos",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "log:ListLogStores",
+        "log:ListDashboard",
+        "log:GetDashboard",
+        "log:ListSavedSearch"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "log:GetLogStoreLogs",
+      "Resource": "acs:log:*:*:project/*/logstore/audit-*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "bssapi:GetPayAsYouGoPrice",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "bssapi:ProductCode": [
+            "servicemesh",
+            "eip",
+            "slb"
+          ]
+        }
+      }
+    },
+    {
+        "Effect": "Allow",
+        "Action": "ram:CreateServiceLinkedRole",
+        "Resource": "*",
+        "Condition": {
+            "StringEquals": {
+                "ram:ServiceName": "servicemesh.aliyuncs.com"
+            }
+        }
+    }
+  ],
+  "Version": "1"
+}

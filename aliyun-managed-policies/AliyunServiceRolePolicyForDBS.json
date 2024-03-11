@@ -1,0 +1,203 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "rds:DescribeDBInstanceNetInfo",
+        "rds:DescribeDBInstanceNetInfoForChannel",
+        "rds:DescribeTasks",
+        "rds:DescribeDBInstances",
+        "rds:DescribeFilesForSQLServer",
+        "rds:DescribeImportsForSQLServer",
+        "rds:DescribeSlowLogRecords",
+        "rds:DescribeBinlogFiles",
+        "rds:DescribeSQLLogRecords",
+        "rds:DescribeParameters",
+        "rds:DescribeParameterTemplates",
+        "rds:DescribeDBInstanceAttribute",
+        "rds:DescribeDatabases",
+        "rds:DescribeAccounts",
+        "rds:DescribeSecurityIPList",
+        "rds:DescribeSecurityIps",
+        "rds:DescribeDBInstanceIPArray",
+        "rds:DescribeDBInstanceIPArrayList",
+        "rds:DescribeDBInstanceSSL",
+        "rds:DescribeDBInstanceTDE",
+        "rds:CreateDBInstance",
+        "rds:CreateAccount",
+        "rds:CreateDatabase",
+        "rds:ModifySecurityIps",
+        "rds:GrantAccountPrivilege",
+        "rds:CreateMigrateTask",
+        "rds:CreateOnlineDatabaseTask",
+        "rds:DescribeMigrateTasks",
+        "rds:DescribeOssDownloads",
+        "rds:CreateBackup",
+        "rds:DescribeBackups",
+        "rds:DescribeBackupPolicy",
+        "rds:ModifyBackupPolicy",
+        "rds:DescribeBackupTasks",
+        "rds:DescribeBinlogFiles",
+        "rds:DescribeResourceUsage",
+        "rds:DescribeAvailableZones",
+        "rds:DescribeAvailableClasses",
+        "rds:ListClasses"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeInstance",
+        "ecs:DescribeInstances",
+        "ecs:DescribeVpcs",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:JoinSecurityGroup",
+        "ecs:RevokeSecurityGroup",
+        "ecs:DescribeSnapshotLinks",
+        "ecs:DescribeSnapshots",
+        "ecs:ModifySnapshotAttribute",
+        "ecs:ResizeDisk",
+        "ecs:CreateSecurityGroup",
+        "ecs:ModifySecurityGroupPolicy"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kms:ListKeys"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:PutEventRule",
+        "cms:PutEventTargets",
+        "cms:ListEventRules",
+        "cms:ListEventTargetsByRule",
+        "cms:DeleteEventRule",
+        "cms:DeleteEventTargets"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "polardb:DescribeDBClusterAttribute",
+        "polardb:DescribeDBClusterIPArrayList",
+        "polardb:DescribeDBClusterNetInfo",
+        "polardb:DescribeDBClusters",
+        "polardb:ModifySecurityIps",
+        "polardb:DescribeDBClusterEndpoints",
+        "polardb:DescribeDBClusterAccessWhitelist",
+        "polardb:ModifyDBClusterAccessWhitelist"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dds:DescribeDBInstanceAttribute",
+        "dds:DescribeReplicaSetRole",
+        "dds:DescribeSecurityIps",
+        "dds:DescribeDBInstances",
+        "dds:ModifySecurityIps"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kvstore:DescribeSecurityIps",
+        "kvstore:DescribeInstances",
+        "kvstore:DescribeAccounts",
+        "kvstore:DescribeDBInstanceNetInfo",
+        "kvstore:CreateAccount",
+        "kvstore:ModifySecurityIps",
+        "kvstore:DescribeInstanceAttribute",
+        "kvstore:AllocateInstancePrivateConnection",
+        "kvstore:DescribeLogicInstanceTopology"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "drds:DescribeDrdsDB",
+        "drds:DescribeDrdsDBs",
+        "drds:DescribeDrdsDbInstance",
+        "drds:DescribeDrdsDbInstances",
+        "drds:DescribeDrdsDBIpWhiteList",
+        "drds:DescribeDrdsInstances",
+        "drds:ModifyDrdsIpWhiteList",
+        "drds:CreateDrdsDB",
+        "drds:DescribeTable",
+        "drds:DescribeTables",
+        "drds:ModifyRdsReadWeight",
+        "drds:ChangeAccountPassword",
+        "drds:CreateDrdsInstance",
+        "drds:CreateInstanceAccount",
+        "drds:CreateInstanceInternetAddress",
+        "drds:DescribeInstanceAccounts"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "privatelink:CreateVpcEndpoint",
+        "privatelink:ListVpcEndpoints",
+        "privatelink:AddZoneToVpcEndpoint",
+        "privatelink:ListVpcEndpointZones",
+        "privatelink:RemoveZoneFromVpcEndpoint",
+        "privatelink:GetVpcEndpointAttribute",
+        "privatelink:DeleteVpcEndpoint"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "bssapi:QueryResourcePackageInstances"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "hdm:AddHDMInstance",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "dbs.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "privatelink.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

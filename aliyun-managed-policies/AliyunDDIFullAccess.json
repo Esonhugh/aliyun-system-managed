@@ -1,0 +1,37 @@
+{
+  "Statement": [
+    {
+      "Action": "ddi:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "emr:ListClusters",
+        "ecs:DescribeInstances",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:ListBuckets",
+        "oss:ListObjects"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "ddi.aliyuncs.com"
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

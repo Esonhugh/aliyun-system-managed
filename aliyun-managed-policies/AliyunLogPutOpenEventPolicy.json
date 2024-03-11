@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "log:PutOpenEvent",
+      "Resource": "acs:log:*:*:resource/sls.alert.webhook_application/*"
+    }
+  ],
+  "Version": "1"
+}

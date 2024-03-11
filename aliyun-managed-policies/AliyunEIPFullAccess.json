@@ -1,0 +1,19 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:*Eip*",
+        "vpc:*HighDefinitionMonitor*",
+        "vpc:*PublicIpAddressPool*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ecs:DescribeInstances",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

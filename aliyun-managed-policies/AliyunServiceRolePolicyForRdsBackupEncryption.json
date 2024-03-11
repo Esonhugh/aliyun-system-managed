@@ -1,0 +1,43 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "kms:ListKeys",
+        "kms:ListAliasesByKeyId",
+        "kms:ListAliases",
+        "kms:DescribeKey"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "acs:kms:*:*:*"
+      ]
+    },
+    {
+      "Action": [
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:GenerateDataKey"
+      ],
+      "Condition": {
+        "StringEqualsIgnoreCase": {
+          "kms:tag/acs:rds:backup-encryption": "true"
+        }
+      },
+      "Effect": "Allow",
+      "Resource": [
+        "acs:kms:*:*:*"
+      ]
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "backupencryption.rds.aliyuncs.com"
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

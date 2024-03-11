@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "httpdns:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "mhub:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

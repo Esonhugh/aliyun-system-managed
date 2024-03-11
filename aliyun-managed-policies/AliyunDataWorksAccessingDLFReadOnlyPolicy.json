@@ -1,0 +1,22 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "dlf-dss:Describe*",
+                "dlf-dss:List*",
+                "dlf-dss:Get*",
+                "dlf-dss:Search",
+                "dlf-dss:SelectTable",
+                "dlf-dss:ExecuteFunction",
+                "dlf:Get*",
+                "dlf:Query*",
+                "dlf:List*",
+                "dlf:Describe*",
+                "dlf:BatchGet*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

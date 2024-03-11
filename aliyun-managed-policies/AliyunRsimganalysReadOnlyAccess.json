@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "rsimganalys:Get*",
+        "rsimganalys:List*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}

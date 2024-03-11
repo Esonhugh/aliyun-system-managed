@@ -1,0 +1,37 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:CreateNetworkInterface",
+        "ecs:DeleteNetworkInterface",
+        "ecs:AttachNetworkInterface",
+        "ecs:DetachNetworkInterface",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:CreateNetworkInterfacePermission",
+        "ecs:DescribeNetworkInterfacePermissions",
+        "ecs:CreateSecurityGroup",
+        "ecs:DeleteSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:DescribeSecurityGroups",
+        "ecs:ModifySecurityGroupAttribute",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:AuthorizeSecurityGroupEgress",
+        "ecs:RevokeSecurityGroup",
+        "ecs:RevokeSecurityGroupEgress",
+        "ecs:AssignIpv6Addresses",
+        "ecs:UnAssignIpv6Addresses",
+        "ecs:ModifyNetworkInterfaceAttribute",
+        "yundun-bastionhost:Describe*",
+        "yundun-bastionhost:AttachHostsToUser*",
+        "yundun-bastionhost:CreateHost*",
+        "yundun-bastionhost:DeleteHost*",
+        "yundun-bastionhost:ListHost*",
+        "yundun-bastionhost:ListUsers*",
+        "yundun-bastionhost:ModifyHostAccountsForUser*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

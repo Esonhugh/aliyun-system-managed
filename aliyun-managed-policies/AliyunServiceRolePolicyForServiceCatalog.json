@@ -1,0 +1,28 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ros:ValidateTemplate",
+        "ros:PreviewStack",
+        "ros:ListStackOperationRisks",
+        "ros:GetStack",
+        "ros:ListStackEvents",
+        "ros:GetStackResource",
+        "ros:ListStackResources"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "servicecatalog.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "rds:DescribeRegions",
+        "rds:DescribeDBInstances",
+        "rds:DescribeDatabases",
+        "rds:DescribeDBInstanceNetInfo",
+        "rds:DescribeDBInstanceAttribute",
+        "rds:DescribeAccounts",
+        "rds:DescribeDBInstanceIPArrayList",
+        "rds:DescribeDBInstancePerformance",
+        "rds:ModifySecurityIps",
+        "rds:CreateAccount",
+        "rds:GrantAccountPrivilege",
+        "rds:RevokeAccountPrivilege",
+        "rds:CreateDatabase",
+        "rds:ModifyDBInstanceDescription",
+        "rds:DescribeSlowLogRecords",
+        "rds:DescribeSlowLogs",
+        "rds:DescribeResourceUsage",
+        "rds:DescribeSQLCollectorPolicy",
+        "rds:ModifyDBInstanceSpec",
+        "rds:DescribeTasks",
+        "rds:DescribeTaskIdByRequestID",
+        "rds:ModifyDBNodeClass",
+        "rds:DescribeParameters",
+        "rds:ModifyParameter",
+        "rds:DescribeBackups",
+        "rds:CloneDBInstance",
+        "rds:DescribeLocalAvailableRecoveryTime",
+        "rds:DescribeSupportOnlineResizeDisk"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribePhysicalConnections",
+        "vpc:DescribeVpnGateways",
+        "vpc:DescribeRouterInterfaces",
+        "vpc:DescribeVirtualBorderRouters",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVSwitchAttributes",
+        "vpc:ModifyVSwitchAttribute"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeInstances",
+        "ecs:DescribeInstanceAttribute",
+        "ecs:DescribeInstanceStatus",
+        "ecs:DescribeInstanceMonitorData",
+        "ecs:DescribeSecurityGroups",
+        "ecs:JoinSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:RevokeSecurityGroup",
+        "ecs:DescribeDisks",
+        "ecs:RunInstances",
+        "ecs:CreateSecurityGroup",
+        "ecs:DescribeAvailableResource",
+        "ecs:DescribeImages"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kvstore:DescribeCacheAnalysisReport",
+        "kvstore:DescribeCacheAnalysisReportList",
+        "kvstore:CreateCacheAnalysisTask",
+        "kvstore:DescribeAccounts",
+        "kvstore:CreateAccount",
+        "kvstore:DescribeRegions",
+        "kvstore:DescribeInstances",
+        "kvstore:DescribeInstanceAttribute",
+        "kvstore:DescribeHistoryMonitorValues",
+        "kvstore:DescribeMonitorItems",
+        "kvstore:VerifyPassword",
+        "kvstore:DescribeSecurityIps",
+        "kvstore:ModifySecurityIps",
+        "kvstore:ModifyInstanceAttribute",
+        "kvstore:ModifyInstanceSpec",
+        "kvstore:AddShardingNode",
+        "kvstore:DeleteShardingNode",
+        "kvstore:DescribeRoleZoneInfo",
+        "kvstore:EnableAdditionalBandwidth",
+        "kvstore:RenewAdditionalBandwidth",
+        "kvstore:DescribeIntranetAttribute",
+        "kvstore:DescribeClusterMemberInfo",
+        "kvstore:DescribeAuditLogConfig",
+        "kvstore:DescribeAuditRecords",
+        "kvstore:DescribeRunningLogRecords",
+        "kvstore:DescribeSlowLogRecords"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dts:DescribeMigrationJobs",
+        "dts:DescribeMigrationJobDetail",
+        "dts:DescribeMigrationJobStatus",
+        "dts:CreateMigrationJob",
+        "dts:ConfigureMigrationJob",
+        "dts:SuspendMigrationJob",
+        "dts:StartMigrationJob",
+        "dts:StopMigrationJob",
+        "dts:DeleteMigrationJob",
+        "dts:DescribeSynchronizationJobs",
+        "dts:DescribeSynchronizationJobStatus",
+        "dts:CreateSynchronizationJob",
+        "dts:ConfigureSynchronizationJob",
+        "dts:SuspendSynchronizationJob",
+        "dts:StartSynchronizationJob",
+        "dts:DeleteSynchronizationJob",
+        "dts:DescribeObjectModifyStatus",
+        "dts:ModifySynchronizationObject",
+        "dts:ResetSynchronizationJob"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "pvtz:DescribeUserServiceStatus",
+        "pvtz:DescribeZones",
+        "pvtz:DescribeZoneRecords",
+        "pvtz:UpdateZoneRecord"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dds:DescribeDBInstances",
+        "dds:DescribeReplicaSetRole",
+        "dds:DescribeDBInstanceAttribute",
+        "dds:DescribeRegions",
+        "dds:DescribeDBInstancePerformance",
+        "dds:DescribeSecurityIps",
+        "dds:ModifyDBInstanceDescription",
+        "dds:ModifySecurityIps",
+        "dds:DescribeShardingNetworkAddress",
+        "dds:DescribeSlowLogRecords",
+        "dds:DescribeRunningLogRecords",
+        "dds:DescribeErrorLogList"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:QueryContactGroup",
+        "cms:QueryContact"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "polardb:DescribeDBClusters",
+        "polardb:DescribeRegions",
+        "polardb:DescribeDBClusterAttribute",
+        "polardb:ModifyDBNodeClass",
+        "polardb:DescribeDBClusterAvailableResources",
+        "polardb:CreateDBNodes",
+        "polardb:DeleteDBNodes",
+        "polardb:DescribeBackups",
+        "polardb:CreateDBCluster",
+        "polardb:ModifyDBClusterStorageSpace",
+        "polardb:ModifyDBClusterParameters",
+        "polardb:DescribeDBClusterParameters"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "hdm.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

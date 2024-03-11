@@ -1,0 +1,20 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "dataworks:ListResourceGroup",
+            "Resource": "acs:dataworks:*:*:exclusive_resource_group/*"
+        },
+        {
+            "Action": "dataworks:ModifyResourceGroup",
+            "Effect": "Allow",
+            "Resource": "acs:dataworks:*:*:exclusive_resource_group/*"
+        },
+        {
+            "Action": "dataworks:ShowResourceGroupDetail",
+            "Effect": "Allow",
+            "Resource": "acs:dataworks:*:*:exclusive_resource_group/*"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "ecs:CreateNetworkInterface", 
+                "ecs:DeleteNetworkInterface", 
+                "ecs:AttachNetworkInterface", 
+                "ecs:DetachNetworkInterface", 
+                "ecs:DescribeNetworkInterfaces", 
+                "ecs:CreateNetworkInterfacePermission", 
+                "ecs:DescribeNetworkInterfacePermissions"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": [
+                "vpc:DescribeVSwitches", 
+                "vpc:DescribeVpcs"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "Version":"1",
+    "Statement":[
+        {
+            "Effect":"Allow",
+            "Action":[
+                "edas:*Application",
+                "edas:ReadCluster",
+                "arms:*",
+                "edas:*Service"
+            ],
+            "Resource":[
+                "*"
+            ]
+        }
+    ]
+}

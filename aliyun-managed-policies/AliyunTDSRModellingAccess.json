@@ -1,0 +1,20 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": ["tdsr:SceneReconstruction",
+                        "tdsr:GetLabel",
+                        "tdsr:UpdateLabel",
+                        "tdsr:ScenePublish",
+                        "tdsr:ListTag",
+                        "tdsr:UpdateTag",
+                        "tdsr:CreateTag",
+                        "tdsr:DeleteTag",
+                        "tdsr:GetTag",
+                        "tdsr:TagPublish",
+                        "tdsr:Preview"],
+            "Resource": "acs:tdsr:*:*:project/*",
+            "Effect": "Allow"
+        }
+    ]
+}

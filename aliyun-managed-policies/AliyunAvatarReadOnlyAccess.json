@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+                "avatar:Get*",
+                "avatar:Describe*",
+                "avatar:List*"
+                ],
+      "Resource": "*"
+    }
+  ]
+}

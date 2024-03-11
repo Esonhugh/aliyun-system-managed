@@ -1,0 +1,21 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cdp:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "vpc:DescribeVpcs",
+                "vpc:DescribeVSwitches",
+                "ecs:DescribeSecurityGroups"
+            ],
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

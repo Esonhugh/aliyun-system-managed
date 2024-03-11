@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "dm:Get*",
+        "dm:List*",
+        "dm:Query*",
+        "dm:Desc*",
+        "dm:SenderStatistics*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

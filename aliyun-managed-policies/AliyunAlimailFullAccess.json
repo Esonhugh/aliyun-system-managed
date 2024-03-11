@@ -1,0 +1,10 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "alimail:*",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

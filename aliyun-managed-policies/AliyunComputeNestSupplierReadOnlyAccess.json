@@ -1,0 +1,13 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+              "computenestsupplier:List*",
+              "computenestsupplier:Get*"
+             ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

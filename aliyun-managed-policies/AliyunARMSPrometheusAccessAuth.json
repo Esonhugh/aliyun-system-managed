@@ -1,0 +1,23 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "arms:Describe",
+                "arms:GetCommercialStatusV2",
+                "arms:ListAddons",
+                "arms:ListGrafanaInstance",
+                "arms:QueryMetric",
+                "arms:GetOldPrometheusRuleCount",
+                "arms:ListPromAlertCluster",
+                "arms:GetSupport*",
+                "arms:GetIntegration*",
+                "arms:GetConsoleBaseInfo",
+                "arms:ListTagResources",
+                "arms:TagResources"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:*HaVip*",
+        "vpc:*RouteTable*",
+        "vpc:*VRouter*",
+        "vpc:*RouteEntry*",
+        "vpc:*RouteEntries*",
+        "vpc:*VSwitch*",
+        "vpc:*Vpc*",
+        "vpc:*Cen*",
+        "vpc:*Tag*",
+        "vpc:*NetworkAcl*",
+        "vpc:*FlowLog*",
+        "vpc:*Ipv4Gateway*",
+        "vpc:*PrefixList*",
+        "vpc:*DhcpOptionsSet*",
+        "vpc:DeletionProtection",
+        "vpc:*TagResource*",
+        "vpc:MoveResourceGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

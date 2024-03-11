@@ -1,0 +1,40 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "slb:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ecs:DescribeInstances",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "cms:QueryMetric*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "slb.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "logdelivery.slb.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "vpc:*GlobalAcceleration*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ga:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "vpcendpoint.ga.aliyuncs.com",
+            "cdt.ga.aliyuncs.com",
+            "alb.ga.aliyuncs.com",
+            "oss.ga.aliyuncs.com",
+            "ddos.ga.aliyuncs.com",
+            "flowlog.ga.aliyuncs.com",
+            "ssl.ga.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

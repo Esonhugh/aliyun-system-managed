@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-cloudauth:Get*", 
+                "yundun-cloudauth:Describe*", 
+                "yundun-cloudauth:Query*", 
+                "yundun-cloudauth:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

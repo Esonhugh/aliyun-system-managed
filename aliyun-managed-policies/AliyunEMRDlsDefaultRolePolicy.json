@@ -1,0 +1,73 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:ListObjects",
+        "oss:ListObjectVersions"
+      ],
+      "Resource": "acs:oss:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:ListObjects",
+        "oss:ListObjectVersions",
+        "oss:ListMultipartUploads",
+        "oss:PutObject",
+        "oss:AbortMultipartUpload",
+        "oss:GetObject",
+        "oss:DeleteObject",
+        "oss:ListParts",
+        "oss:RestoreObject",
+        "oss:GetObjectVersion",
+        "oss:RestoreObjectVersion",
+        "oss:DeleteObjectVersion",
+        "oss:PutObjectTagging",
+        "oss:GetObjectTagging",
+        "oss:DeleteObjectTagging",
+        "oss:PutObjectVersionTagging",
+        "oss:GetObjectVersionTagging",
+        "oss:DeleteObjectVersionTagging"
+      ],
+      "Resource": [
+        "acs:oss:*:*:*/.dlsdata",
+        "acs:oss:*:*:*/.dlsdata*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:GetBucketInfo",
+        "oss:PostDataLakeStorageFileOperation",
+        "oss:PostDataLakeStorageAdminOperation",
+        "oss:PostDataLakeStorageSecurityOperation"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:PutBucket",
+        "oss:PutBucketTagging",
+        "oss:ListBuckets",
+        "oss:DescribeRegions"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:GetBucketInfo",
+        "oss:DeleteBucket",
+        "oss:GetBucketTagging",
+        "oss:GetBucketPolicy",
+        "oss:GetBucketStat",
+        "oss:ListObjects",
+        "oss:PutBucketPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

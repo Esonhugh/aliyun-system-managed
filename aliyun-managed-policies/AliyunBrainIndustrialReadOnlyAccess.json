@@ -1,0 +1,14 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "brain-industrial:Get*",
+        "brain-industrial:Query*",
+        "brain-industrial:List*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

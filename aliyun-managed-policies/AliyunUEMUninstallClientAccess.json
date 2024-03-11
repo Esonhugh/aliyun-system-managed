@@ -1,0 +1,22 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "uem:Get*",
+        "uem:Describe*",
+        "uem:Query*",
+        "uem:List*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "uem:ApplyAppUninstallCode"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

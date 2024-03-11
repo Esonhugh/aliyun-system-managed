@@ -1,0 +1,44 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "hcs-sgw:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ecs:DescribeInstances",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "oss:ListBuckets",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateServiceLinkedRole",
+        "ram:DeleteServiceLinkedRole"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "hcs-sgw.aliyuncs.com",
+            "logmonitor.hcs-sgw.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

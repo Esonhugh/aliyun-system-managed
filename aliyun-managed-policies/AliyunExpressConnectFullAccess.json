@@ -1,0 +1,37 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:*PhysicalConnection*",
+        "vpc:*VirtualBorderRouter*",
+        "vpc:UpdateVirtualBorderBandwidth",
+        "vpc:*Vbr*",
+        "vpc:*RouterInterface*",
+        "vpc:*RouteEntry*",
+        "vpc:*RouteTable*",
+        "vpc:*Bgp*",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVirtualBorderRouters",
+        "vpc:DescribeGrantRulesToCen",
+        "vpc:*ExpressCloudConnection*",
+        "vpc:ChangeResourceGroup",
+        "vpc:*GeographicSubRegions*",
+        "vpc:*BusinessAccessPoint*",
+        "vpc:*EcGrant*",
+        "vpc:QueryPconnTrafficPrice",
+        "vpc:ListBusinessRegions",
+        "vpc:UpdateCrossBoarderStatus",
+        "vpc:DescribeVBRs",
+        "vpc:DescribeAccessPoints",
+        "vpc:*BondRouterInterface*",
+        "vpc:*Tag*",
+        "vpc:*Nqa*",
+        "vpc:*FailoverTestJob*",
+        "vpc:*ExpressConnectTrafficQos*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

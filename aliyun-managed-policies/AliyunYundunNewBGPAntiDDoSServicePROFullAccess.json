@@ -1,0 +1,19 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-ddoscoo:*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": [
+                "yundun-ddosdip:*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

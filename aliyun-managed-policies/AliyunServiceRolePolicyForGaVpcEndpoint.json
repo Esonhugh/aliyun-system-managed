@@ -1,0 +1,42 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Resource": "*",
+      "Action": [
+        "ecs:CreateNetworkInterface",
+        "ecs:DeleteNetworkInterface",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:ModifyNetworkInterfaceAttribute",
+        "ecs:DescribeSecurityGroups",
+        "ecs:CreateSecurityGroup",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:AuthorizeSecurityGroupEgress",
+        "ecs:RevokeSecurityGroup",
+        "ecs:RevokeSecurityGroupEgress",
+        "ecs:JoinSecurityGroup",
+        "ecs:LeaveSecurityGroup",
+        "ecs:DeleteSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DescribeSecurityGroupReferences",
+        "ecs:ModifySecurityGroupAttribute",
+        "ecs:ModifySecurityGroupEgressRule",
+        "ecs:ModifySecurityGroupPolicy",
+        "ecs:ModifySecurityGroupRule",
+        "vpc:DescribeVSwitches"
+      ]
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "vpcendpoint.ga.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

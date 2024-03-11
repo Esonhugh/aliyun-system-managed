@@ -1,0 +1,20 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bpstudio:Get*",
+        "bpstudio:Describe*",
+        "bpstudio:List*",
+        "bpstudio:Query*",
+        "bpstudio:Attach*",
+        "bpstudio:CheckUser",
+        "bpstudio:ExportFile"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ],
+  "Version": "1"
+}

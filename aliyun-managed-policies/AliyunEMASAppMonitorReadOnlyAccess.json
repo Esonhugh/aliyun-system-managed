@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Action": "emasha:View*",
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

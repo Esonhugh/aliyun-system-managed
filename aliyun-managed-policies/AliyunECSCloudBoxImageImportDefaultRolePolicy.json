@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "oss-cloudbox:GetObject",
+        "oss-cloudbox:GetBucketLocation",
+        "oss-cloudbox:GetBucketInfo"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "pam:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:DescribeInstances",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVpcAttribute",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVSwitchAttributes",
+        "yundun-idaas:DescribeRegions",
+        "yundun-idaas:DescribeInstances"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "pam.aliyuncs.com"
+        }
+      }
+    }
+  ],
+  "Version": "1"
+}

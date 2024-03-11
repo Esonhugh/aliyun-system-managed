@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "privatelink:ListVpcEndpointServices",
+        "privatelink:GetVpcEndpointServiceAttribute",
+        "privatelink:ListVpcEndpointServiceResources",
+        "privatelink:ListVpcEndpointConnections",
+        "privatelink:ListVpcEndpointServiceUsers",
+        "slb:DescribeLoadBalancers"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

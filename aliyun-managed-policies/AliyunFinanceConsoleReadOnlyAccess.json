@@ -1,0 +1,25 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "efc:Get*", 
+                "efc:Query*", 
+                "efc:Check*", 
+                "efc:Verify*", 
+                "efc:Validate*", 
+                "efc:CurrentProductFee", 
+                "efc:BillAnalysis"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }, 
+        {
+            "Action": [
+                "bss:Describe*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

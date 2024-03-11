@@ -1,0 +1,19 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "nlb:Describe*",
+        "nlb:List*",
+        "nlb:Get*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "cms:QueryMetricList",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

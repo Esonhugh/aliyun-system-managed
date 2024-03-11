@@ -1,0 +1,34 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:DescribeInstances",
+        "ecs:DescribeTag*",
+        "ecs:DescribeCommand*",
+        "ecs:DescribeInvocation*",
+        "ecs:DescribeCloudAssistant*",
+        "ecs:DescribeSendFileResults",
+        "ecs:DescribeManagedInstances",
+        "ecs:DescribeActivations",
+        "ecs:ListPluginStatus"
+      ],
+      "Resource": [
+        "acs:ecs:*:*:instance/*",
+        "acs:ecs:*:*:command/*",
+        "acs:ecs:*:*:activation/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:ListServiceSettings"
+      ],
+      "Resource": [
+        "acs:ecs:*:*:servicesettings/cloudassistantdeliverysettings",
+        "acs:ecs:*:*:servicesettings/sessionmanagerdeliverysettings"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "docmind:Get*",
+                "docmind:Query*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

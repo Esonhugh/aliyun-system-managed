@@ -1,0 +1,20 @@
+{
+    "Version":"1",
+    "Statement":[
+        {
+            "Effect":"Allow",
+            "Action":[
+                "edas:ReadApplication",
+                "edas:ReadService",
+                "arms:Describe*",
+                "arms:List*",
+                "arms:Get*",
+                "arms:Search*",
+                "arms:Query*"
+            ],
+            "Resource":[
+                "*"
+            ]
+        }
+    ]
+}

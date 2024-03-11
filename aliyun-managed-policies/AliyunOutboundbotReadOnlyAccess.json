@@ -1,0 +1,17 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "outboundbot:Get*",
+        "outboundbot:List*",
+        "outboundbot:Describe*",
+        "outboundbot:Query*",
+        "outboundbot:Download*",
+        "outboundbot:Export*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

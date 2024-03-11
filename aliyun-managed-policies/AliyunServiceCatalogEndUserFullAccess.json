@@ -1,0 +1,99 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ros:GetTemplate",
+        "ros:ValidateTemplate",
+        "ros:PreviewStack",
+        "ros:CreateStack",
+        "ros:ContinueCreateStack",
+        "ros:GetStack",
+        "ros:UpdateStack",
+        "ros:DeleteStack",
+        "ros:ListStacks",
+        "ros:ListStackEvents",
+        "ros:ListStackResources",
+        "ros:ListChangeSets",
+        "ros:ListStackOperationRisks"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:GetUser",
+        "ram:ListUsers",
+        "ram:GetRole",
+        "ram:ListRoles"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "servicecatalog:ListUserTypes",
+        "servicecatalog:GetAccountInfo",
+        "servicecatalog:GetProductAsEndUser",
+        "servicecatalog:ListProductsAsEndUser",
+        "servicecatalog:ListLaunchOptions",
+        "servicecatalog:GetProductVersion",
+        "servicecatalog:ListProductVersions",
+        "servicecatalog:GetTemplateDefinition",
+        "servicecatalog:GetGeneratedTemplate",
+        "servicecatalog:GetTemplate",
+        "servicecatalog:GetEnhancedTemplate",
+        "servicecatalog:GetProvisioningParameters",
+        "servicecatalog:LaunchProduct"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "servicecatalog:GetProvisionedProduct",
+        "servicecatalog:GetProvisionedProductParameters",
+        "servicecatalog:GetProvisionedProductForResourceSpec",
+        "servicecatalog:ListProvisionedProducts",
+        "servicecatalog:UpdateProvisionedProduct",
+        "servicecatalog:TerminateProvisionedProduct",
+        "servicecatalog:GetTask",
+        "servicecatalog:ListTasks",
+        "servicecatalog:GetProvisionedProductPlan",
+        "servicecatalog:ListProvisionedProductPlanApprovers",
+        "servicecatalog:ListProvisionedProductPlans",
+        "servicecatalog:ExecuteProvisionedProductPlan",
+        "servicecatalog:DeleteProvisionedProductPlan",
+        "servicecatalog:CreateProvisionedProductPlan",
+        "servicecatalog:CancelProvisionedProductPlan",
+        "servicecatalog:UpdateProvisionedProductPlan"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "servicecatalog:UserLevel": "self"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "servicecatalog:GetProvisionedProduct",
+        "servicecatalog:GetProvisionedProductParameters",
+        "servicecatalog:GetProvisionedProductForResourceSpec",
+        "servicecatalog:GetTask",
+        "servicecatalog:ListTasks",
+        "servicecatalog:ApproveProvisionedProductPlan",
+        "servicecatalog:GetProvisionedProductPlan",
+        "servicecatalog:ListProvisionedProductPlans"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "servicecatalog:ApprovalActor": "approver"
+        }
+      }
+    }
+  ]
+}

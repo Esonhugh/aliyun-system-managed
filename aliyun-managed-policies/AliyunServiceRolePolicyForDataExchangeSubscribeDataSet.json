@@ -1,0 +1,36 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:GetBucketPolicy",
+        "oss:PutBucketPolicy",
+        "oss:GetBucketRequestPayment"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "oss:BucketTag/dataexchange": [
+            "yunmarket"
+          ]
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": "oss:GetBucketTagging",
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "datasetsubscriber.dataexchange.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

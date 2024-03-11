@@ -1,0 +1,13 @@
+{
+    "Statement": [
+       {
+            "Action": [
+                "svgp:Get*",
+                "svgp:List*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

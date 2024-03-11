@@ -1,0 +1,39 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "eci:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeSecurityGroups"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeEipAddresses"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "eci.aliyuncs.com",
+            "vnode.eci.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

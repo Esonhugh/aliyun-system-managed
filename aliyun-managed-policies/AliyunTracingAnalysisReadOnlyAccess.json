@@ -1,0 +1,32 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "xtrace:Describe*",
+        "xtrace:List*",
+        "xtrace:Get*",
+        "xtrace:Search*",
+        "xtrace:Query*",
+        "xtrace:Read*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "arms:Describe*",
+        "arms:List*",
+        "arms:Get*",
+        "arms:Search*",
+        "arms:Check*",
+        "arms:Query*",
+        "xtrace:Read*",
+        "xtrace:Get*",
+        "xtrace:Describe*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

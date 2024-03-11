@@ -1,0 +1,41 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "servicecatalog:Get*",
+        "servicecatalog:List*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ros:GetTemplate",
+        "ros:ValidateTemplate",
+        "ros:GetStack",
+        "ros:ListStacks",
+        "ros:ListStackEvents",
+        "ros:ListStackResources",
+        "ros:ListChangeSets"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "resourcesharing:ListSharedTargets",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:GetUser",
+        "ram:ListUsers",
+        "ram:GetRole",
+        "ram:ListRoles"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

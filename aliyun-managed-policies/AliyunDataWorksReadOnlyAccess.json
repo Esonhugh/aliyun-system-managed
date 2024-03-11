@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "dataworks:ListResourceGroup",
+      "Resource": "acs:dataworks:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "dataworks:ShowResourceGroupDetail",
+      "Resource": "acs:dataworks:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "dataworks:ListContacts",
+      "Resource": "acs:dataworks:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "dataworks:ListAlarmResource",
+      "Resource": "acs:dataworks:*:*:*"
+    }
+  ]
+}

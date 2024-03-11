@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "dyvms:Query*",
+        "dyvms:Describe*",
+        "dyvms:Get*",
+        "dyvms:List*",
+        "dyvms:Overview*",
+        "dyvms:Qry*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

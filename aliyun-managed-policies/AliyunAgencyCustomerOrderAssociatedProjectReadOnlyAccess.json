@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+    "agency-customer:ListWaitPickOrder",
+    "agency-customer:ListAlreadyPickOrder"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

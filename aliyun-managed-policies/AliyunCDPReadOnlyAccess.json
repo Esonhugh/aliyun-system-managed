@@ -1,0 +1,16 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cdp:List*",
+                "cdp:SearchClusterInstances",
+                "cdp:HasDefaultRole",
+                "cdp:Get*",
+                "cdp:Query*"
+            ],
+            "Resource": "*"
+        }
+    ],
+    "Version": "1"
+}

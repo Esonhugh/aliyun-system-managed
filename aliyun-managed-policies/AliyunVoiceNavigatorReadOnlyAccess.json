@@ -1,0 +1,15 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "voicebot:List*",
+        "voicebot:Describe*",
+        "voicebot:Query",
+        "voicebot:Export"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "aisearch:Query*",
+        "aisearch:List*",
+        "aisearch:Describe*",
+        "aisearch:Get*",
+        "aisearch:Show*"
+      ],
+      "Resource": "acs:aisearch:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

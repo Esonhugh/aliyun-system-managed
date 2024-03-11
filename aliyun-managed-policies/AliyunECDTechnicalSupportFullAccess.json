@@ -1,0 +1,18 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecd:List*",
+        "ecd:Describe*",
+        "ecd:*GuestApplication*",
+        "ecd:*DesktopSession*",
+        "cms:*",
+        "ecd:ApplyCoordinationForMonitoring",
+        "ecd:Get*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}

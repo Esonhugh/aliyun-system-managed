@@ -1,0 +1,116 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ros:CreateTemplateScratch",
+        "ros:GetTemplateScratch",
+        "ros:GenerateTemplateByScratch",
+        "ros:DeleteTemplateScratch",
+        "ros:PreviewStack",
+        "ros:CreateStack",
+        "ros:DeleteStack",
+        "ros:GetStack",
+        "ros:ListStacks",
+        "ros:ListStackResources",
+        "ros:GetStackResource"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "alb:CreateLoadBalancer",
+        "alb:DeleteLoadBalancer",
+        "alb:UpdateLoadBalancerAttribute",
+        "alb:GetLoadBalancerAttribute",
+        "alb:AttachCommonBandwidthPackageToLoadBalancer",
+        "alb:DetachCommonBandwidthPackageFromLoadBalancer",
+        "alb:EnableLoadBalancerAccessLog",
+        "alb:DisableLoadBalancerAccessLog",
+        "alb:EnableLoadBalancerIpv6Internet",
+        "alb:DisableLoadBalancerIpv6Internet",
+        "alb:DisableDeletionProtection",
+        "alb:EnableDeletionProtection",
+        "alb:CreateListener",
+        "alb:DeleteListener",
+        "alb:GetListenerAttribute",
+        "alb:UpdateListenerAttribute",
+        "alb:StartListener",
+        "alb:StopListener",
+        "alb:ListListenerCertificates",
+        "alb:AssociateAclsWithListener",
+        "alb:DissociateAclsFromListener",
+        "alb:AssociateAdditionalCertificatesWithListener",
+        "alb:DissociateAdditionalCertificatesFromListener",
+        "alb:CreateRule",
+        "alb:CreateRules",
+        "alb:DeleteRules",
+        "alb:DeleteRule",
+        "alb:UpdateRuleAttribute",
+        "alb:UpdateRulesAttribute",
+        "alb:ListRules",
+        "alb:DeleteAcl",
+        "alb:CreateAcl",
+        "alb:ListAcls",
+        "alb:AddEntriesToAcl",
+        "alb:RemoveEntriesFromAcl",
+        "alb:ListAclEntries",
+        "alb:ListAclRelations",
+        "alb:ListServerGroupServers",
+        "alb:ListServerGroups",
+        "alb:CreateServerGroup",
+        "alb:DeleteServerGroup",
+        "alb:UpdateServerGroupAttribute",
+        "alb:UpdateServerGroupServersAttribute",
+        "alb:AddServersToServerGroup",
+        "alb:RemoveServersFromServerGroup",
+        "alb:CreateHealthCheckTemplate",
+        "alb:DeleteHealthCheckTemplates",
+        "alb:UpdateHealthCheckTemplateAttribute",
+        "alb:GetHealthCheckTemplateAttribute",
+        "alb:ListTagResources",
+        "alb:UnTagResources",
+        "alb:TagResources",
+        "alb:DescribeZones",
+        "alb:ListAsynJobs"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "slb:Describe*",
+        "slb:ListTagResources"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "tag:TagResources",
+        "tag:UntagResources"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "clone.alb.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

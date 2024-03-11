@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "outboundbot:*",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "privatelink:List*",
+        "privatelink:Get*",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "ecs:DescribeSecurityGroups",
+        "slb:DescribeLoadBalancers"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

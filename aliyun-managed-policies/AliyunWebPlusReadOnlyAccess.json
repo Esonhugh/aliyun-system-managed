@@ -1,0 +1,89 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "webplus:List*",
+        "webplus:Get*",
+        "webplus:Describe*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcAttribute"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "slb:DescribeLoadBalancers",
+        "slb:DescribeVServerGroups",
+        "slb:DescribeLoadBalancerAttribute",
+        "slb:DescribeLoadBalancerTCPListenerAttribute",
+        "slb:DescribeLoadBalancerHTTPListenerAttribute",
+        "slb:DescribeLoadBalancerUDPListenerAttribute",
+        "slb:DescribeLoadBalancerHTTPSListenerAttribute",
+        "slb:DescribeHealthStatus",
+        "slb:DescribeVServerGroupAttribute",
+        "slb:DescribeServerCertificates",
+        "slb:DescribeCACertificates"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeKeyPairs",
+        "ecs:DescribeSecurityGroups",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:DescribeInstanceTypeFamilies",
+        "ecs:DescribeInstanceTypes",
+        "ecs:DescribeInstances",
+        "ecs:DescribeResources"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:Query*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DescribeAvailableResource",
+        "rds:DescribeDBInstances",
+        "rds:DescribeDatabases",
+        "rds:DescribeAccounts",
+        "rds:DescribeDBInstanceAttribute"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "alidns:DescribeDomains",
+        "alidns:DescribeSubDomainRecords",
+        "alidns:ValidateDomainCanAdd",
+        "alidns:DescribeDomainNs"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kvstore:DescribeAvailableResource",
+        "kvstore:DescribeInstances"
+       ],
+       "Resource": "*",
+       "Effect": "Allow"
+    }
+  ]
+}

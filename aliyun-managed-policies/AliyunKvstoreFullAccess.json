@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "kvstore:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "hdm:*",
+      "Resource": "acs:kvstore:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "r-kvstore.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

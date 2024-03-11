@@ -1,0 +1,39 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sofa:GetTS*",
+        "sofa:CountTS*",
+        "sofa:QueryTS*",
+        "sofa:ListTS*",
+        "sofa:AllTS*",
+        "sofa:CheckTS*",
+        "sofa:DescribeTS*",
+        "sofa:ExistTS*",
+        "sofa:BatchQueryMs*",
+        "sofa:BatchQueryMS*",
+        "sofa:GetMS*",
+        "sofa:ListAllMS*",
+        "sofa:ListMS*",
+        "sofa:ListSofaMS*",
+        "sofa:AllMS*",
+        "sofa:QueryAllMS*",
+        "sofa:QueryMS*",
+        "sofa:SearchMS*",
+        "sofa:GetDTX*",
+        "sofa:QueryDTX*",
+        "sofa:ListDTX*",
+        "sofa:List*Sofamq*",
+        "sofa:Get*Sofamq*",
+        "sofa:Query*Sofamq*",
+        "sofa:Describe*Sofamq*",
+        "sofa:Get*Dms*",
+        "sofa:*Query*Dms*",
+        "sofa:List*Dms*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

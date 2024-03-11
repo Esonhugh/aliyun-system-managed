@@ -1,0 +1,30 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "polardb:Describe*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dbs:Get*",
+        "dbs:Describe*",
+        "dbs:Query*",
+        "dbs:Support*"
+      ],
+      "Resource": "acs:polardb:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "hdm:Get*",
+        "hdm:Describe*",
+        "hdm:Query*",
+        "hdm:Support*"
+      ],
+      "Resource": "acs:polardb:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "advisor:Describe*",
+        "advisor:Count*",
+        "advisor:Get*",
+        "advisor:List*",
+        "advisor:Query*",
+        "advisor:Check*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

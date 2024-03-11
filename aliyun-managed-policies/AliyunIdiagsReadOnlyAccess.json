@@ -1,0 +1,14 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "aiops:Get*",
+                "aiops:List*",
+                "aiops:Describe*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

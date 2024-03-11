@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "bss:DescribeCarts",
+        "bss:AddResourceToCart",
+        "bss:RemoveResourceFromCart",
+        "bss:UpdateCartResources",
+        "bss:CreateOrderFromCart"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

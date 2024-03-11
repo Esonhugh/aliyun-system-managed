@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "rds:DescribeDBInstanceAttribute",
+        "rds:DescribeDBInstanceNetInfo",
+        "rds:DescribeDBInstances",
+        "rds:DescribeRegions",
+        "rds:DescribeDatabases"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

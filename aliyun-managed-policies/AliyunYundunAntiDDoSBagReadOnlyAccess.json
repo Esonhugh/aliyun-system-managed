@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-antiddosbag:Get*", 
+                "yundun-antiddosbag:Describe*", 
+                "yundun-antiddosbag:Query*", 
+                "yundun-antiddosbag:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "httpdns:List*",
+        "httpdns:Get*",
+        "httpdns:ResolveDomain",
+        "httpdns:sdnsList*",
+        "httpdns:sdnsDescribe*",
+        "httpdns:SdnsValidate*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "mhub:List*",
+        "mhub:Query*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:DescribeInstances",
+        "ecs:JoinSecurityGroup",
+        "ecs:LeaveSecurityGroup",
+        "ecs:DescribeImages",
+        "ecs:CreateSecurityGroup",
+        "ecs:AuthorizeSecurityGroup",
+        "ecs:DescribeSecurityGroupAttribute",
+        "ecs:DescribeSecurityGroups",
+        "ecs:RevokeSecurityGroup",
+        "ecs:DescribeRegions",
+        "ecs:DescribeInstances",
+        "ecs:DescribeInstanceAttribute",
+        "ecs:CreateCommand",
+        "ecs:DeleteCommand",
+        "ecs:DescribeInvocationResults"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:InvokeCommand",
+        "ecs:StopInvocation"
+      ],
+      "Resource": "acs:ecs:*:*:instance/*",
+      "Condition": {
+        "StringEquals": {
+          "acs:ResourceTag/dms": "script-for-dms"
+        }
+      },
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:InvokeCommand",
+        "ecs:StopInvocation"
+      ],
+      "Resource": "acs:ecs:*:*:command/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DescribeDBInstanceHAConfig",
+        "rds:DescribeBinlogFiles",
+        "rds:DescribeDBInstancePerformance",
+        "rds:DescribeDBInstanceAttribute",
+        "rds:DescribeSlowLogs",
+        "rds:DescribeSlowLogRecords",
+        "rds:DescribeSQLCollectorPolicy",
+        "rds:ModifySQLCollectorPolicy",
+        "rds:DescribeSQLLogRecords",
+        "rds:DescribeSQLLogFiles",
+        "rds:DescribeResourceUsage",
+        "rds:DescribeRegions",
+        "rds:DescribeDBInstances",
+        "rds:DescribeDBInstanceAttribute",
+        "rds:ModifyBackupPolicy",
+        "rds:DescribeSecurityGroupConfiguration",
+        "rds:DescribeDBInstanceEncryptionKey",
+        "rds:DescribeDBInstanceTDE",
+        "rds:DescribeDBInstanceSSL",
+        "rds:DescribeCrossRegionBackupDBInstance",
+        "rds:DescribeSQLCollectorRetention"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dds:DescribeSecurityIps",
+        "dds:ModifySecurityIps",
+        "dds:DescribeDBInstances"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "kvstore:DescribeSecurityIps",
+        "kvstore:ModifySecurityIps",
+        "kvstore:DescribeRegions",
+        "kvstore:DescribeInstances",
+        "kvstore:DescribeInstanceAttribute",
+        "kvstore:DescribeInstanceConfig"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "drds:DescribeDrdsInstances",
+        "drds:QueryInstanceInfoByConn",
+        "drds:DescribeDrdsInstanceList",
+        "drds:DescribeDrdsDBIpWhiteList",
+        "drds:ModifyDrdsIpWhiteList",
+        "drds:DescribeDrdsInstanceVersion"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "polardb:DescribeRegions",
+        "polardb:DescribeDBClusters",
+        "polardb:DescribeDBClusterAttribute",
+        "polardb:DescribeDBClusterEndpoints",
+        "polardb:DescribeMaskingRules",
+        "polardb:ModifyMaskingRules",
+        "polardb:DeleteMaskingRules",
+        "polardb:DescribeDBClusterVersion",
+        "polardb:DescribeDBClusterAuditLogCollector"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "polardbx:DescribeDBInstances",
+        "polardbx:DescribeSecurityIps",
+        "polardbx:ModifySecurityIps",
+        "polardbx:DescribeDBInstanceAttribute",
+        "polardbx:DescribeBinaryLogList",
+        "polardbx:DescribeDBInstanceViaEndpoint"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "petadata:DescribeInstances",
+        "petadata:DescribeInstanceInfoByConnection",
+        "petadata:DescribeSecurityIPs",
+        "petadata:ModifySecurityIPs"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "hdm:AccessHDMInstance"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dts:CreateMigrationJob",
+        "dts:ConfigureMigrationJob",
+        "dts:StartMigrationJob",
+        "dts:StopMigrationJob",
+        "dts:DescribeMigrationJobStatus",
+        "dts:DescribeMigrationJobDetail",
+        "dts:CreateSynchronizationJob",
+        "dts:ConfigureSynchronizationJob",
+        "dts:StartSynchronizationJob",
+        "dts:SuspendSynchronizationJob",
+        "dts:DescribeSynchronizationJobStatus",
+        "dts:ShieldPrecheck",
+        "dts:CreateDtsInstance",
+        "dts:ConfigureDtsJob",
+        "dts:StartDtsJob",
+        "dts:ModifyDtsJob",
+        "dts:StopDtsJob",
+        "dts:DescribeDtsJobDetail",
+        "dts:DescribeDtsJobs",
+        "dts:ConfigureEtlJob",
+        "dts:SaveEtlJob",
+        "dts:SuspendDtsJob",
+        "dts:DeleteDtsJob",
+        "dts:ModifyDtsJobName",
+        "dts:SkipPreCheck",
+        "dts:DescribeDtsEtlJobVersionInfo",
+        "dts:DescribeEtlJobLogs",
+        "dts:PreviewSql",
+        "dts:DescribePreCheckStatus",
+        "dts:DescribeDtsJobLogs",
+        "dts:DescribeJobMonitorRule",
+        "dts:CreateJobMonitorRule",
+        "dts:DescribeConfigRelations",
+        "dts:DescribeFormInfo",
+        "dts:DescribeDmsInstanceDetail",
+        "dts:DescribeSchemaList",
+        "dts:DescribeColumns",
+        "dts:DescribeStruct",
+        "dts:DescribeDtsInstancePrice",
+        "dts:DescribeRegions",
+        "dts:DescribeInstanceInventory",
+        "dts:CreateCheckJob",
+        "dts:DescribeCheckJobDiffDetails",
+        "dts:EtlMockData",
+        "dts:EtlMockResult",
+        "dts:DescribeCheckJobStatus",
+        "dts:DescribeDtsJobStatistics",
+        "dts:Ping"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "apigateway:CreateApiGroup",
+        "apigateway:ModifyApiGroup",
+        "apigateway:DeleteApiGroup",
+        "apigateway:DescribeApiGroups",
+        "apigateway:CreateApi",
+        "apigateway:ModifyApi",
+        "apigateway:DeployApi",
+        "apigateway:AbolishApi",
+        "apigateway:DeleteApi",
+        "apigateway:DescribeApi",
+        "apigateway:DescribeApis",
+        "apigateway:CreateApp",
+        "apigateway:ModifyApp",
+        "apigateway:DeleteApp",
+        "apigateway:DescribeAppSecurity",
+        "apigateway:ResetAppCode",
+        "apigateway:ResetAppSecret",
+        "apigateway:DescribeAppAttributes",
+        "apigateway:SetApisAuthorities",
+        "apigateway:DescribeAuthorizedApps"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dg:GetUserGateways",
+        "dg:GetUserDatabases"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "openanalytics:QueryBucketList",
+        "openanalytics:QueryDirectoryList",
+        "openanalytics:ListVirtualClusters",
+        "openanalytics:SubmitSparkJob",
+        "openanalytics:KillSparkJob",
+        "openanalytics:GetJobLog",
+        "openanalytics:GetJobDetail",
+        "openanalytics:GetJobStatus",
+        "openanalytics:ExecuteService",
+        "openanalytics:QueryService",
+        "openanalytics:ExecuteOnVirtualCluster"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dbs:DescribeBackupPlanList",
+        "dbs:DescribeFullBackupList",
+        "dbs:CreateBackupPlan",
+        "dbs:ConfigureBackupPlan",
+        "dbs:ModifyBackupObjects",
+        "dbs:StartBackupPlan",
+        "dbs:ModifyBackupSourceEndpoint",
+        "dbs:StartTask",
+        "dbs:StopBackupPlan",
+        "dbs:CreateRestoreTask",
+        "dbs:StartRestoreTask",
+        "dbs:DescribeRestoreTaskList",
+        "dbs:DescribeRestoreRangeInfo",
+        "dbs:CreateDLAService",
+        "dbs:DescribeDLAService",
+        "dbs:CloseDLAService",
+        "dbs:CreateAndStartBackupPlan",
+        "dbs:DescribeFullBackupSet",
+        "dbs:DescribeDataSourceQueryableAttribute",
+        "dbs:DescribeDataSourceQueryableAttributeDetail",
+        "dbs:GetTimeTravelInstance"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oceanbase:DescribeAllTenantsConnectionInfo",
+        "oceanbase:DescribeInstances"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "dms.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": [
+        "hbase:DescribeInstances",
+        "hbase:DescribeInstance",
+        "hbase:DescribeEndpoints",
+        "hbase:DescribeIpWhitelist",
+        "hbase:ModifyIpWhitelist"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cassandra:DescribeClusters",
+        "cassandra:DescribeCluster",
+        "cassandra:DescribeDataCenters",
+        "cassandra:DescribeIpWhitelistGroups",
+        "cassandra:ModifyIpWhitelistGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "lindorm:GetLindormInstanceList",
+        "lindorm:GetLindormInstance",
+        "lindorm:GetLindormInstanceEngineList",
+        "lindorm:GetLindormInstanceListForDMS",
+        "lindorm:GetLindormInstanceForDMS",
+        "lindorm:GetLindormInstanceForDMSByConnStr",
+        "lindorm:GetInstanceIpWhiteList",
+        "lindorm:UpdateInstanceIpWhiteList",
+        "lindorm:CreateComputeEngineJob",
+        "lindorm:GetComputeEngineJobDetail",
+        "lindorm:GetComputeEngineJobLog",
+        "lindorm:ReleaseLindormComputeJob"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "adb:CreateDBCluster",
+        "adb:CreateAccount",
+        "adb:DescribeDBClusters",
+        "adb:DescribeDBClusterNetInfo",
+        "adb:SubmitSparkApp",
+        "adb:KillSparkApp",
+        "adb:ListSparkApps",
+        "adb:GetSparkAppLog",
+        "adb:GetSparkAppInfo",
+        "adb:GetSparkAppState",
+        "adb:GetSparkAppAttemptLog",
+        "adb:GetSparkAppWebUiAddress",
+        "adb:ListSparkAppAttempts",
+        "adb:DescribeDBClusterAttribute",
+        "adb:DescribeDBResourceGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "gpdb:DescribeDBInstances",
+        "gpdb:ResumeInstance",
+        "gpdb:PauseInstance"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "hologram:GetInstance",
+        "hologram:ListInstances"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "gdb:DescribeDbInstances"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:ListBuckets"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "selectdb:DescribeDBInstances",
+        "selectdb:DescribeDBInstanceAttribute",
+        "selectdb:DescribeDBInstanceNetInfo",
+        "selectdb:DescribeSecurityIPList",
+        "selectdb:ModifySecurityIPList"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "clickhouse:DescribeDBClusters",
+        "clickhouse:DescribeDBInstances",
+        "clickhouse:DescribeDBInstanceAttribute",
+        "clickhouse:DescribeEndpoints",
+        "clickhouse:DescribeSecurityIPList",
+        "clickhouse:ModifySecurityIPList"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "sr:ListInstances",
+        "sr:GetInstanceDetail",
+        "sr:DescribeRegions",
+        "sr:GetDmsConnectionInfo",
+        "sr:GetNetworkMappingIp"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dbs-inner:DescribeDataSourceQueryableAttribute",
+        "dbs-inner:DescribeDataSourceQueryableAttributeDetail",
+        "dbs-inner:GetTimeTravelInstance"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

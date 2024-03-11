@@ -1,0 +1,82 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:CreateNetworkInterface",
+        "ecs:DeleteNetworkInterface",
+        "ecs:DescribeNetworkInterfaces",
+        "ecs:CreateNetworkInterfacePermission",
+        "ecs:DescribeNetworkInterfacePermissions",
+        "ecs:DeleteNetworkInterfacePermission",
+        "ecs:DescribeSecurityGroups",
+        "ecs:AttachNetworkInterface",
+        "ecs:DetachNetworkInterface"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "vpc:DescribeVSwitchAttributes",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcAttribute"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cr:GetAuthorizationToken",
+        "cr:CreateRepository",
+        "cr:PullRepository",
+        "cr:PushRepository",
+        "cr:ListInstance",
+        "cr:GetRepository",
+        "cr:ListRepository",
+        "cr:ListRepositoryTag"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "oss:ListBuckets"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "oss:GetObject",
+        "oss:PutObject",
+        "oss:DeleteObject"
+      ],
+      "Resource": "acs:oss:*:*:*/sfm/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "oss:ListObjects",
+      "Effect": "Allow",
+      "Resource": "acs:oss:*:*:*",
+      "Condition": {
+        "StringLike": {
+          "oss:Prefix": [
+            "sfm/*"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "model-developer.sfm.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

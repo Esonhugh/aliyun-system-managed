@@ -1,0 +1,18 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "iovcc:Count*", 
+                "iovcc:Diagnosis*", 
+                "iovcc:Describe*", 
+                "iovcc:Find*", 
+                "iovcc:Get*", 
+                "iovcc:List*", 
+                "iovcc:Query*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

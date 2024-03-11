@@ -1,0 +1,18 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "yundun-sddp:Get*",
+        "yundun-sddp:Describe*",
+        "yundun-sddp:CreateDomain",
+        "yundun-sddp:DeleteDomain",
+        "yundun-sddp:MoveDomain",
+        "yundun-sddp:MoveInstances",
+        "yundun-sddp:UpdateDomain"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

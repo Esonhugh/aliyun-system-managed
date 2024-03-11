@@ -1,0 +1,40 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ga:UpdateAcceleratorCrossBorderStatus",
+        "ga:ListAvailableAccelerateAreas",
+        "ga:DeleteAccelerator",
+        "ga:DescribeAccelerator",
+        "ga:ListEndpointGroupIpAddressCidrBlocks",
+        "ga:ListListeners",
+        "ga:ListEndpointGroups",
+        "ga:CreateAccelerator",
+        "ga:DeployAccelerator"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "ga.alb.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": ["cdt.ga.aliyuncs.com","alb.ga.aliyuncs.com","ssl.ga.aliyuncs.com","vpcendpoint.ga.aliyuncs.com"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sofa:*TS*",
+        "sofa:*MS*",
+        "sofa:*DTX*",
+        "sofa:*Sofamq*",
+        "sofa:*Dms*",
+        "sofa:*ODP*"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

@@ -1,0 +1,93 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "iot:Query*",
+        "iot:List*",
+        "iot:Get*",
+        "iot:BatchGet*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "iotid:QueryId2OrderAbstract"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "isoc:GetSummary",
+        "isoc:GetDeviceRankSummary",
+        "isoc:GetDeviceRiskSummary",
+        "isoc:GetAlertTaskSummary"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "linkwan:GetInstancePacketStat",
+        "linkwan:CountGateways"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "rds:DescribeDBInstances",
+        "rds:DescribeDatabases",
+        "rds:DescribeAccounts",
+        "rds:DescribeDBInstanceNetInfo"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListRoles",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "mns:ListTopic",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "dhs:ListProject",
+        "dhs:ListTopic",
+        "dhs:GetTopic"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ots:ListInstance",
+        "ots:ListTable",
+        "ots:DescribeTable"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "log:Get*",
+        "log:List*"
+      ],
+      "Resource": "acs:log:*:*:project/iot-log-*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "cms:QueryMetricList"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

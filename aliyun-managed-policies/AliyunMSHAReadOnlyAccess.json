@@ -1,0 +1,17 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "msha:Describe*",
+                "msha:List*",
+                "msha:Display*",
+                "msha:Get*",
+                "msha:Query*",
+                "msha:Show*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

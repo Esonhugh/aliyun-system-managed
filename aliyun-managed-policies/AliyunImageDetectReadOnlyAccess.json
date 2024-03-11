@@ -1,0 +1,14 @@
+{
+  "Version": "1",
+  "Statement": [
+        {
+            "Action": [
+                "imagedetect:Query*",
+                "imagedetect:List*",
+                "imagedetect:Get*"
+            ],
+            "Resource": "acs:imagedetect:*:*:*",
+            "Effect": "Allow"
+        }
+  ]
+}

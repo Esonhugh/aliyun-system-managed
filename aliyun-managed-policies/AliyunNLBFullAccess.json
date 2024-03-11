@@ -1,0 +1,34 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "nlb:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeInstances",
+        "ecs:DescribeNetworkInterfaces",
+        "eci:DescribeContainerGroups",
+        "cms:QueryMetricList",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "nlb.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

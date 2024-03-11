@@ -1,0 +1,13 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iacservice:List*",
+        "iacservice:Get*"
+      ],
+      "Resource": "acs:iacservice:*:*:*"
+    }
+  ],
+  "Version": "1"
+}

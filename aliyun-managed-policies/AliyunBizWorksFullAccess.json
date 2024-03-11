@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "bizworks:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "bizworks.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:ListUserBasicInfos",
+      "Resource": "*"
+    }
+  ]
+}

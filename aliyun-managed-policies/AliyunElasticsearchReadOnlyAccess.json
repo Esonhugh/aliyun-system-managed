@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "elasticsearch:List*",
+        "elasticsearch:Describe*",
+        "elasticsearch:Get*",
+        "elasticsearch:Query*",
+        "elasticsearch:Suggest*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

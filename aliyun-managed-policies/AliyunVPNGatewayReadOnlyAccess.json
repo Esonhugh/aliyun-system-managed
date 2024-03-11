@@ -1,0 +1,25 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "vpc:DescribeVpnGateway*",
+        "vpc:DescribeVpnConnection*",
+        "vpc:DescribeCustomerGateway*",
+        "vpc:DescribeSslVpnServer*",
+        "vpc:DescribeSslVpnClientCert*",
+        "vpc:DescribeSslVpnClients",
+        "vpc:DescribeVpn*",
+        "vpc:GetVpn*",
+        "vpc:ListVpn*",
+        "vpc:ListIpsecServer*",
+        "vpc:DescribeVpnCrossAccountAuthorizations",
+        "vpc:DescribeVcoRouteEntries",
+        "vpc:DescribeVpnAttachments",
+        "vpc:CheckVpnBgpEnabled"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

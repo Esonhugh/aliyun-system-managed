@@ -1,0 +1,378 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "resourcemanager:GetResourceDirectory",
+        "resourcemanager:InitResourceDirectory",
+        "resourcemanager:ListResources",
+        "resourcemanager:ListFoldersForParent",
+        "resourcemanager:ListAccountsForParent",
+        "resourcemanager:ListAccounts",
+        "resourcemanager:CreateFolder",
+        "resourcemanager:CreateResourceAccount",
+        "resourcemanager:GetFolder",
+        "resourcemanager:GetAccount",
+        "resourcemanager:UpdateFolder",
+        "resourcemanager:DeleteFolder",
+        "resourcemanager:MoveAccount",
+        "resourcemanager:UpdateAccount",
+        "resourcemanager:ListHandshakesForResourceDirectory",
+        "resourcemanager:GetPayerForAccount",
+        "resourcemanager:EnableControlPolicy",
+        "resourcemanager:CreateControlPolicy",
+        "resourcemanager:AttachControlPolicy",
+        "resourcemanager:UpdateControlPolicy",
+        "resourcemanager:GetControlPolicy",
+        "resourcemanager:ListControlPolicyAttachmentsForTarget",
+        "resourcemanager:ListControlPolicies",
+        "resourcemanager:InviteAccountToResourceDirectory",
+        "resourcemanager:GetHandshake",
+        "resourcemanager:ListTagResources",
+        "resourcemanager:RegisterDelegatedAdministrator",
+        "resourcemanager:ListDelegatedAdministrators",
+        "resourcemanager:DeregisterDelegatedAdministrator",
+        "resourcemanager:DeleteControlPolicy",
+        "resourcemanager:DetachControlPolicy"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "ecs:DescribeInstances",
+        "cen:DescribeCenBandwidthPackages",
+        "ecs:DescribeDisks",
+        "ecs:DescribeSnapshots",
+        "ecs:DescribeImages",
+        "vpc:DescribeVpcs",
+        "vpc:DescribeVSwitches",
+        "cen:DescribeCens",
+        "oss:ListBuckets",
+        "elasticsearch:ListInstance",
+        "eci:DescribeContainerGroups",
+        "dds:DescribeDBInstances",
+        "kvstore:DescribeInstances",
+        "polardb:DescribeDBClusters",
+        "alb:ListLoadBalancers",
+        "slb:DescribeLoadBalancers",
+        "rocketmq:ListInstances",
+        "polardbx:DescribeDBInstances",
+        "cs:GetClusters",
+        "cs:GetClustersByUid",
+        "rds:DescribeDBInstances",
+        "drds:DescribeDrdsInstances",
+        "log:ListLogstore",
+        "vpc:DescribeBandwidthPackages",
+        "vpc:DescribeCommonBandwidthPackages",
+        "vpc:DescribeEipAddresses",
+        "vpc:DescribeNatGateways",
+        "log:ListProject",
+        "mq:OnsInstanceList",
+        "mq:ListInstance",
+        "yundun-bastionhost:DescribeInstanceBastionhost",
+        "arms:ListPrometheusInstance",
+        "arms:ListPrometheusInstanceByTagAndResourceGroupId"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "governance.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "sts:AssumeRole",
+      "Effect": "Allow",
+      "Resource": "acs:ram::*:role/aliyungovernance*"
+    },
+    {
+      "Action": [
+        "actiontrail:CreateTrail",
+        "actiontrail:DescribeTrails",
+        "actiontrail:UpdateTrail",
+        "actiontrail:DeleteTrail",
+        "actiontrail:StartLogging",
+        "actiontrail:LookupEvents",
+        "config:PutDeliveryChannel",
+        "config:DescribeDeliveryChannels",
+        "config:CreateAggregator",
+        "config:UpdateAggregator",
+        "config:ListAggregators",
+        "config:GetAggregator",
+        "config:StartConfigurationRecorder",
+        "config:DescribeConfigurationRecorder",
+        "config:PutConfigurationRecorder",
+        "config:ListAggregateCompliancePacks",
+        "config:GetAggregateCompliancePack",
+        "config:CreateAggregateCompliancePack",
+        "config:UpdateAggregateCompliancePack",
+        "config:DeleteAggregateCompliancePacks",
+        "config:GetAggregateConfigRuleComplianceByPack",
+        "config:GetConfigRule",
+        "config:UpdateConfigRule",
+        "config:CreateCompliancePack",
+        "config:UpdateCompliancePack",
+        "config:GetCompliancePack",
+        "config:DeleteCompliancePacks",
+        "config:GetAggregateResourceCountsGroupByRegion",
+        "config:GetAggregateResourceCountsGroupByResourceType",
+        "config:GetDiscoveredResourceCountsGroupByRegion",
+        "config:GetDiscoveredResourceCountsGroupByResourceType",
+        "config:DetachAggregateConfigRuleToCompliancePack",
+        "config:AttachAggregateConfigRuleToCompliancePack",
+        "config:GetAggregateConfigRule",
+        "config:ListAggregateConfigRules",
+        "config:CreateAggregateConfigRule",
+        "config:UpdateAggregateConfigRule",
+        "config:DeleteAggregateConfigRules",
+        "config:GetManagedRule",
+        "config:ListAggregateConfigRuleEvaluationResults",
+        "config:ListAggregateDiscoveredResources",
+        "config:GetAggregateResourceComplianceByConfigRule",
+        "config:ListDiscoveredResources",
+        "config:ListConfigRuleEvaluationResults",
+        "config:GetResourceComplianceByConfigRule",
+        "config:ListConfigRules",
+        "config:StartAggregateConfigRuleEvaluation",
+        "config:StartConfigRuleEvaluation",
+        "config:ListCompliancePacks",
+        "config:DetachConfigRuleToCompliancePack",
+        "config:AttachConfigRuleToCompliancePack",
+        "config:DeleteConfigRules",
+        "config:CreateConfigRule",
+        "config:CreateRemediation",
+        "config:ListRemediations",
+        "config:StartRemediation",
+        "config:ListRemediationExecutions",
+        "config:DeleteAggregateConfigDeliveryChannel",
+        "config:ListAggregateConfigDeliveryChannels",
+        "config:CreateAggregateConfigDeliveryChannel",
+        "config:GetAggregateConfigDeliveryChannel",
+        "config:UpdateAggregateConfigDeliveryChannel",
+        "config:ListConfigDeliveryChannels"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "actiontrail.aliyuncs.com",
+            "config.aliyuncs.com",
+            "cloudsso.aliyuncs.com",
+            "cloudmonitor.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Action": [
+        "cms:CreateServiceLinkRoleForCloudMonitor",
+        "cms:CheckRamRoleForCloudMonitor",
+        "cms:CreateAnalysisSuit",
+        "cms:DescribeAnalysisSuit",
+        "cms:DescribeAnalysisTask",
+        "cms:RestartAnalysisTask"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "arms:GetUserArmsPromClusterList",
+        "arms:UseHighPriorityAlert",
+        "arms:HighPriorityAlertClearRatio"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:GetSAMLProvider",
+        "ram:CreateSAMLProvider",
+        "ram:CreatePolicy",
+        "ram:ListRoles",
+        "ram:GetRole",
+        "ram:ListPolicies",
+        "ram:ListSAMLProviders"
+      ],
+      "Resource": [
+        "acs:ram:*:*:policy/*",
+        "acs:ram:*:*:saml-provider/*",
+        "acs:ram:*:*:role/*"
+      ],
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:ListEntitiesForPolicy",
+        "ram:ListPolicyVersions",
+        "ram:DeletePolicyVersion",
+        "ram:CreatePolicyVersion",
+        "ram:DeletePolicy"
+      ],
+      "Resource": "acs:ram:*:*:policy/AliyunReservedGovernance*",
+      "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:UpdateSAMLProvider",
+        "ram:DeleteSAMLProvider",
+        "ram:AttachPolicyToRole",
+        "ram:DetachPolicyFromRole",
+        "ram:ListPoliciesForRole",
+        "ram:CreateRole",
+        "ram:UpdateRole",
+        "ram:GetPolicy",
+        "ram:DeleteRole"
+      ],
+      "Resource": [
+        "acs:ram:*:*:saml-provider/AliyunReservedGovernance*",
+        "acs:ram:*:*:role/aliyunreservedgovernance*",
+        "acs:ram:*:system:policy/*",
+        "acs:ram:*:*:policy/AliyunReservedGovernance*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudsso:EnableService",
+        "cloudsso:ListDirectories",
+        "cloudsso:ListAccessConfigurations",
+        "cloudsso:CreateDirectory",
+        "cloudsso:SetMFAAuthenticationStatus",
+        "cloudsso:SetExternalSAMLIdentityProvider",
+        "cloudsso:GetDirectory",
+        "cloudsso:GetMFAAuthenticationStatus",
+        "cloudsso:GetSCIMSynchronizationStatus",
+        "cloudsso:GetExternalSAMLIdentityProvider",
+        "cloudsso:CreateAccessConfiguration",
+        "cloudsso:GetAccessConfiguration",
+        "cloudsso:ListPermissionPoliciesInAccessConfiguration",
+        "cloudsso:RemovePermissionPolicyFromAccessConfiguration",
+        "cloudsso:AddPermissionPolicyToAccessConfiguration",
+        "cloudsso:ListAccessConfigurationProvisionings",
+        "cloudsso:ProvisionAccessConfiguration",
+        "cloudsso:GetTaskStatus",
+        "cloudsso:UpdateAccessConfiguration",
+        "cloudsso:DeleteAccessConfiguration",
+        "cloudsso:GetServiceStatus",
+        "cloudsso:ListUsers",
+        "cloudsso:ListAccessAssignments",
+        "cloudsso:CreateAccessAssignment",
+        "cloudsso:ListGroups"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "tag:ListTagResources",
+        "tag:DescribeRegions",
+        "tag:ListTagKeys",
+        "tag:CheckCreatedByEnabled"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:GenerateGovernanceReport",
+        "ram:GetGovernanceReportStatus",
+        "ram:ListRecentGovernanceMetrics",
+        "ram:GetGovernanceItemReport"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:ModifyImageSharePermission",
+        "ecs:DescribeImageSharePermission"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ram:GenerateCredentialReport",
+        "ram:GetCredentialReport",
+        "ram:GetAccountSummary",
+        "ram:ListPolicyAttachments",
+        "config:GetApiStatisticData",
+        "actiontrail:GetGovernanceMetrics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "mscsub:ListSubscriptionItems",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "yundun-sas:GetModuleConfigStatus",
+        "yundun-aegis:DescribeAccesskeyLeakList",
+        "yundun-sas:DescribeGroupedVul",
+        "yundun-sas:DescribeCheckWarningSummary",
+        "yundun-sas:DescribeSuspEvents"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ims:ListUserBasicInfos",
+        "ims:ListAccessKeys",
+        "actiontrail:GetAccessKeyLastUsedProducts",
+        "actiontrail:GetAccessKeyLastUsedInfo"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "yundun-antiddosbag:DescribeInstanceSummary",
+        "yundun-antiddosbag:DescribeInstanceList",
+        "yundun-antiddosbag:DescribePackIpList",
+        "yundun-ddoscoo:DescribeDomains",
+        "yundun-ddoscoo:DescribeWebCcProtectSwitch"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "yundun-cloudfirewall:DescribeUserBuyVersion",
+        "yundun-cloudfirewall:DescribeAssetStatistic",
+        "yundun-cloudfirewall:DescribeUserBandwithDetail",
+        "yundun-cloudfirewall:DescribeAssetList",
+        "yundun-cloudfirewall:DescribeNatFirewallList",
+        "yundun-cloudfirewall:DescribeVpcFirewallSummaryInfo",
+        "yundun-cloudfirewall:DescribeDefaultIPSConfig",
+        "yundun-cloudfirewall:DescribeAclStats",
+        "yundun-cloudfirewall:DescribeControlPolicy",
+        "yundun-cloudfirewall:DescribeLogStoreInfo",
+        "yundun-cloudfirewall:DescribeVpcFirewallList",
+        "yundun-cloudfirewall:DescribeVpcFirewallCenList",
+        "yundun-cloudfirewall:DescribeTrFirewallsV2List",
+        "yundun-cloudfirewall:DescribeVpcInstanceList",
+        "yundun-cloudfirewall:DescribeTrFirewallsV2Detail"
+      ],
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

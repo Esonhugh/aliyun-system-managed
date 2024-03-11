@@ -1,0 +1,13 @@
+ {
+    "Version": "1",
+    "Statement": [       
+        {
+            "Action": [
+                "ivst:Get*",
+                "ivst:DownloadReport"
+                ], 
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

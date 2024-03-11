@@ -1,0 +1,13 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "acc:Describe*",
+        "acc:CheckServiceRole"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

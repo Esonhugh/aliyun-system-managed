@@ -1,0 +1,59 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "pvtz:DescribeUserServiceStatus",
+        "pvtz:DescribeZones",
+        "pvtz:DescribeZoneInfo",
+        "pvtz:DescribeZoneRecords",
+        "pvtz:CheckZoneName",
+        "pvtz:AddZone",
+        "pvtz:BindZoneVpc",
+        "pvtz:DeleteZone",
+        "pvtz:AddZoneRecord",
+        "pvtz:UpdateZoneRecord",
+        "pvtz:DeleteZoneRecord",
+        "dts:CreateDtsInstance",
+        "dts:ConfigureDtsJob",
+        "dts:StartDtsJob",
+        "dts:DescribePreCheckStatus",
+        "dts:DescribeDtsJobDetail",
+        "dts:DescribeDtsJobs",
+        "dts:ModifyDtsJob",
+        "dts:SuspendDtsJob",
+        "dts:StopDtsJob",
+        "dts:DeleteDtsJob",
+        "dts:CheckDefaultRole",
+        "dts:ReverseTwoWayDirection",
+        "privatelink:ListVpcEndpointServicesByEndUser",
+        "privatelink:CreateVpcEndpoint",
+        "privatelink:ListVpcEndpoints",
+        "privatelink:UpdateVpcEndpointAttribute",
+        "privatelink:GetVpcEndpointAttribute",
+        "privatelink:ListVpcEndpointSecurityGroups",
+        "privatelink:AttachSecurityGroupToVpcEndpoint",
+        "privatelink:DetachSecurityGroupFromVpcEndpoint",
+        "privatelink:AddZoneToVpcEndpoint",
+        "privatelink:RemoveZoneFromVpcEndpoint",
+        "privatelink:ListVpcEndpointZones",
+        "privatelink:DeleteVpcEndpoint",
+        "ecs:DescribeSecurityGroups",
+        "vpc:DescribeVSwitches",
+        "vpc:DescribeVpcs"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "polardb.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

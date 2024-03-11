@@ -1,0 +1,77 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "openanalytics.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "openanalytics:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:ListRoles",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "dms:LoginDatabase",
+      "Resource": "acs:openanalytics:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:PassRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "acs:Service": "openanalytics.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": [
+        "dts:DescribeSubscriptionInstances",
+        "dts:DescribeConsumerGroup",
+        "dts:DescribeDtsJobDetail"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ecs:DescribeSecurityGroups"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "alikafka:ListInstance",
+        "alikafka:ListTopic",
+        "alikafka:QueryMessage"
+      ],
+      "Resource": "acs:alikafka:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "lindorm:GetSpecifiedLindormInstanceList",
+        "lindorm:GetLdfsDirectories",
+        "lindorm:CreateLdfsDirectory",
+        "lindorm:CheckLdfsUserPermission",
+        "lindorm:GetLtsStreams",
+        "lindorm:GetLtsStreamDetails"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

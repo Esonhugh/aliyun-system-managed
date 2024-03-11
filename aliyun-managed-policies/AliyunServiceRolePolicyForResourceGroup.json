@@ -1,0 +1,76 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "ecs:JoinResourceGroup",
+        "vpc:MoveResourceGroup"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "actiontrail:CreateServiceTrail",
+        "actiontrail:DeleteServiceTrail",
+        "actiontrail:GetServiceTrail",
+        "actiontrail:GetServiceTrailDeliveryStatus"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "config:StartConfigurationRecorder",
+        "config:GetConfigurationRecorder",
+        "config:CreateConfigRule",
+        "config:ActiveConfigRules",
+        "config:GetConfigRule",
+        "config:ListConfigRules",
+        "config:CreateRemediation",
+        "config:ListRemediations",
+        "config:GetRemediationTemplate",
+        "config:StartConfigRuleEvaluation",
+        "config:DeactiveConfigRules",
+        "config:DeleteConfigRules",
+        "config:GetResourceComplianceByConfigRule"
+      ],
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "config:ServiceChannel": "ResourceGroup"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "acs:ram:*:*:role/*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "rmc.resourcemanager.aliyuncs.com",
+            "config.aliyuncs.com",
+            "remediation.config.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "resourcecenter:EnableResourceCenter",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "resourcegroup.resourcemanager.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

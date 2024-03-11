@@ -1,0 +1,31 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "rds:DescribeDBInstanceAttribute",
+        "rds:DescribeDBInstanceIPArrayList",
+        "rds:DescribeDBInstanceNetInfo",
+        "rds:DescribeDBInstanceSSL",
+        "rds:DescribeDBInstances",
+        "rds:DescribeDatabases",
+        "rds:DescribeResourceUsage",
+        "rds:ModifySecurityIps",
+        "rds:DescribeAnalyticDBInstanceAttribute",
+        "rds:DescribeAnalyticDBInstanceNetInfo"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "rds.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

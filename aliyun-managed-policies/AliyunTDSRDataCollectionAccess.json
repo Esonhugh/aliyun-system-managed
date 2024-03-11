@@ -1,0 +1,24 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                    "tdsr:GetProject",
+                    "tdsr:CreateProject",
+                    "tdsr:UpdateProject",
+                    "tdsr:DeleteProject",
+                    "tdsr:ListScene",
+                    "tdsr:GetScene",
+                    "tdsr:CreateScene",
+                    "tdsr:DeleteScene",
+                    "tdsr:UpdateScene",
+                    "tdsr:ListSubScene",
+                    "tdsr:GetSubScene",
+                    "tdsr:CreateSubScene",
+                    "tdsr:DeleteSubScene",
+                    "tdsr:UpdateSubScene"],
+            "Resource": "acs:tdsr:*:*:project/*",
+            "Effect": "Allow"
+        }
+    ]
+}

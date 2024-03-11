@@ -1,0 +1,38 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "privatelink:ListVpcEndpointServicesByEndUser",
+        "privatelink:CreateVpcEndpoint",
+        "privatelink:ListVpcEndpoints",
+        "privatelink:UpdateVpcEndpointAttribute",
+        "privatelink:GetVpcEndpointAttribute",
+        "privatelink:ListVpcEndpointSecurityGroups",
+        "privatelink:AttachSecurityGroupToVpcEndpoint",
+        "privatelink:DetachSecurityGroupFromVpcEndpoint",
+        "privatelink:AddZoneToVpcEndpoint",
+        "privatelink:RemoveZoneFromVpcEndpoint",
+        "privatelink:ListVpcEndpointZones",
+        "privatelink:DeleteVpcEndpoint",
+        "vpc:DescribeVpcs",
+        "ecs:DescribeSecurityGroups",
+        "vpc:DescribeVSwitches"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "ram:CreateServiceLinkedRole"
+      ],
+      "Resource": "acs:ram:*:*:role/*",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "privatelink.aliyuncs.com"
+        }
+      },
+      "Effect": "Allow"
+    }
+  ]
+}

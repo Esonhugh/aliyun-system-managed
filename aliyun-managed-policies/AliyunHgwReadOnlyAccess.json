@@ -1,0 +1,10 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "hgw:Describe*",
+      "Resource": "acs:hgw:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "vpc:CreateVpc",
+        "vpc:DescribeVpcs",
+        "vpc:ModifyVpcAttribute",
+        "vpc:CreateVSwitch",
+        "vpc:ModifyVSwitchAttribute",
+        "vpc:DescribeVSwitchAttributes",
+        "vpc:DeletionProtection",
+        "vpc:CreateCommonBandwidthPackage",
+        "vpc:DescribeCommonBandwidthPackages",
+        "vpc:ModifyCommonBandwidthPackageSpec",
+        "vpc:AddCommonBandwidthPackageIp",
+        "vpc:CreateNatGateway",
+        "vpc:DescribeNatGateways",
+        "vpc:ModifyNatGatewayAttribute",
+        "vpc:ModifyNatGatewaySpec",
+        "vpc:UpdateNatGatewayNatType",
+        "vpc:CreateSnatEntry",
+        "vpc:GrantInstanceToCen",
+        "vpc:AllocateEipAddress",
+        "vpc:DescribeEipAddresses",
+        "vpc:ModifyEipAddressAttribute",
+        "vpc:AssociateEipAddress",
+        "vpc:DescribeGrantRulesToCen",
+        "vpc:ListTagResources",
+        "vpc:DeleteVpc",
+        "vpc:DeleteVSwitch",
+        "vpc:DeleteNatGateway",
+        "vpc:UnassociateEipAddress",
+        "vpc:DeleteSnatEntry",
+        "vpc:ReleaseEipAddress",
+        "vpc:RemoveCommonBandwidthPackageIp",
+        "vpc:DeleteCommonBandwidthPackage",
+        "vpc:RevokeInstanceFromCen",
+        "vpc:DescribeRouteTableList",
+        "vpc:DescribeSnatTableEntries",
+        "vpc:CreateRouteEntry",
+        "vpc:DescribeRouteTables"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cen:CreateCen",
+        "cen:DescribeCens",
+        "cen:ModifyCenAttribute",
+        "cen:UntagResources",
+        "cen:TagResources",
+        "cen:CreateTransitRouter",
+        "cen:ListTransitRouters",
+        "cen:UpdateTransitRouter",
+        "cen:CreateTransitRouterVpcAttachment",
+        "cen:ListTransitRouterVpcAttachments",
+        "cen:UpdateTransitRouterVpcAttachmentAttribute",
+        "cen:UpdateTransitRouterVpcAttachmentZones",
+        "cen:OpenTransitRouterService",
+        "cen:CheckTransitRouterService",
+        "cen:ListTransitRouterRouteTables",
+        "cen:AssociateTransitRouterAttachmentWithRouteTable",
+        "cen:ListTransitRouterRouteTableAssociations",
+        "cen:EnableTransitRouterRouteTablePropagation",
+        "cen:ListTransitRouterRouteTablePropagations",
+        "cen:ListTransitRouterRouteEntries",
+        "cen:CreateTransitRouterRouteEntry",
+        "cen:DeleteCen",
+        "cen:DeleteTransitRouter",
+        "cen:DeleteTransitRouterRouteEntry",
+        "cen:DeleteTransitRouterVpcAttachment",
+        "cen:DissociateTransitRouterAttachmentFromRouteTable",
+        "cen:DisableTransitRouterRouteTablePropagation",
+        "cen:ListTagResources"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "cen.aliyuncs.com",
+            "nat.aliyuncs.com"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "blueprint-network.governance.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:GetRole",
+      "Resource": "acs:ram:*:*:role/aliyunserviceroleforcen"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ram:ListRoles",
+      "Resource": "acs:ram:*:*:role/*"
+    }
+  ]
+}

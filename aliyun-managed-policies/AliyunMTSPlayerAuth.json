@@ -1,0 +1,16 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "mts:PlayerAuth", 
+                "mts:PlayInfo", 
+                "mts:DecryptKey", 
+                "mts:GetLicense", 
+                "mts:GetPackage"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

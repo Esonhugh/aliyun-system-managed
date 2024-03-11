@@ -1,0 +1,15 @@
+{
+    "Version": "1", 
+    "Statement": [
+        {
+            "Action": [
+                "yundun-dbaudit:Get*", 
+                "yundun-dbaudit:Describe*", 
+                "yundun-dbaudit:Query*", 
+                "yundun-dbaudit:List*"
+            ], 
+            "Resource": "*", 
+            "Effect": "Allow"
+        }
+    ]
+}

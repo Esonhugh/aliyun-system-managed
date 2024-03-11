@@ -1,0 +1,19 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+              "emr:GetCluster",
+              "emr:ListClusters",
+              "emr:ListApplicationConfigs",
+              "emr:ListApplications",
+              "emr:ListNodes",
+              "emr:ListComponentInstances",
+              "emr:List*",
+              "emr:Get*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

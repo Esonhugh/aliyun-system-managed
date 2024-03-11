@@ -1,0 +1,38 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "eas:CreateService",
+        "eas:ListServices",
+        "eas:DescribeService",
+        "eas:DeleteService",
+        "eas:UpdateService",
+        "eas:StartService",
+        "eas:StopService"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "langstudio.pai.aliyuncs.com"
+        }
+      }
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "eas.pai.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}

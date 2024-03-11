@@ -1,0 +1,16 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": [
+        "nis:List*",
+        "nis:Get*",
+        "nis:Count*",
+        "nis:Check*",
+        "nis:Is*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

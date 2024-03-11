@@ -1,0 +1,37 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Action": "eventbridge:*",
+      "Resource": "*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": "ram:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": [
+            "sendevent-fc.eventbridge.aliyuncs.com",
+            "sendevent-mns.eventbridge.aliyuncs.com",
+            "sendevent-sms.eventbridge.aliyuncs.com",
+            "sendevent-directmail.eventbridge.aliyuncs.com",
+            "source-rocketmq.eventbridge.aliyuncs.com",
+            "connect-vpc.eventbridge.aliyuncs.com",
+            "source-actiontrail.eventbridge.aliyuncs.com",
+            "source-rabbitmq.eventbridge.aliyuncs.com",
+            "sendevent-rabbitmq.eventbridge.aliyuncs.com",
+            "sendevent-rocketmq.eventbridge.aliyuncs.com",
+            "source-cms.eventbridge.aliyuncs.com",
+            "sendevent-kafka.eventbridge.aliyuncs.com",
+            "source-kafka.eventbridge.aliyuncs.com",
+            "sendevent-rds.eventbridge.aliyuncs.com",
+            "sendevent-sae.eventbridge.aliyuncs.com",
+            "source-mqtt.eventbridge.aliyuncs.com"
+          ]
+        }
+      }
+    }
+  ]
+}

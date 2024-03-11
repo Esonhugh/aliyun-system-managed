@@ -1,0 +1,18 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "csas:Query*",
+        "csas:Get*",
+        "csas:List*",
+        "csas:Describe*",
+        "csas:Check*",
+        "csas:Download*",
+        "csas:Count*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "1"
+}

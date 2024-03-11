@@ -1,0 +1,33 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:ListBuckets"
+      ],
+      "Resource": "acs:oss:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:PutObject",
+        "oss:ListParts",
+        "oss:GetObject",
+        "oss:AbortMultipartUpload",
+        "oss:DeleteObject"
+      ],
+      "Resource": "acs:oss:*:*:*/aimiaobi/*"
+    },
+    {
+      "Action": "ram:DeleteServiceLinkedRole",
+      "Resource": "*",
+      "Effect": "Allow",
+      "Condition": {
+        "StringEquals": {
+          "ram:ServiceName": "oss-access-aimiaobi.sfm.aliyuncs.com"
+        }
+      }
+    }
+  ]
+}
